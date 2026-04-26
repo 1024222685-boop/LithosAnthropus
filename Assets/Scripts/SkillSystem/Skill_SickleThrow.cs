@@ -3,11 +3,33 @@ using UnityEngine;
 public class Skill_SickleThrow : Skill_Base
 {
     private SkillObject_Sickle currentSickle;
+    private float currentThrowPower;
 
     [Header("Regular Sickle Upgrade")]
     [SerializeField] private GameObject sicklePrefab;
     [Range(0, 10)]
-    [SerializeField] private float throwPower = 5;
+    [SerializeField] private float regularThrowPower = 5;
+
+    [Header("Pierce Sickle Upgrade")]
+    [SerializeField] private GameObject pierceSicklePrefab;
+    public int amountToPierce = 2;
+    [Range(0, 10)]
+    [SerializeField] private float pierceThrowPower = 5;
+
+    [Header("Spin Sickle Upgrade")]
+    [SerializeField] private GameObject spinSicklePrefab;
+    public int maxDistance = 5;
+    public float attackPerSecond = 6;
+    public float maxSpinDuration = 3;
+    [Range(0, 10)]
+    [SerializeField] private float spinThrowPower = 5;
+
+    [Header("Bounce Sickle Upgrade")]
+    [SerializeField] private GameObject bounceSicklePrefab;
+    public int bounceCount = 5;
+    public float bounceSpeed = 12;
+    [Range(0, 10)]
+    [SerializeField] private float bounceThrowPower = 5;
 
     [Header("Trajectory prediction")]
     [SerializeField] private GameObject predictionDot;
@@ -27,6 +49,8 @@ public class Skill_SickleThrow : Skill_Base
 
     public override bool CanUseSkill()
     {
+        UpdateThrowPower();
+
         if (currentSickle != null)
         {
             currentSickle.GetSickleBackToPlayer();
@@ -38,13 +62,51 @@ public class Skill_SickleThrow : Skill_Base
 
     public void ThrowSickle()
     {
+        GameObject sicklePrefab = GetSicklePrefab();
         GameObject newSickle = Instantiate(sicklePrefab, dots[1].position, Quaternion.identity);
 
         currentSickle = newSickle.GetComponent<SkillObject_Sickle>();
         currentSickle.SetupSickle(this, GetThrowPower());
     }
 
-    private Vector2 GetThrowPower() => confirmedDirection * (throwPower * 10);
+    private GameObject GetSicklePrefab()
+    {
+        if (Unlocked(SkillUpgradeType.SickleThrow))
+            return sicklePrefab;
+
+        if (Unlocked(SkillUpgradeType.SickleThrow_Pierce))
+            return pierceSicklePrefab;
+
+        if (Unlocked(SkillUpgradeType.SickleThrow_Spin))
+            return spinSicklePrefab;
+
+        if (Unlocked(SkillUpgradeType.SickleThrow_Bounce))
+            return bounceSicklePrefab;
+
+        Debug.Log("No valid upgrade selected!");
+        return null;
+    }
+
+    private void UpdateThrowPower()
+    {
+        switch (upgradeType)
+        {
+            case SkillUpgradeType.SickleThrow:
+                currentThrowPower = regularThrowPower;
+                break;
+            case SkillUpgradeType.SickleThrow_Pierce:
+                currentThrowPower = pierceThrowPower;
+                break;
+            case SkillUpgradeType.SickleThrow_Spin:
+                currentThrowPower = spinThrowPower;
+                break;
+            case SkillUpgradeType.SickleThrow_Bounce:
+                currentThrowPower = bounceThrowPower;
+                break;
+        }
+    }
+
+    private Vector2 GetThrowPower() => confirmedDirection * (currentThrowPower * 10);
 
     public void PredicTraJectory(Vector2 direction)
     {
@@ -58,7 +120,7 @@ public class Skill_SickleThrow : Skill_Base
 
     private Vector2 GetTraJectoryPoint(Vector2 direction, float t)
     {
-        float scaledThrowPower = throwPower * 10;
+        float scaledThrowPower = currentThrowPower * 10;
         Vector2 initialVelocity = direction * scaledThrowPower;
         Vector2 gravityEffect = 0.5f * Physics2D.gravity * sickleGravity * (t * t);
         Vector2 predictedPoint = (initialVelocity * t) + gravityEffect;

@@ -19,7 +19,7 @@ public enum SkillUpgradeType
     ShadowClone_SwapHpRecover,
 
     SickleThrow,
-    SickleThrow_Spin,
     SickleThrow_Pierce,
+    SickleThrow_Spin,
     SickleThrow_Bounce
 }

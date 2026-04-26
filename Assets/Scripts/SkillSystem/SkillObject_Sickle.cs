@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SkillObject_Sickle : SkillObject_Base
@@ -16,7 +13,7 @@ public class SkillObject_Sickle : SkillObject_Base
     private float ScaleSign;
     private Quaternion LocalRot;
 
-    private void Update()
+    protected virtual void Update()
     {
         if (rb != null && rb.simulated && rb.velocity != Vector2.zero)
         {

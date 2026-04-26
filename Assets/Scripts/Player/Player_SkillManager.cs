@@ -19,6 +19,7 @@ public class Player_SkillManager : MonoBehaviour
         {
             case SkillType.AFewGoodMen: return dash;
             case SkillType.ShadowClone: return shadow;
+            case SkillType.SickleThrow:return sickleThrow;
 
             default:
                 Debug.Log($"Skill type {type} is not implemented yet.");
