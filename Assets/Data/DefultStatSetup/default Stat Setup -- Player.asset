@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b134a5435e49f49418f9c163d2cbe946, type: 3}
+  m_Name: default Stat Setup -- Player
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthRegen: 0
+  attackSpeed: 2
+  damage: 10
+  critChance: 0
+  critPower: 0
+  armorReduction: 0
+  brutalityDamage: 100
+  mercyDamage: 0
+  cowardiceDamage: 0
+  armor: 0
+  evasion: 0
+  brutalityResistance: 0
+  mercyResistance: 0
+  cowardiceResistance: 0
+  strength: 0
+  agility: 0
+  intelligence: 0
+  vitality: 0

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
+  m_Name: Skill data - Fight Clubs
+  m_EditorClassIdentifier: 
+  cost: 3
+  unlockedByDefault: 0
+  skillType: 0
+  upgradeData:
+    upgradeType: 4
+    cooldown: 2
+    damageScaleData:
+      physical: 1
+      elemental: 1
+      mercyDuration: 3
+      mercySlowMultiplier: 0.2
+      brutalDuration: 3
+      brutalDamageScale: 1
+      cowardDuration: 3
+      cowardDamageScale: 1
+      cowardCharge: 0.4
+  displayName: Fight Clubs
+  description: Emu will gains a 10% increase in attack power and make a shadow clone
+    after dashing
+  icon: {fileID: 21300000, guid: 3c3f008165c9b144e8c03691eadec4a2, type: 3}
