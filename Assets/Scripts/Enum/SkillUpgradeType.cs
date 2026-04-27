@@ -21,5 +21,15 @@ public enum SkillUpgradeType
     SickleThrow,
     SickleThrow_Pierce,
     SickleThrow_Spin,
-    SickleThrow_Bounce
+    SickleThrow_Bounce,
+
+    StuntMan,
+    StuntMan_SingleAttack,
+    StuntMan_MultiAttack,
+    StuntMan_ChanceToMultiply,
+
+    StuntMan_Heal,
+
+    StuntMan_Clean,
+    StuntMan_Cooldown   
 }

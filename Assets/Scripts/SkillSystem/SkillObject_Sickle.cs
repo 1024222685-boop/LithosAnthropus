@@ -3,7 +3,6 @@ using UnityEngine;
 public class SkillObject_Sickle : SkillObject_Base
 {
     protected Skill_SickleThrow sickleManager;
-    protected Rigidbody2D rb;
 
     protected Transform playerTransform;
     protected bool shouldComeback;
@@ -36,7 +35,6 @@ public class SkillObject_Sickle : SkillObject_Base
 
     public virtual void SetupSickle(Skill_SickleThrow sickleManager, Vector2 direction)
     {
-        rb = GetComponent<Rigidbody2D>();
         rb.velocity = direction;
 
         this.sickleManager = sickleManager;

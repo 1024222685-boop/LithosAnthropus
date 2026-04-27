@@ -29,9 +29,16 @@ public class Entity_Health : MonoBehaviour, IDamagable
         entityStats = GetComponent<Entity_Stats>();
         healthBar = GetComponentInChildren<Slider>();
 
+        SetUpHealth();
+    }
+
+    private void SetUpHealth()
+    {
+        if (entityStats == null)
+            return;
+
         currentHealth = entityStats.GetMaxHealth();
         UpdateHealthBar();
-
         InvokeRepeating(nameof(RegenerateHealth), 0, regenInterval);
     }
 
@@ -48,11 +55,10 @@ public class Entity_Health : MonoBehaviour, IDamagable
 
         Entity_Stats attackerStats = damageDealer.GetComponent<Entity_Stats>();
         float armorReduction = attackerStats != null ? attackerStats.GetArmorReduction() : 0;
+        float mitigation = entityStats != null ? entityStats.GetArmorMitigation(armorReduction) : 0;
+        float resistance = entityStats != null ? entityStats.GetElementalResistance(element) : 0;
 
-        float mitigation = entityStats.GetArmorMitigation(armorReduction);
         float physicalDamageTaken = damage * (1 - mitigation);
-
-        float resistance = entityStats.GetElementalResistance(element);
         float elementalDamageTaken = elementalDamage * (1 - mitigation);
 
         TakeKnockback(damage, damageDealer, physicalDamageTaken);
@@ -69,7 +75,14 @@ public class Entity_Health : MonoBehaviour, IDamagable
         entity?.ReciveKnockback(knockback, duration);
     }
 
-    private bool AttackEvaded() => Random.Range(0, 100) < entityStats.GetEvasion();
+    private bool AttackEvaded()
+    {
+        if (entityStats == null)
+            return false;
+        else
+            return Random.Range(0, 100) < entityStats.GetEvasion();
+
+    }
 
     private void RegenerateHealth()
     {
@@ -88,7 +101,7 @@ public class Entity_Health : MonoBehaviour, IDamagable
         float newHealth = currentHealth + healAmount;
         float maxHealth = entityStats.GetMaxHealth();
 
-        currentHealth = Mathf.Min(newHealth,maxHealth);
+        currentHealth = Mathf.Min(newHealth, maxHealth);
         UpdateHealthBar();
     }
 
@@ -102,7 +115,7 @@ public class Entity_Health : MonoBehaviour, IDamagable
             Die();
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         isDead = true;
         entity.EntityDeath();
@@ -137,5 +150,11 @@ public class Entity_Health : MonoBehaviour, IDamagable
 
     private float CalculateDuration(float damage) => IsHeavyDamage(damage) ? heavyKnockbackDuration : knockbackDuration;
 
-    private bool IsHeavyDamage(float damage) => damage / entityStats.GetMaxHealth() > heavyDamageThreshold;
+    private bool IsHeavyDamage(float damage)
+    {
+        if (entityStats == null)
+            return false;
+        else
+            return damage / entityStats.GetMaxHealth() > heavyDamageThreshold;
+    }
 }

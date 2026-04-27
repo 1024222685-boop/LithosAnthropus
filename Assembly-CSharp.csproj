@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Entity\Entity_Health.cs" />
     <Compile Include="Assets\Scripts\UI\UI_ToolTip.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Stuntman.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_ResourceGroup.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_HurtState.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\Scripts\UI\UI.cs" />
     <Compile Include="Assets\Scripts\Enum\StatType.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Health.cs" />
+    <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Health.cs" />
     <Compile Include="Assets\Scripts\VFX\VFX_AutoController.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Shadow.cs" />
     <Compile Include="Assets\Scripts\StateMachine\EntityState.cs" />
@@ -153,6 +155,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DashState.cs" />
     <Compile Include="Assets\Scripts\UI\UI_TreeConnectHandler.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_Shadow.cs" />
+    <Compile Include="Assets\Scripts\SkillSystem\Skill_Stuntman.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
     <Compile Include="Assets\Scripts\UI\UI_MiniHealthBar.cs" />
   </ItemGroup>

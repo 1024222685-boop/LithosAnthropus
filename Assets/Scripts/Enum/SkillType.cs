@@ -5,7 +5,7 @@ using UnityEngine;
 public enum SkillType 
 {
     AFewGoodMen,
-    Gladiator,
+    Stuntman,
     ShadowClone,
     SickleThrow
 }
