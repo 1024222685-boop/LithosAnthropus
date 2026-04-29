@@ -12,12 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
   m_Name: Skill data - Plein Solein
   m_EditorClassIdentifier: 
-  cost: 0
+  displayName: Plein Solein
+  description: When Emu swap places with shadow,his health will recover
+  icon: {fileID: 21300000, guid: e51092775c8033847b070b09f5e188ca, type: 3}
+  cost: 5
   unlockedByDefault: 0
   skillType: 2
   upgradeData:
     upgradeType: 10
     cooldown: 5
-  displayName: Plein Solein
-  description: When Emu swap places with shadow,his health will recover
-  icon: {fileID: 21300000, guid: e51092775c8033847b070b09f5e188ca, type: 3}
+    damageScaleData:
+      physical: 1
+      elemental: 1
+      mercyDuration: 3
+      mercySlowMultiplier: 0.2
+      brutalDuration: 3
+      brutalDamageScale: 1
+      cowardDuration: 3
+      cowardDamageScale: 1
+      cowardCharge: 0.4

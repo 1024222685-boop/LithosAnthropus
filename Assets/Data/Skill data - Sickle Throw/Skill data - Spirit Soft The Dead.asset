@@ -15,12 +15,12 @@ MonoBehaviour:
   displayName: Spirit Soft The Dead
   description: E mu can throw a sickle with mercy power
   icon: {fileID: 21300000, guid: e39ae05fcfe002a4bb935b8bbed27928, type: 3}
-  cost: 0
+  cost: 2
   unlockedByDefault: 0
   skillType: 3
   upgradeData:
     upgradeType: 11
-    cooldown: 0
+    cooldown: 1
     damageScaleData:
       physical: 1
       elemental: 1

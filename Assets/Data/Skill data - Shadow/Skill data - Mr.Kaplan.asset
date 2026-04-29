@@ -12,14 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
   m_Name: Skill data - Mr.Kaplan
   m_EditorClassIdentifier: 
-  cost: 0
-  unlockedByDefault: 0
-  skillType: 2
-  upgradeData:
-    upgradeType: 8
-    cooldown: 5
   displayName: Mr.Kaplan
   description: 'More Shadow Army
 
 '
   icon: {fileID: 21300000, guid: 8466b6f22fd0c4e49bdb74edf7533799, type: 3}
+  cost: 15
+  unlockedByDefault: 0
+  skillType: 2
+  upgradeData:
+    upgradeType: 8
+    cooldown: 20
+    damageScaleData:
+      physical: 1
+      elemental: 1
+      mercyDuration: 3
+      mercySlowMultiplier: 0.2
+      brutalDuration: 3
+      brutalDamageScale: 1
+      cowardDuration: 3
+      cowardDamageScale: 1
+      cowardCharge: 0.4

@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Enemy_AnimationTriggers : Entity_AnimationTriggers
 {
     private Enemy enemy;
@@ -20,7 +16,7 @@ public class Enemy_AnimationTriggers : Entity_AnimationTriggers
         enemy.EnableCounterWindow(true);
     }
 
-    private void DisableCounterWindow() 
+    private void DisableCounterWindow()
     {
         enemyVfx.EnableAttackAlert(false);
         enemy.EnableCounterWindow(false);

@@ -15,12 +15,12 @@ MonoBehaviour:
   displayName: The Life and Death of Colonel Blimp
   description: The Stunt Man has a 30% chance to duplicate itself.
   icon: {fileID: 21300000, guid: 2b48292c5f5e22c4faf42f76e1283677, type: 3}
-  cost: 2
+  cost: 20
   unlockedByDefault: 0
   skillType: 1
   upgradeData:
     upgradeType: 18
-    cooldown: 0
+    cooldown: 1
     damageScaleData:
       physical: 1
       elemental: 1

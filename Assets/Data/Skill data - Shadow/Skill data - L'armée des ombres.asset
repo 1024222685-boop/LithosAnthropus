@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
   m_Name: "Skill data - L'arm\xE9e des ombres"
   m_EditorClassIdentifier: 
-  cost: 0
+  displayName: "L'arm\xE9e des ombres"
+  description: E mu will create a shadow that charges at and damages nearby enemies
+  icon: {fileID: 21300000, guid: 05cbb1bd4e196374e8ad726229fba2d6, type: 3}
+  cost: 2
   unlockedByDefault: 0
   skillType: 2
   upgradeData:
     upgradeType: 6
-    cooldown: 5
+    cooldown: 2
     damageScaleData:
       physical: 1
       elemental: 1
@@ -28,6 +31,3 @@ MonoBehaviour:
       cowardDuration: 3
       cowardDamageScale: 1
       cowardCharge: 0.4
-  displayName: "L'arm\xE9e des ombres"
-  description: E mu will create a shadow that charges at and damages nearby enemies
-  icon: {fileID: 21300000, guid: 05cbb1bd4e196374e8ad726229fba2d6, type: 3}

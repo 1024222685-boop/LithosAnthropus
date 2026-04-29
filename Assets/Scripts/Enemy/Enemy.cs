@@ -60,6 +60,11 @@ public class Enemy : Entity
     {
         base.EntityDeath();
 
+        if (TryGetComponent(out Enemy_VFX vfx))
+        {
+            vfx.EnableAttackAlert(false);
+        }
+
         stateMachine.ChangeState(deadState);
     }
 

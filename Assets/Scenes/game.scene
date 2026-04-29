@@ -3687,7 +3687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.481445, y: 12}
+  m_AnchoredPosition: {x: 64.481445, y: 11.9999695}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &402804514
@@ -5163,7 +5163,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: 1bc506c44c980b549b0b9449e9057238, type: 2}
   skillName: "L'arm\xE9e des ombres"
   skillIcon: {fileID: 731210298}
-  skillCost: 0
+  skillCost: 2
   lockedColorHex: '#9F9797'
 --- !u!1 &591721407
 GameObject:
@@ -5230,7 +5230,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: 53492b66f87e4354887747906aede2db, type: 2}
   skillName: Cape Fear
   skillIcon: {fileID: 10957721}
-  skillCost: 0
+  skillCost: 15
   lockedColorHex: '#9F9797'
 --- !u!224 &591721410
 RectTransform:
@@ -5371,7 +5371,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: 2d7d340c38195a3479fb8c29558c64bc, type: 2}
   skillName: Kakushi Toride no San-Akunin
   skillIcon: {fileID: 1076092845}
-  skillCost: 2
+  skillCost: 4
   lockedColorHex: '#9F9797'
 --- !u!114 &596839477
 MonoBehaviour:
@@ -7241,8 +7241,8 @@ Tilemap:
   - first: {x: -13, y: -27, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7401,8 +7401,8 @@ Tilemap:
   - first: {x: 3, y: -27, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7451,8 +7451,8 @@ Tilemap:
   - first: {x: 8, y: -27, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7531,8 +7531,8 @@ Tilemap:
   - first: {x: 16, y: -27, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 22
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8491,8 +8491,8 @@ Tilemap:
   - first: {x: 12, y: -26, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8621,8 +8621,8 @@ Tilemap:
   - first: {x: 25, y: -26, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 22
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9011,8 +9011,8 @@ Tilemap:
   - first: {x: -36, y: -25, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10121,8 +10121,8 @@ Tilemap:
   - first: {x: -25, y: -24, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10241,8 +10241,8 @@ Tilemap:
   - first: {x: -13, y: -24, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11001,8 +11001,8 @@ Tilemap:
   - first: {x: -37, y: -23, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11101,8 +11101,8 @@ Tilemap:
   - first: {x: -27, y: -23, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12761,8 +12761,8 @@ Tilemap:
   - first: {x: 39, y: -22, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 22
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13191,8 +13191,8 @@ Tilemap:
   - first: {x: -18, y: -21, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13241,8 +13241,8 @@ Tilemap:
   - first: {x: -13, y: -21, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15141,8 +15141,8 @@ Tilemap:
   - first: {x: -23, y: -19, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15261,8 +15261,8 @@ Tilemap:
   - first: {x: -11, y: -19, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16031,8 +16031,8 @@ Tilemap:
   - first: {x: -34, y: -18, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -20361,8 +20361,8 @@ Tilemap:
   - first: {x: -35, y: -12, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 23
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -23441,8 +23441,8 @@ Tilemap:
   - first: {x: 26, y: -9, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 22
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -26231,8 +26231,8 @@ Tilemap:
   - first: {x: 20, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 34
-      m_TileSpriteIndex: 32
+      m_TileIndex: 22
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -31554,9 +31554,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 56dfedff767de86478256b30504f0c41, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 91
+  - m_RefCount: 96
     m_Data: {fileID: 11400000, guid: 40b3cb3a210ca964eb21bcac6e5ea4e1, type: 2}
-  - m_RefCount: 106
+  - m_RefCount: 121
     m_Data: {fileID: 11400000, guid: 1018b1a554e6a174189a1e72d3b00c6e, type: 2}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: a08d1f03d53fdec4dbe86d8f0ba5a32a, type: 2}
@@ -31578,7 +31578,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 65
     m_Data: {fileID: 11400000, guid: 25660b304d8be2548a883ffaf94988cb, type: 2}
-  - m_RefCount: 1278
+  - m_RefCount: 1258
     m_Data: {fileID: 11400000, guid: 8da8a683e7329694fa20ff2c1cb32ae2, type: 2}
   - m_RefCount: 77
     m_Data: {fileID: 11400000, guid: cd2e434579f574841a81197a1da8637d, type: 2}
@@ -31635,11 +31635,11 @@ Tilemap:
     m_Data: {fileID: -1970699391, guid: e064980480c09c544b41498b379ae7c7, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: -1794920726, guid: e064980480c09c544b41498b379ae7c7, type: 3}
-  - m_RefCount: 91
+  - m_RefCount: 96
     m_Data: {fileID: 1063264103, guid: c793f4f7d2be10e4faca491395556f22, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 106
+  - m_RefCount: 121
     m_Data: {fileID: 2057299503, guid: c793f4f7d2be10e4faca491395556f22, type: 3}
   - m_RefCount: 11
     m_Data: {fileID: -1428293004, guid: e064980480c09c544b41498b379ae7c7, type: 3}
@@ -31651,7 +31651,7 @@ Tilemap:
     m_Data: {fileID: 1284863549, guid: e064980480c09c544b41498b379ae7c7, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -694630417, guid: e064980480c09c544b41498b379ae7c7, type: 3}
-  - m_RefCount: 1278
+  - m_RefCount: 1258
     m_Data: {fileID: 1129809744, guid: e064980480c09c544b41498b379ae7c7, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 983420083, guid: e064980480c09c544b41498b379ae7c7, type: 3}
@@ -34102,7 +34102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192b2fb0ef9cbfe428e4a4be9ca90691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillPoints: 10
+  skillPoints: 50
   parentNodes:
   - {fileID: 1063853092}
   - {fileID: 910418958}
@@ -34281,7 +34281,7 @@ MonoBehaviour:
   spinSicklePrefab: {fileID: 4065531089704011085, guid: a76a7f4f7b93ba04c9e6abf5ad435409, type: 3}
   maxDistance: 15
   attackPerSecond: 6
-  maxSpinDuration: 3
+  maxSpinDuration: 10
   spinThrowPower: 5
   bounceSicklePrefab: {fileID: 2697435328256750860, guid: 743a47f5a1aba3e4e8e76149216f7d3b, type: 3}
   bounceCount: 5
@@ -34303,12 +34303,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillType: 1
-  upgradeType: 18
+  upgradeType: 0
   cooldown: 0
   stuntManPrefab: {fileID: 186851569340404632, guid: 944268ef3183caf42aac79aeca1909e8, type: 3}
-  stuntManDuration: 15
-  maxAttacks: 5
-  duplocationChance: 1
+  stuntManDuration: 5
+  maxAttacks: 3
+  duplocationChance: 0.8
 --- !u!1 &830200721
 GameObject:
   m_ObjectHideFlags: 0
@@ -51640,7 +51640,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: cdbe7f7cd35f6cc4388a3b38d662c4ce, type: 2}
   skillName: Plein Solein
   skillIcon: {fileID: 677700176}
-  skillCost: 0
+  skillCost: 5
   lockedColorHex: '#9F9797'
 --- !u!1 &955332597
 GameObject:
@@ -53032,7 +53032,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: f0df19376a16a5d45aece6c2579a8247, type: 2}
   skillName: ' Spectral'
   skillIcon: {fileID: 1463086122}
-  skillCost: 0
+  skillCost: 2
   lockedColorHex: '#9F9797'
 --- !u!224 &1093080698
 RectTransform:
@@ -53440,7 +53440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1435, y: 262}
+  m_AnchoredPosition: {x: -1400, y: 267}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1134658155
@@ -53581,7 +53581,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: abb1093420936f840a717bc14e4a9c45, type: 2}
   skillName: Un Flic
   skillIcon: {fileID: 581364039}
-  skillCost: 0
+  skillCost: 4
   lockedColorHex: '#9F9797'
 --- !u!114 &1144726145
 MonoBehaviour:
@@ -53909,7 +53909,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: ecf473e892c42b843a04661ed1f0b591, type: 2}
   skillName: ' Rope'
   skillIcon: {fileID: 1565453467}
-  skillCost: 0
+  skillCost: 30
   lockedColorHex: '#9F9797'
 --- !u!114 &1174068457
 MonoBehaviour:
@@ -54639,7 +54639,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: 7ebedd9febaad6d4d909d1608bb1d05b, type: 2}
   skillName: The Life and Death of Colonel Blimp
   skillIcon: {fileID: 708603349}
-  skillCost: 2
+  skillCost: 20
   lockedColorHex: '#9F9797'
 --- !u!1 &1272517275
 GameObject:
@@ -54898,7 +54898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -530, y: 25}
+  m_AnchoredPosition: {x: -1378, y: -465}
   m_SizeDelta: {x: 497.16907, y: 535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1312704684
@@ -56888,7 +56888,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: 782daba13cb178c49a546de591fd6d5d, type: 2}
   skillName: Mr.Kaplan
   skillIcon: {fileID: 1169914654}
-  skillCost: 0
+  skillCost: 15
   lockedColorHex: '#9F9797'
 --- !u!213 &1488499993
 Sprite:
@@ -57289,7 +57289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1403, y: -252}
+  m_AnchoredPosition: {x: -1774, y: -326}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1542784892
@@ -58354,7 +58354,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: 4fa359eb3b70018448ef03ce78f81c18, type: 2}
   skillName: Gattaca
   skillIcon: {fileID: 959648582}
-  skillCost: 0
+  skillCost: 4
   lockedColorHex: '#9F9797'
 --- !u!114 &1620104168
 MonoBehaviour:
@@ -60224,7 +60224,7 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: e880fc5c6cff5774086f4051ab7a6bc1, type: 2}
   skillName: Spirit Soft The Dead
   skillIcon: {fileID: 1649139709}
-  skillCost: 0
+  skillCost: 2
   lockedColorHex: '#9F9797'
 --- !u!114 &1860520952
 MonoBehaviour:

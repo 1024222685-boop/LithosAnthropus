@@ -15,7 +15,7 @@ public class Enemy_DeadState : EnemyState
     {
         base.Enter();
 
-        // 清零物理，防止坠机乱飞
+        // 清零物理，防止x,y轴乱飞
         enemy.rb.velocity = Vector2.zero;
         enemy.rb.gravityScale = 0;
 

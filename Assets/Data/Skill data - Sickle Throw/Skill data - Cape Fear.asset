@@ -15,12 +15,12 @@ MonoBehaviour:
   displayName: Cape Fear
   description: The scikle will bounce between two or more enemy
   icon: {fileID: 21300000, guid: a5deae2d8e31c8a42a0e336a4ea944dc, type: 3}
-  cost: 0
+  cost: 15
   unlockedByDefault: 0
   skillType: 3
   upgradeData:
     upgradeType: 14
-    cooldown: 0
+    cooldown: 10
     damageScaleData:
       physical: 1
       elemental: 1
