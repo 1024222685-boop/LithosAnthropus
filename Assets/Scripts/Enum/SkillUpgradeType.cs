@@ -26,7 +26,7 @@ public enum SkillUpgradeType
     StuntMan,
     StuntMan_SingleAttack,
     StuntMan_MultiAttack,
-    StuntMan_ChanceToMultiply,
+    StuntMan_ChanceToDuplicate,
 
     StuntMan_Heal,
 

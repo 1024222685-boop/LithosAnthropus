@@ -136,6 +136,7 @@
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Combat.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
+    <Compile Include="Assets\Scripts\SkillSystem\SkillObject_AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_BattleState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_FallState.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_IdleState.cs" />

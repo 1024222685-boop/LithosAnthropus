@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
-  m_Name: Skill data - The Pursuit Happyness
+  m_Name: Skill data - The Life and Death of Colonel Blimp
   m_EditorClassIdentifier: 
-  displayName: The Pursuit Happyness
-  description: When the Health_Bar is less than 20%,it can regen the health to the
-    25%
-  icon: {fileID: 21300000, guid: caf06fc56a8987d42856a3e675ba28aa, type: 3}
+  displayName: The Life and Death of Colonel Blimp
+  description: The Stunt Man has a 30% chance to duplicate itself.
+  icon: {fileID: 21300000, guid: 2b48292c5f5e22c4faf42f76e1283677, type: 3}
   cost: 2
   unlockedByDefault: 0
   skillType: 1
   upgradeData:
-    upgradeType: 0
+    upgradeType: 18
     cooldown: 0
     damageScaleData:
       physical: 1

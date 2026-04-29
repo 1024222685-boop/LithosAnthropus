@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 186851569340404632}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.00000008742278, z: 0, w: -1}
-  m_LocalPosition: {x: -28.436, y: -1.489, z: 0}
+  m_LocalPosition: {x: -28.38, y: -1.48, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -118,7 +118,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256
-  targetCheck: {fileID: 5688513409792018198}
+  targetCheck: {fileID: 8100592218090785963}
   checkRadius: 1
   onDeathvfx: {fileID: 172590, guid: 93c383a7bb6b65547bc569e7d7f10507, type: 3}
   whatIsGround:
@@ -171,9 +171,9 @@ Transform:
   m_GameObject: {fileID: 999867061985676197}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.32, y: -0.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5688513409792018198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 1666090445918558571}
   - component: {fileID: 2953544570441210689}
   - component: {fileID: 845832125920051531}
+  - component: {fileID: 7123969976228528749}
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: Animator
@@ -289,3 +290,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7123969976228528749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4967625531632089380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a36a433efe76a4a8c524f5080718f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
