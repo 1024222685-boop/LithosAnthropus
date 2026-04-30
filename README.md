@@ -1,2 +1,3 @@
 # StoneOfAnthropotes
-Independent Game Designe
+Independent Game Design
+And welcome to my Game World
