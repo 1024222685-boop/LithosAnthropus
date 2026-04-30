@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Skill data - The Pursuit Happyness
   m_EditorClassIdentifier: 
   displayName: The Pursuit Happyness
-  description: When the Health_Bar is less than 20%,it can regen the health to the
-    25%
+  description: 'When StuntMan is destroyed by enemy,it will become a soul back to
+    the E mu''s body and heals E mu on contact. '
   icon: {fileID: 21300000, guid: caf06fc56a8987d42856a3e675ba28aa, type: 3}
   cost: 2
   unlockedByDefault: 0
   skillType: 1
   upgradeData:
-    upgradeType: 0
+    upgradeType: 19
     cooldown: 0
     damageScaleData:
       physical: 1

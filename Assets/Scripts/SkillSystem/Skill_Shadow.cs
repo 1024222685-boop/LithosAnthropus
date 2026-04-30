@@ -30,6 +30,32 @@ public class Skill_Shadow : Skill_Base
         playerHealth = GetComponentInParent<Entity_Health>();
     }
 
+    public void CreateShadow()
+    {
+        float detonateTime = GetDetonateTime();
+
+        GameObject shadow = Instantiate(shadowPrefab, transform.position, Quaternion.identity);
+        currentShadow = shadow.GetComponent<SkillObject_Shadow>();
+        currentShadow.SetupShadow(this);
+
+        if (Unlocked(SkillUpgradeType.ShadowClone_Swap) || Unlocked(SkillUpgradeType.ShadowClone_SwapHpRecover))
+            currentShadow.OnSlash += ForceCooldown;
+    }
+
+    public void CreateRawShadow(Transform target = null,bool shadowCanMove = false)
+    {
+        bool canMove = shadowCanMove != false ? shadowCanMove : 
+            Unlocked(SkillUpgradeType.ShadowClone_CloneSpeedUp) || Unlocked(SkillUpgradeType.ShadowClone_MoreClone);
+
+        GameObject shadow = Instantiate(shadowPrefab, transform.position, Quaternion.identity);
+        shadow.GetComponent<SkillObject_Shadow>().SetupShadow(this, detonateTime, canMove, shadowSpeed,target);
+    }
+
+    public void CreateDomainShadow(Transform target)
+    {
+
+    }
+
     public override void TryUseSkill()
     {
         if (CanUseSkill() == false)
@@ -130,25 +156,6 @@ public class Skill_Shadow : Skill_Base
         SetSkillOnCooldown();
     }
 
-    public void CreateShadow()
-    {
-        float detonateTime = GetDetonateTime();
-
-        GameObject shadow = Instantiate(shadowPrefab, transform.position, Quaternion.identity);
-        currentShadow = shadow.GetComponent<SkillObject_Shadow>();
-        currentShadow.SetupShadow(this);
-
-        if (Unlocked(SkillUpgradeType.ShadowClone_Swap) || Unlocked(SkillUpgradeType.ShadowClone_SwapHpRecover))
-            currentShadow.OnSlash += ForceCooldown;
-    }
-
-    public void CreateRawShadow()
-    {
-        bool canMove = Unlocked(SkillUpgradeType.ShadowClone_CloneSpeedUp) || Unlocked(SkillUpgradeType.ShadowClone_MoreClone);
-
-        GameObject shadow = Instantiate(shadowPrefab, transform.position, Quaternion.identity);
-        shadow.GetComponent<SkillObject_Shadow>().SetupShadow(this, detonateTime, canMove, shadowSpeed);
-    }
 
     public float GetDetonateTime()
     {

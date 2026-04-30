@@ -19,9 +19,9 @@ public class SkillObject_Shadow : SkillObject_Base
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 
-    public void MoveTowardsClosestTarget(float speed)
+    public void MoveTowardsClosestTarget(float speed,Transform newTarget = null)
     {
-        target = FindClosestTarget();
+        target = newTarget == null ? FindClosestTarget() : newTarget;
         this.speed = speed;
     }
 
@@ -37,17 +37,16 @@ public class SkillObject_Shadow : SkillObject_Base
         Invoke(nameof(Slash), detonationTime);
     }
 
-    public void SetupShadow(Skill_Shadow shadowManager, float detonationTime, bool canMove, float shadowSpeed)
+    public void SetupShadow(Skill_Shadow shadowManager, float detonationTime, bool canMove, float shadowSpeed,Transform target = null)
     {
         this.shadowManager = shadowManager;
-
         playerStats = shadowManager.player.stats;
         damageScaleData = shadowManager.damageScaleData;
 
         Invoke(nameof(Slash), detonationTime);
 
         if (canMove)
-            MoveTowardsClosestTarget(shadowSpeed);
+            MoveTowardsClosestTarget(shadowSpeed,target);
     }
 
     public void Slash()

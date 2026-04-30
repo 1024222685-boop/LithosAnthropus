@@ -31,5 +31,9 @@ public enum SkillUpgradeType
     StuntMan_Heal,
 
     StuntMan_Clean,
-    StuntMan_Cooldown   
+    StuntMan_Cooldown,
+
+    Domain_SlowinDown,
+    Domain_StuntSpam,
+    Domain_ShadowSpam
 }

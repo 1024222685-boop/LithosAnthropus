@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
-  m_Name: Skill data - Ikiru
+  m_Name: Skill data - I walking by my own ways
   m_EditorClassIdentifier: 
-  displayName: Ikiru
-  description: The Pursuit Happyness reduces cooldown of E mu's other skills by 1
-    second
-  icon: {fileID: 21300000, guid: 692233f6c1c22f446b751a78907c5655, type: 3}
-  cost: 4
+  displayName: ' I walking by my own ways'
+  description: Each enemy trapped in this field is struck by multiple shadow clowns
+  icon: {fileID: 21300000, guid: c0721b8f282ff7545ad0c56089512f56, type: 3}
+  cost: 0
   unlockedByDefault: 0
-  skillType: 1
+  skillType: 4
   upgradeData:
-    upgradeType: 21
+    upgradeType: 24
     cooldown: 0
     damageScaleData:
       physical: 1

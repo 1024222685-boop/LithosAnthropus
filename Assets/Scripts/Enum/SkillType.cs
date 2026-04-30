@@ -7,5 +7,6 @@ public enum SkillType
     AFewGoodMen,
     Stuntman,
     ShadowClone,
-    SickleThrow
+    SickleThrow,
+    DomainExpansion
 }

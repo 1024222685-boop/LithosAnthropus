@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_BattleState : EnemyState
@@ -18,19 +16,19 @@ public class Enemy_BattleState : EnemyState
         base.Enter();
         UpdateBattleTimer();
 
-        if(player == null)
+        if (player == null)
             player = enemy.GetPlayerReference();
 
         if (ShouldRetreat())
         {
-            rb.velocity = new Vector2(enemy.retreatVelocity.x * -DirectionToPlayer(),enemy.retreatVelocity.y);
+            rb.velocity = new Vector2((enemy.retreatVelocity.x * enemy.activeSlowMutiplier) * -DirectionToPlayer(), enemy.retreatVelocity.y);
             enemy.HandleFlip(DirectionToPlayer());
         }
     }
 
     public override void Update()
     {
-        base .Update();
+        base.Update();
 
         if (enemy.PlayerDetected() == true)
         {
@@ -44,7 +42,7 @@ public class Enemy_BattleState : EnemyState
         if (WithinAttackRange() && enemy.PlayerDetected())
             stateMachine.ChangeState(enemy.attackState);
         else
-            enemy.SetVelocity(enemy.battleMoveSpeed * DirectionToPlayer(), rb.velocity.y);
+            enemy.SetVelocity(enemy.GetBattleMoveSpeed() * DirectionToPlayer(), rb.velocity.y);
 
     }
 
@@ -71,7 +69,7 @@ public class Enemy_BattleState : EnemyState
 
     private float DistanceToPlayer()
     {
-      if(player == null)
+        if (player == null)
             return float.MaxValue;
 
         return Mathf.Abs(player.position.x - enemy.transform.position.x);
@@ -79,7 +77,7 @@ public class Enemy_BattleState : EnemyState
 
     private int DirectionToPlayer()
     {
-        if(player == null)
+        if (player == null)
             return 0;
 
         return player.position.x > enemy.transform.position.x ? 1 : -1;

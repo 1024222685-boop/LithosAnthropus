@@ -22,7 +22,7 @@ public class Enemy_MoveState : Enemy_GroundState
     {
         base.Update();
 
-        enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.velocity.y);
+        enemy.SetVelocity(enemy.GetMoveSpped() * enemy.facingDir, rb.velocity.y);
 
         if (enemy.groundDetected == false || enemy.wallDetected)
         {

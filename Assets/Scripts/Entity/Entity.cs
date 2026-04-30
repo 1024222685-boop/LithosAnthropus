@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
@@ -10,14 +9,14 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
     public Animator anim { get; private set; }//动画组件（设为private的目的是防止修改，保证调用时出错可首先排除这个问题）
 
     public Rigidbody2D rb { get; private set; }
-    public Entity_Stats stats { get; private set; } 
+    public Entity_Stats stats { get; private set; }
     protected StateMachine stateMachine;//让所有实体都拥有状态机
 
     private bool facingRight = true;
     public int facingDir { get; private set; } = 1;
 
     [Header("Collision detection")]
-    [SerializeField] protected LayerMask whatIsGround;
+    public LayerMask whatIsGround;
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private float wallCheckDistance;
     [SerializeField] private Transform groundCheck;
@@ -41,7 +40,7 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
 
     protected virtual void Start()
     {
-        
+
     }
 
     protected virtual void Update()
@@ -57,23 +56,33 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
 
     public virtual void EntityDeath()
     {
-        
+
     }
 
-    public virtual void  SlowDownEntity(float duration,float slowMultiplier)
+    public virtual void SlowDownEntity(float duration, float slowMultiplier, bool canOverrideSlowEffect = false)
     {
-        if(slowDownCo != null)
-            StopCoroutine(slowDownCo);
+        if (slowDownCo != null)
+        {
+            if (canOverrideSlowEffect)
+                StopCoroutine(slowDownCo);
+            else
+                return;
+        }
 
-        slowDownCo = StartCoroutine(SlowDownEntityCo(duration,slowMultiplier));
+        slowDownCo = StartCoroutine(SlowDownEntityCo(duration, slowMultiplier));
     }
 
-    protected virtual IEnumerator SlowDownEntityCo(float duration,float slowMultiplier)
+    protected virtual IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
     {
         yield return null;
     }
 
-    public void ReciveKnockback(Vector2 knockback,float duration)
+    public virtual void StopSlowDown()
+    {
+        slowDownCo = null;
+    }
+
+    public void ReciveKnockback(Vector2 knockback, float duration)
     {
         if (knockbackCo != null)
             StopCoroutine(knockbackCo);
@@ -86,11 +95,11 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
         }
     }
 
-    private IEnumerator KnockbackCo(Vector2 knockback,float duration)//击退协程
+    private IEnumerator KnockbackCo(Vector2 knockback, float duration)//击退协程
     {
         isKnocked = true;//标记：正在击退
-        if(this is Player)
-    {
+        if (this is Player)
+        {
             anim.SetBool("isHurt", true);
         }
 
@@ -151,7 +160,7 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
         }
     }
 
-   
+
     protected virtual void OnDrawGizmos()//编辑器里绘制辅助线（方便观察角色或者敌人的检测范围）
     {
         Gizmos.DrawLine(groundCheck.position, groundCheck.position + new Vector3(0, -groundCheckDistance));

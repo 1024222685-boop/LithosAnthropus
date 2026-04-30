@@ -2,9 +2,19 @@ using UnityEngine;
 
 public class SkillObject_Stuntman : SkillObject_Base
 {
+    [SerializeField] private float wispMoveSpeed = 15;
     [SerializeField] private GameObject onDeathvfx;
     [SerializeField] private LayerMask whatIsGround;
+    private bool shouldMoveToPlayer;
+
+    private Transform playerTransform;
     private Skill_Stuntman stuntManager;
+    private TrailRenderer wispTrail;
+    private Entity_Health playerhealth;
+    private SkillObject_Health stuntHealth;
+    private Player_SkillManager skillManager;
+    private Entity_StatusHandler statusHandler;
+
 
     public int maxAttacks { get; private set; }
 
@@ -14,16 +24,55 @@ public class SkillObject_Stuntman : SkillObject_Base
         playerStats = stuntManager.player.stats;
         damageScaleData = stuntManager.damageScaleData;
         maxAttacks = stuntManager.GetMaxAttacks();
+        playerTransform = stuntManager.transform.root;
+        playerhealth = stuntManager.player.health;
+        statusHandler = stuntManager.player.statusHandler;
 
-        FlipTotarget();
-        anim.SetBool("canAttack", maxAttacks > 0);
+        skillManager = stuntManager.skillManager;
+
         Invoke(nameof(HandleDeath), stuntManager.GetStuntDuration());
+        FlipTotarget();
+
+        stuntHealth = GetComponent<SkillObject_Health>();
+        wispTrail = GetComponentInChildren<TrailRenderer>();
+        wispTrail.gameObject.SetActive(false);
+
+        anim.SetBool("canAttack", maxAttacks > 0);
     }
 
     private void Update()
     {
-        anim.SetFloat("yVelocity", rb.velocity.y);
-        StopHorizontalMovement();
+        if (shouldMoveToPlayer)
+            HandleWispMovement();
+        else
+        {
+            anim.SetFloat("yVelocity", rb.velocity.y);
+            StopHorizontalMovement();
+        }
+
+    }
+
+    private void HandlePlayerTouch()
+    {
+        float healAmount = stuntHealth.lastDamageTaken * stuntManager.GetPercentofDamageHealed();
+        playerhealth.IncreaseHealth(healAmount);
+
+        float amountInSeconds = stuntManager.GetCooldownReduceInSeconds();
+        skillManager.ReduceAllSkillCooldownBy(amountInSeconds);
+
+        if(stuntManager.CanRemoveNegativeEffects())
+            statusHandler.RemoveAllNegativeEffects( );
+    }
+
+    private void HandleWispMovement()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, wispMoveSpeed * Time.deltaTime);
+
+        if (Vector2.Distance(transform.position, playerTransform.position) < .5f)
+        {
+            HandlePlayerTouch();
+            Destroy(gameObject);
+        }
     }
 
     private void FlipTotarget()
@@ -51,7 +100,31 @@ public class SkillObject_Stuntman : SkillObject_Base
     public void HandleDeath()
     {
         Instantiate(onDeathvfx, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+
+        if (stuntManager.ShouldBeWisp())
+        {
+            shouldMoveToPlayer = true;
+
+            anim.gameObject.SetActive(false);
+
+            wispTrail.gameObject.SetActive(true);
+
+            rb.velocity = Vector2.zero;
+            rb.gravityScale = 0;
+            rb.isKinematic = true;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void TurnIntoWisp()
+    {
+        shouldMoveToPlayer = true;
+        anim.gameObject.SetActive(false);
+        wispTrail.gameObject.SetActive(true);
+        rb.simulated = false;
     }
 
     private void StopHorizontalMovement()

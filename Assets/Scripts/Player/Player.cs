@@ -27,6 +27,7 @@ public class Player : Entity
     public Player_CounterAttackState counterAttackState { get; private set; }
     public Player_HurtState hurtState { get; private set; }
     public Player_SickleThrowState sickleThrowState { get; private set; }
+    public Player_DomainExpansionState domainExpansionState { get; private set; }
 
     #endregion
 
@@ -36,6 +37,10 @@ public class Player : Entity
     public float attackVelocityDuration = .1f;
     public float comboResetTime = 1;
     private Coroutine queuedAttackCo;
+
+    [Header("Ultimate ability details")]
+    public float riseSpeed = 25;
+    public float riseMaxDistance = 3;
 
     [Header("Movement details")]//在Inseprctor里添加一个醒目的标题，形成一个视觉上的分组能看出参数变化的细节
     public float moveSpeed;
@@ -73,6 +78,7 @@ public class Player : Entity
         counterAttackState = new Player_CounterAttackState(this, stateMachine, "counterAttack");
         hurtState = new Player_HurtState(this, stateMachine, "isHurt");
         sickleThrowState = new Player_SickleThrowState(this, stateMachine, "sickleThrow");
+        domainExpansionState = new Player_DomainExpansionState(this, stateMachine, "jumpFall");
     }
 
     protected override void Start()

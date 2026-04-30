@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
-  m_Name: Skill data - Ikiru
+  m_Name: Skill data - La Grande Illusion
   m_EditorClassIdentifier: 
-  displayName: Ikiru
-  description: The Pursuit Happyness reduces cooldown of E mu's other skills by 1
-    second
-  icon: {fileID: 21300000, guid: 692233f6c1c22f446b751a78907c5655, type: 3}
-  cost: 4
+  displayName: La Grande Illusion
+  description: 'When E mu relaese the filed reach to the enem,the stuntman will attack
+    them.
+
+'
+  icon: {fileID: 21300000, guid: 7f15d5b511fc3a4408ac8fe322b1d3b4, type: 3}
+  cost: 0
   unlockedByDefault: 0
-  skillType: 1
+  skillType: 4
   upgradeData:
-    upgradeType: 21
+    upgradeType: 24
     cooldown: 0
     damageScaleData:
       physical: 1

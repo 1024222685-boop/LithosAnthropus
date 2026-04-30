@@ -23,6 +23,13 @@ public class Entity_StatusHandler : MonoBehaviour
         entityvfx = GetComponent<Entity_VFX>();
     }
 
+    public void RemoveAllNegativeEffects()
+    {
+        StopAllCoroutines();
+        currentEffect = ElementType.None;
+        entityvfx.StopAllvfx();
+    }
+
     public void ApplyStatusEffect(ElementType element,ElementalEffectData effectData)
     {
         if (element == ElementType.Mercy && CanBeApplied(ElementType.Mercy))
@@ -35,7 +42,7 @@ public class Entity_StatusHandler : MonoBehaviour
             ApplyCowardEffect(effectData.cowardDuration, effectData.cowardDamage, effectData.cowardCharge);
     }
 
-    public void ApplyCowardEffect(float duration,float damage,float absorb)
+    private void ApplyCowardEffect(float duration,float damage,float absorb)
     {
         float cowardiceResistance = entityStats.GetElementalResistance(ElementType.Cowardice);
         float finalAbsorb = absorb * (1 - cowardiceResistance);
@@ -76,7 +83,7 @@ public class Entity_StatusHandler : MonoBehaviour
         StopCowardEffect();
     }
 
-    public void ApplyBrutalEffect(float duration, float brutalityDamage)
+    private void ApplyBrutalEffect(float duration, float brutalityDamage)
     {
         float brutalityResistance = entityStats.GetElementalResistance(ElementType.Brutality);
         float finalDamage = brutalityDamage * (1 - brutalityResistance);
@@ -106,7 +113,7 @@ public class Entity_StatusHandler : MonoBehaviour
 
     }
 
-    public void ApplyMercyEffect(float duration, float slowMultiplier)
+   private void ApplyMercyEffect(float duration, float slowMultiplier)
     {
         float mercyResistance = entityStats.GetElementalResistance(ElementType.Mercy);
         float finalDuration = duration * (1 - mercyResistance);
