@@ -1,13 +1,17 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Collections; 
 
-public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class UI_TreeNode : MonoBehaviour,
+    IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler,
+    ISelectHandler, IDeselectHandler, ISubmitHandler
 {
     private UI ui;
     private RectTransform rect;
     private UI_SkillTree skillTree;
     private UI_TreeConnectHandler connectHandler;
+    private Button button;
 
     [Header("Unlock details")]
     public UI_TreeNode[] neededNodes;
@@ -22,7 +26,13 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     [SerializeField] private int skillCost;
     [SerializeField] private string lockedColorHex = "#9F9797";
 
-    // 常驻基准色
+    [Header("Controller choose")] 
+    [SerializeField] private GameObject selectionFrame; 
+    [SerializeField] private float flashSpeed = 2f; 
+    [SerializeField] private Color flashColor = Color.yellow; 
+    private Coroutine flashCoroutine; 
+    private Image frameImage; 
+
     private Color baseNormalColor;
     private readonly Color hoverHighlightColor = new Color(0.9f, 0.9f, 0.9f, 1f);
 
@@ -33,8 +43,35 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         rect = GetComponent<RectTransform>();
         skillTree = GetComponentInParent<UI_SkillTree>();
         connectHandler = GetComponent<UI_TreeConnectHandler>();
+        button = GetComponent<Button>();
+        if (button == null)
+        {
+            button = gameObject.AddComponent<Button>();
+        }
 
-        // 初始化：未解锁=灰色常驻底色
+        button.transition = Selectable.Transition.None;
+        button.targetGraphic = skillIcon;
+
+        button.colors = new ColorBlock()
+        {
+            normalColor = Color.white,
+            highlightedColor = Color.white,
+            pressedColor = Color.white,
+            disabledColor = Color.white,
+            colorMultiplier = 1f,
+            fadeDuration = 0f
+        };
+
+        if (selectionFrame != null)
+        {
+            frameImage = selectionFrame.GetComponent<Image>();
+            if (frameImage != null)
+            {
+                frameImage.color = flashColor;
+            }
+            selectionFrame.SetActive(false);
+        }
+
         baseNormalColor = GetColorByHex(lockedColorHex);
         UpdateIconBaseColor(baseNormalColor);
     }
@@ -43,9 +80,18 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (skillData.unlockedByDefault)
             Unlock();
+
+        UpdateButtonInteractable();
     }
 
-    // 永久设置常驻底色
+    private void UpdateButtonInteractable()
+    {
+        if (button != null)
+        {
+            button.interactable = true;
+        }
+    }
+
     private void UpdateIconBaseColor(Color newBaseColor)
     {
         baseNormalColor = newBaseColor;
@@ -62,12 +108,14 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         skillTree.AddSkillPoints(skillData.cost);
         connectHandler.UnlockedConnectionImage(false);
+
+        UpdateButtonInteractable();
     }
 
     private void Unlock()
     {
         isUnlocked = true;
-        // 解锁后常驻白色底色
+
         UpdateIconBaseColor(Color.white);
         LockConflictNodes();
 
@@ -75,6 +123,8 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         connectHandler.UnlockedConnectionImage(true);
 
         skillTree.skillManager.GetSkillByType(skillData.skillType).SetSkillUpgrade(skillData.upgradeData);
+
+        UpdateButtonInteractable();
     }
 
     private bool CanBeUnlocked()
@@ -106,18 +156,30 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             node.isLocked = true;
             node.LockChildNodes();
+            node.UpdateButtonInteractable();
         }
     }
 
     public void LockChildNodes()
     {
         isLocked = true;
+        UpdateButtonInteractable();
 
         foreach (var node in connectHandler.GetChildNodes())
             node.LockChildNodes();
     }
 
     public void OnPointerDown(PointerEventData eventData)
+    {
+        TryUnlockOrShowLocked();
+    }
+
+    public void OnSubmit(BaseEventData eventData)
+    {
+        TryUnlockOrShowLocked();
+    }
+
+    private void TryUnlockOrShowLocked()
     {
         if (CanBeUnlocked())
             Unlock();
@@ -127,26 +189,90 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        ShowTooltipAndHighlight();
+        ShowSelectionFrame();
+    }
+
+    public void OnSelect(BaseEventData eventData)
+    {
+        ShowTooltipAndHighlight();
+        ShowSelectionFrame();
+
+        if (isLocked)
+        {
+            ui.skillToolTip.LockedSkillEffect();
+
+            Debug.Log($"The locked node is choosed：{skillData.displayName}，reson：confliced with the other nodes");
+        }
+    }
+
+    private void ShowTooltipAndHighlight()
+    {
         if (ui == null || ui.skillToolTip == null) return;
         ui.skillToolTip.ShowToolTip(true, rect, this);
 
-        // 只有 未锁定、未解锁 的可交互节点，才允许鼠标高亮
         if (isUnlocked || isLocked)
             return;
 
-        // 鼠标移入：临时高亮
         if (skillIcon != null)
             skillIcon.color = hoverHighlightColor;
     }
 
+    private void ShowSelectionFrame()
+    {
+        if (selectionFrame == null || frameImage == null) return;
+        if (isUnlocked || isLocked) return; 
+
+        selectionFrame.SetActive(true);
+
+        if (flashCoroutine != null)
+            StopCoroutine(flashCoroutine);
+
+        flashCoroutine = StartCoroutine(FlashFrame());
+    }
+
+    private IEnumerator FlashFrame()
+    {
+        while (true)
+        {
+            float alpha = Mathf.PingPong(Time.time * flashSpeed, 1f) * 0.7f + 0.3f;
+            frameImage.color = new Color(flashColor.r, flashColor.g, flashColor.b, alpha);
+            yield return null;
+        }
+    }
+
     public void OnPointerExit(PointerEventData eventData)
+    {
+        HideTooltipAndResetColor();
+        HideSelectionFrame();
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        HideTooltipAndResetColor();
+        HideSelectionFrame();
+    }
+
+    private void HideTooltipAndResetColor()
     {
         if (ui == null || ui.skillToolTip == null) return;
         ui.skillToolTip.ShowToolTip(false, rect);
 
-        //不管什么状态，鼠标移出 强制恢复常驻基准色
         if (skillIcon != null)
             skillIcon.color = baseNormalColor;
+    }
+
+    private void HideSelectionFrame()
+    {
+        if (selectionFrame == null) return;
+
+        selectionFrame.SetActive(false);
+
+        if (flashCoroutine != null)
+        {
+            StopCoroutine(flashCoroutine);
+            flashCoroutine = null;
+        }
     }
 
     private Color GetColorByHex(string hexNumber)
@@ -157,7 +283,8 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void OnDisable()
     {
-        // 失活时强制刷新正确底色
+        HideSelectionFrame();
+
         if (isLocked || !isUnlocked)
             UpdateIconBaseColor(GetColorByHex(lockedColorHex));
         if (isUnlocked)

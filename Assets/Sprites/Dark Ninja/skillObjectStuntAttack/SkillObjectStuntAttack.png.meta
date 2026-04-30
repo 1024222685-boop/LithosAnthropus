@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: Cy8XvHyvW3jNPG/f4/l18ng9HfSxoRW29b8BSY4tVIuvWWkL330Oznk=
+guid: Ci4c4SKuUHPVVUcbGUxb7hTgf7tEGwx3ePVqavDODr2l48/arSrJrNY=
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -144,7 +144,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SkillObjectStuntAttack_3_0
+      name: SkillObjectStuntAttack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -158,14 +158,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ade8a03ef63930458ecf22a7632f675
-      internalID: 1455227897
+      spriteID: 0c33d49fea15353419c965fc5542d38d
+      internalID: -1943908978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkillObjectStuntAttack_3_1
+      name: SkillObjectStuntAttack_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a696df4f983e741ad0f17d3354cd53
+      internalID: 1107215995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillObjectStuntAttack_2
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +200,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2001425e73a49843a1ebc474c4e7f70
-      internalID: -1838234389
+      spriteID: 834d69772d37f2043b5fc4a53b64a4ce
+      internalID: -1549603250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkillObjectStuntAttack_3_2
+      name: SkillObjectStuntAttack_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a5699533f717245961c48c35e4f0cc
+      internalID: 685489329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillObjectStuntAttack_4
       rect:
         serializedVersion: 2
         x: 0
@@ -200,8 +242,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf22df1e689941d43838a27274113eea
-      internalID: 612757609
+      spriteID: 4a85b22c7a074134087372f4dbc8f24e
+      internalID: 2093797206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillObjectStuntAttack_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8848d720ebde140a100ccab74cd480
+      internalID: 1814644600
       vertices: []
       indices: 
       edges: []
@@ -217,9 +280,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SkillObjectStuntAttack_3_0: 1455227897
-      SkillObjectStuntAttack_3_1: -1838234389
-      SkillObjectStuntAttack_3_2: 612757609
+      SkillObjectStuntAttack_0: -1943908978
+      SkillObjectStuntAttack_1: 1107215995
+      SkillObjectStuntAttack_2: -1549603250
+      SkillObjectStuntAttack_3: 685489329
+      SkillObjectStuntAttack_4: 2093797206
+      SkillObjectStuntAttack_5: 1814644600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   doOverrideTextureManagerOperations: 0

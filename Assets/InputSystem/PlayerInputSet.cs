@@ -181,6 +181,15 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AimDirection"",
+                    ""type"": ""Value"",
+                    ""id"": ""7d1bb8f5-293e-4e98-be45-c2ee4d17fe57"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -480,6 +489,17 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                     ""action"": ""UltimateSpell"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5cc388e7-feb8-4fbd-a946-d3fd1afb0e11"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimDirection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -515,6 +535,7 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
         m_Player_RangeAttack = m_Player.FindAction("RangeAttack", throwIfNotFound: true);
         m_Player_Mouse = m_Player.FindAction("Mouse", throwIfNotFound: true);
         m_Player_UltimateSpell = m_Player.FindAction("UltimateSpell", throwIfNotFound: true);
+        m_Player_AimDirection = m_Player.FindAction("AimDirection", throwIfNotFound: true);
     }
 
     ~@PlayerInputSet()
@@ -605,6 +626,7 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_RangeAttack;
     private readonly InputAction m_Player_Mouse;
     private readonly InputAction m_Player_UltimateSpell;
+    private readonly InputAction m_Player_AimDirection;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -656,6 +678,10 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/UltimateSpell".
         /// </summary>
         public InputAction @UltimateSpell => m_Wrapper.m_Player_UltimateSpell;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/AimDirection".
+        /// </summary>
+        public InputAction @AimDirection => m_Wrapper.m_Player_AimDirection;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -712,6 +738,9 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
             @UltimateSpell.started += instance.OnUltimateSpell;
             @UltimateSpell.performed += instance.OnUltimateSpell;
             @UltimateSpell.canceled += instance.OnUltimateSpell;
+            @AimDirection.started += instance.OnAimDirection;
+            @AimDirection.performed += instance.OnAimDirection;
+            @AimDirection.canceled += instance.OnAimDirection;
         }
 
         /// <summary>
@@ -753,6 +782,9 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
             @UltimateSpell.started -= instance.OnUltimateSpell;
             @UltimateSpell.performed -= instance.OnUltimateSpell;
             @UltimateSpell.canceled -= instance.OnUltimateSpell;
+            @AimDirection.started -= instance.OnAimDirection;
+            @AimDirection.performed -= instance.OnAimDirection;
+            @AimDirection.canceled -= instance.OnAimDirection;
         }
 
         /// <summary>
@@ -876,5 +908,12 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnUltimateSpell(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "AimDirection" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAimDirection(InputAction.CallbackContext context);
     }
 }

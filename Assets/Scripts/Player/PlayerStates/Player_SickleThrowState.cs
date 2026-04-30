@@ -23,7 +23,9 @@ public class Player_SickleThrowState : PlayerState
     {
         base.Update();
 
-        Vector2 dirToMouse = DirectionToMouse();
+        Vector2 dirToMouse = GetStickDirection();
+        if (dirToMouse == Vector2.zero)
+            dirToMouse = DirectionToMouse();
 
         player.SetVelocity(0, rb.velocity.y);
         player.HandleFlip(dirToMouse.x);
@@ -46,6 +48,18 @@ public class Player_SickleThrowState : PlayerState
         base.Exit();
         anim.SetBool("sickleThrowPerformed", false);
         skillManager.sickleThrow.EnableDots(false);
+    }
+
+    private Vector2 GetStickDirection()
+    {
+        Vector2 stickInput = input.Player.AimDirection.ReadValue<Vector2>();
+
+        if (stickInput.magnitude > 0.1f)
+        {
+            return stickInput.normalized;
+        }
+
+        return Vector2.zero;
     }
 
     private Vector2 DirectionToMouse()

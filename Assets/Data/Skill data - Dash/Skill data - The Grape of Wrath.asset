@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
   m_Name: Skill data - The Grape of Wrath
   m_EditorClassIdentifier: 
+  displayName: The Grape of Wrath
+  description: Emu will become invincible
+  icon: {fileID: 21300000, guid: 2b1240ed18c87fe44b78ad3204e558f2, type: 3}
   cost: 10
   unlockedByDefault: 0
   skillType: 0
   upgradeData:
     upgradeType: 5
-    cooldown: 30
+    cooldown: 5
     damageScaleData:
       physical: 1
       elemental: 1
@@ -28,6 +31,3 @@ MonoBehaviour:
       cowardDuration: 3
       cowardDamageScale: 1
       cowardCharge: 0.4
-  displayName: The Grape of Wrath
-  description: Emu will become invincible
-  icon: {fileID: 21300000, guid: 2b1240ed18c87fe44b78ad3204e558f2, type: 3}

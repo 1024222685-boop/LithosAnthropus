@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UI_SkillTree : MonoBehaviour
 {
     [SerializeField] public int skillPoints;
     [SerializeField] private UI_TreeConnectHandler[] parentNodes;
+    [SerializeField] private UI_TreeNode defaultSelectedNode;
     public Player_SkillManager skillManager { get; private set; }
 
     private void Awake()
@@ -13,8 +16,38 @@ public class UI_SkillTree : MonoBehaviour
 
     private void Start()
     {
-
         UpdateAllConnections();
+    }
+
+    private void OnEnable()
+    {
+        Invoke(nameof(SetDefaultSelectedNode), 0.02f);
+    }
+
+    private void SetDefaultSelectedNode()
+    {
+        if (EventSystem.current == null) return;
+
+        if (defaultSelectedNode != null)
+        {
+            Button btn = defaultSelectedNode.GetComponent<Button>();
+            if (btn != null && btn.interactable)
+            {
+                EventSystem.current.SetSelectedGameObject(defaultSelectedNode.gameObject);
+                return;
+            }
+        }
+
+        UI_TreeNode[] allNodes = GetComponentsInChildren<UI_TreeNode>();
+        foreach (var node in allNodes)
+        {
+            Button btn = node.GetComponent<Button>();
+            if (btn != null && btn.interactable)
+            {
+                EventSystem.current.SetSelectedGameObject(node.gameObject);
+                return;
+            }
+        }
     }
 
     [ContextMenu("Reset Skill Tree")]

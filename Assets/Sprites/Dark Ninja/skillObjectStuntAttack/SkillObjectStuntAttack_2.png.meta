@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: B30esCr7VX1Ga7MSLi+GglmDVmX/N9lBfU+VrhCD+O9Cw682xsTCPGw=
+guid: WXMW4XupUi9RJCqpZFs3PWX0ZTPLWT9eLKvEbChKoO0zc3reh3EGzfs=
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6deb6a82d62f98c4785693e62f7b4023
-      internalID: -369350110
+      spriteID: f7af54c75856d0c4cb4bfcebf1149fec
+      internalID: 1666968133
       vertices: []
       indices: 
       edges: []
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cbd3672550004e44b3589613a04154d
-      internalID: 2090564627
+      spriteID: 3ef090ee748e574418245ddfbf2c05d6
+      internalID: 724212150
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f73b1889bcad7fd48a77189120d6a77f
-      internalID: 1462951090
+      spriteID: 698e4816eb21ec74f8e7958a5d940de6
+      internalID: 373067830
       vertices: []
       indices: 
       edges: []
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faf57e342f546634db41126e7436388b
-      internalID: -61770585
+      spriteID: 2cc0e628831bb2c4eb9a33c7950b6be7
+      internalID: -324378195
       vertices: []
       indices: 
       edges: []
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a294147aa9850fd4180fb80f775b9239
-      internalID: 2043986674
+      spriteID: 81ab555f30621564ca1f1d88b94a3bb1
+      internalID: 66353324
       vertices: []
       indices: 
       edges: []
@@ -259,11 +259,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SkillObjectStuntAttack_2_0: -369350110
-      SkillObjectStuntAttack_2_1: 2090564627
-      SkillObjectStuntAttack_2_2: 1462951090
-      SkillObjectStuntAttack_2_3: -61770585
-      SkillObjectStuntAttack_2_4: 2043986674
+      SkillObjectStuntAttack_2_0: 1666968133
+      SkillObjectStuntAttack_2_1: 724212150
+      SkillObjectStuntAttack_2_2: 373067830
+      SkillObjectStuntAttack_2_3: -324378195
+      SkillObjectStuntAttack_2_4: 66353324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   doOverrideTextureManagerOperations: 0

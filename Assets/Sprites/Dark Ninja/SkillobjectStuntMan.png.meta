@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: Cy8XvHyvW3jNPG/f4/l18ng9HfSxoRW29b8BSY4tVIuvWWkL330Oznk=
+guid: XntJsXn7AnoxgIkBzaMkOeJOa4V+oZ39WvBpt125bAZWOF4J1m+5P+I=
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -144,12 +144,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SkillObjectStuntAttack_3_0
+      name: SkillobjectStuntMan_0
       rect:
         serializedVersion: 2
         x: 0
         y: 128
-        width: 96
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,19 +158,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ade8a03ef63930458ecf22a7632f675
-      internalID: 1455227897
+      spriteID: fbc154296fd88014289b4bb905761ff8
+      internalID: -998776585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkillObjectStuntAttack_3_1
+      name: SkillobjectStuntMan_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd018dfd259a0334abf5624f383ef4f5
+      internalID: -642901550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillobjectStuntMan_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd22fbe4833f284d91d6624d0e4abef
+      internalID: -1955908565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillobjectStuntMan_3
       rect:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 96
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,19 +221,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2001425e73a49843a1ebc474c4e7f70
-      internalID: -1838234389
+      spriteID: 560aff55a3079204f8f0fb7b88231ec6
+      internalID: -980411624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkillObjectStuntAttack_3_2
+      name: SkillobjectStuntMan_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
+        x: 64
+        y: 64
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,8 +242,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf22df1e689941d43838a27274113eea
-      internalID: 612757609
+      spriteID: 62697be9a8e7cfd45a88389044057787
+      internalID: 1298157369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillobjectStuntMan_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98dce5d463dc5764f961dc19bd1bf66d
+      internalID: -56625469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillobjectStuntMan_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a704d78608d77dd4aa5a19cbf6321f9b
+      internalID: 515298895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillobjectStuntMan_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7fa9734a6a480b46ac0dfbc3d5e3069
+      internalID: -995761259
       vertices: []
       indices: 
       edges: []
@@ -217,9 +322,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SkillObjectStuntAttack_3_0: 1455227897
-      SkillObjectStuntAttack_3_1: -1838234389
-      SkillObjectStuntAttack_3_2: 612757609
+      SkillobjectStuntMan_0: -998776585
+      SkillobjectStuntMan_1: -642901550
+      SkillobjectStuntMan_2: -1955908565
+      SkillobjectStuntMan_3: -980411624
+      SkillobjectStuntMan_4: 1298157369
+      SkillobjectStuntMan_5: -56625469
+      SkillobjectStuntMan_6: 515298895
+      SkillobjectStuntMan_7: -995761259
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   doOverrideTextureManagerOperations: 0
