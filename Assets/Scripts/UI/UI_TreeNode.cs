@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using System.Collections; 
+using System.Collections;
 
 public class UI_TreeNode : MonoBehaviour,
     IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler,
@@ -26,12 +26,12 @@ public class UI_TreeNode : MonoBehaviour,
     [SerializeField] private int skillCost;
     [SerializeField] private string lockedColorHex = "#9F9797";
 
-    [Header("Controller choose")] 
-    [SerializeField] private GameObject selectionFrame; 
-    [SerializeField] private float flashSpeed = 2f; 
-    [SerializeField] private Color flashColor = Color.yellow; 
-    private Coroutine flashCoroutine; 
-    private Image frameImage; 
+    [Header("Controller choose")]
+    [SerializeField] private GameObject SelectionFrame;
+    [SerializeField] private float flashSpeed = 3f;
+    [SerializeField] private Color flashColor = Color.yellow;
+    private Coroutine flashCoroutine;
+    private Image frameImage;
 
     private Color baseNormalColor;
     private readonly Color hoverHighlightColor = new Color(0.9f, 0.9f, 0.9f, 1f);
@@ -43,6 +43,7 @@ public class UI_TreeNode : MonoBehaviour,
         rect = GetComponent<RectTransform>();
         skillTree = GetComponentInParent<UI_SkillTree>();
         connectHandler = GetComponent<UI_TreeConnectHandler>();
+
         button = GetComponent<Button>();
         if (button == null)
         {
@@ -51,7 +52,6 @@ public class UI_TreeNode : MonoBehaviour,
 
         button.transition = Selectable.Transition.None;
         button.targetGraphic = skillIcon;
-
         button.colors = new ColorBlock()
         {
             normalColor = Color.white,
@@ -62,14 +62,15 @@ public class UI_TreeNode : MonoBehaviour,
             fadeDuration = 0f
         };
 
-        if (selectionFrame != null)
+        // 修复：统一初始化外框Image，仅从子物体获取，不重复覆盖
+        if (SelectionFrame != null)
         {
-            frameImage = selectionFrame.GetComponent<Image>();
+            frameImage = SelectionFrame.GetComponentInChildren<Image>();
             if (frameImage != null)
             {
                 frameImage.color = flashColor;
             }
-            selectionFrame.SetActive(false);
+            SelectionFrame.SetActive(false);
         }
 
         baseNormalColor = GetColorByHex(lockedColorHex);
@@ -201,8 +202,6 @@ public class UI_TreeNode : MonoBehaviour,
         if (isLocked)
         {
             ui.skillToolTip.LockedSkillEffect();
-
-            Debug.Log($"The locked node is choosed：{skillData.displayName}，reson：confliced with the other nodes");
         }
     }
 
@@ -218,12 +217,12 @@ public class UI_TreeNode : MonoBehaviour,
             skillIcon.color = hoverHighlightColor;
     }
 
+    // 修复：移除拦截判断，确保协程正常启动
     private void ShowSelectionFrame()
     {
-        if (selectionFrame == null || frameImage == null) return;
-        if (isUnlocked || isLocked) return; 
+        if (SelectionFrame == null || frameImage == null) return;
 
-        selectionFrame.SetActive(true);
+        SelectionFrame.SetActive(true);
 
         if (flashCoroutine != null)
             StopCoroutine(flashCoroutine);
@@ -231,11 +230,16 @@ public class UI_TreeNode : MonoBehaviour,
         flashCoroutine = StartCoroutine(FlashFrame());
     }
 
+    // 修复：优化协程稳定性，增加退出条件与空值保护
     private IEnumerator FlashFrame()
     {
-        while (true)
+        if (frameImage == null) yield break;
+
+        while (SelectionFrame.activeSelf)
         {
-            float alpha = Mathf.PingPong(Time.time * flashSpeed, 1f) * 0.7f + 0.3f;
+            if (frameImage == null) yield break;
+
+            float alpha = Mathf.PingPong(Time.unscaledTime * flashSpeed, 1f) * 0.7f + 0.3f;
             frameImage.color = new Color(flashColor.r, flashColor.g, flashColor.b, alpha);
             yield return null;
         }
@@ -264,9 +268,9 @@ public class UI_TreeNode : MonoBehaviour,
 
     private void HideSelectionFrame()
     {
-        if (selectionFrame == null) return;
+        if (SelectionFrame == null) return;
 
-        selectionFrame.SetActive(false);
+        SelectionFrame.SetActive(false);
 
         if (flashCoroutine != null)
         {

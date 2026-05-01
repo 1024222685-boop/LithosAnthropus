@@ -67,6 +67,8 @@ public class Skill_SickleThrow : Skill_Base
 
         currentSickle = newSickle.GetComponent<SkillObject_Sickle>();
         currentSickle.SetupSickle(this, GetThrowPower());
+
+        SetSkillOnCooldown();
     }
 
     private GameObject GetSicklePrefab()

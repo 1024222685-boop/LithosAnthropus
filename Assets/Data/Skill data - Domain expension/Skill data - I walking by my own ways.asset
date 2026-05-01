@@ -15,12 +15,12 @@ MonoBehaviour:
   displayName: ' I walking by my own ways'
   description: Each enemy trapped in this field is struck by multiple shadow clowns
   icon: {fileID: 21300000, guid: c0721b8f282ff7545ad0c56089512f56, type: 3}
-  cost: 0
+  cost: 20
   unlockedByDefault: 0
   skillType: 4
   upgradeData:
     upgradeType: 24
-    cooldown: 0
+    cooldown: 15
     damageScaleData:
       physical: 1
       elemental: 1
