@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
+  m_Name: Skill data -  The Enigma of Kaspar Hauser
+  m_EditorClassIdentifier: 
+  displayName: The Enigma of Kaspar Hauser
+  description: E mu will create a stuntman
+  icon: {fileID: 21300000, guid: 6b354efe2066c394c977a77253371211, type: 3}
+  cost: 1
+  unlockedByDefault: 0
+  skillType: 1
+  upgradeData:
+    upgradeType: 15
+    cooldown: 2
+    damageScaleData:
+      physical: 1
+      elemental: 1
+      mercyDuration: 3
+      mercySlowMultiplier: 0.2
+      brutalDuration: 3
+      brutalDamageScale: 1
+      cowardDuration: 3
+      cowardDamageScale: 1
+      cowardCharge: 0.4
