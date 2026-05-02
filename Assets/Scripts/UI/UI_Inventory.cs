@@ -33,12 +33,18 @@ public class UI_Inventory : MonoBehaviour
 
         for (int i = 0; i < uiEquipSlots.Length; i++)
         {
-            var playerEquipSlot = playerEquipList[i];
-
-            if (playerEquipSlot.HasItem() == false)
-                uiEquipSlots[i].UpdateSlot(null);
+            if (i < playerEquipList.Count)
+            {
+                var playerEquipSlot = playerEquipList[i];
+                if (playerEquipSlot.HasItem() == false)
+                    uiEquipSlots[i].UpdateSlot(null);
+                else
+                    uiEquipSlots[i].UpdateSlot(playerEquipSlot.equipedItem);
+            }
             else
-                uiEquipSlots[i].UpdateSlot(playerEquipSlot.equipedItem);
+            {
+                uiEquipSlots[i].UpdateSlot(null);
+            }
         }
     }
 
