@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,9 +15,9 @@ public class Inventory_Player : Inventory_Base
     public void TryEquipItem(Inventory_Item item)
     {
         var inventoryItem = FindItem(item.itemData);
-        var matchchinngSlots = equipList.FindAll(slot => slot.slotType == item.itemData.itemType);
+        var matchchingSlots = equipList.FindAll(slot => slot.slotType == item.itemData.itemType);
 
-        foreach (var slot in matchchinngSlots)
+        foreach (var slot in matchchingSlots)
         {
             if (slot.HasItem() == false)
             {
@@ -26,6 +25,12 @@ public class Inventory_Player : Inventory_Base
                 return;
             }
         }
+
+        var slotToReplace = matchchingSlots[0];
+        var itemToUnequip = slotToReplace.equipedItem;
+
+        EquipItem(inventoryItem, slotToReplace);
+        UnequipItem(itemToUnequip);
     }
 
     private void EquipItem(Inventory_Item itemToEquip, Inventory_EquipmentSlot slot)
@@ -34,5 +39,26 @@ public class Inventory_Player : Inventory_Base
         slot.equipedItem.AddModifiers(playerStats);
 
         RemoveItem(itemToEquip);
+    }
+
+    public void UnequipItem(Inventory_Item itemToUnequip)
+    {
+        if (CanAddItem() == false)
+        {
+            Debug.Log("No sapce!");
+            return;
+        }
+
+        foreach (var slot in equipList)
+        {
+            if (slot.equipedItem == itemToUnequip)
+            {
+                slot.equipedItem = null;
+                break;
+            }
+        }
+
+        itemToUnequip.RemoveModifiers(playerStats);
+        AddItem(itemToUnequip);
     }
 }

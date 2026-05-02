@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Data\ItemDataSO.cs" />
     <Compile Include="Assets\Scripts\Data\EquipmentDataSO.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillType.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_EquipSlot.cs" />
     <Compile Include="Assets\Scripts\ItemSystem\INventory_Player.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />

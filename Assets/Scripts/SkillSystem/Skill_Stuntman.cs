@@ -15,7 +15,7 @@ public class Skill_Stuntman : Skill_Base
 
     public float GetPercentofDamageHealed()
     {
-        if(ShouldBeWisp() == false)
+        if (ShouldBeWisp() == false)
             return 0;
 
         return damagePercentHealed;
@@ -23,7 +23,7 @@ public class Skill_Stuntman : Skill_Base
 
     public float GetCooldownReduceInSeconds()
     {
-        if(upgradeType != SkillUpgradeType.StuntMan_Cooldown)
+        if (upgradeType != SkillUpgradeType.StuntMan_Cooldown)
             return 0;
 
         return cooldownReducedInSeconds;
@@ -70,6 +70,7 @@ public class Skill_Stuntman : Skill_Base
             return;
 
         CreatStuntMan();
+        SetSkillOnCooldown();
     }
 
     public void CreatStuntMan(Vector3? targetposition = null)

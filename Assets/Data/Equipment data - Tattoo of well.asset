@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a4a573af39f6324cb8494da50439db8, type: 3}
-  m_Name: Equipment data - Blade Kuchi
+  m_Name: Equipment data - Tattoo of well
   m_EditorClassIdentifier: 
-  itemName: Blade Kuchi
-  itemIcon: {fileID: 21300000, guid: 1807852e41dc8cc44937fbb25d9e7d09, type: 3}
-  itemType: 1
+  itemName: Tattoo of well
+  itemIcon: {fileID: 21300000, guid: 7993075c5d242ab4f99dddae3d0f63f7, type: 3}
+  itemType: 3
   maxStackSize: 1
   modifiers:
-  - statType: 8
+  - statType: 1
     value: 50
-  - statType: 2
+  - statType: 9
+    value: 2
+  - statType: 14
     value: 1

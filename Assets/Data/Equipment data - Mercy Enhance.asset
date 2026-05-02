@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a4a573af39f6324cb8494da50439db8, type: 3}
-  m_Name: Equipment data - Blade Kuchi
+  m_Name: Equipment data - Mercy Enhance
   m_EditorClassIdentifier: 
-  itemName: Blade Kuchi
-  itemIcon: {fileID: 21300000, guid: 1807852e41dc8cc44937fbb25d9e7d09, type: 3}
-  itemType: 1
+  itemName: Mercy Enhance
+  itemIcon: {fileID: 21300000, guid: 6a7cab71c4e232743ba41968c94a886f, type: 3}
+  itemType: 3
   maxStackSize: 1
   modifiers:
-  - statType: 8
+  - statType: 12
     value: 50
+  - statType: 9
+    value: 30
   - statType: 2
-    value: 1
+    value: 10
+  - statType: 1
+    value: 2.5
