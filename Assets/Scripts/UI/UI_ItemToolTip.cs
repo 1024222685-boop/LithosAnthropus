@@ -43,18 +43,22 @@ public class UI_ItemToolTip : UI_ToolTip
             case StatType.HealthRegen: return "Health Regeneration";
             case StatType.Strength: return "Strength";
             case StatType.Agility: return "Agility";
+
             case StatType.Intelligence: return "Intelligence";
             case StatType.Vitality: return "Vitality";
             case StatType.AttackSpeed: return "Attack Speed";
             case StatType.Damage: return "Damage";
+
             case StatType.CritChance: return "Critical Chance";
             case StatType.CritPower: return "Critical Power";
             case StatType.ArmorReduction: return "Armor Reduction";
             case StatType.BrutalityDamage: return "Brutality Damage";
             case StatType.MercyDamage: return "Mercy Damage";
+
             case StatType.CowardiceDamage: return "Cowardice Damage";
             case StatType.Armor: return "Armor";
             case StatType.Evasion: return "Evasion";
+
             case StatType.MercyResistance: return "Mercy Resistance";
             case StatType.BrutalityResistance: return "Brutality Resistance";
             case StatType.CowardiceResistance: return "Cowardice Resistance";

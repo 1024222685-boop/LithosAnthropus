@@ -83,30 +83,23 @@ public class Entity_Stats : MonoBehaviour
 
     public float GetPhysicalDamage(out bool isCrit, float scaleFactor = 1)
     {
-        float baseDamge = offense.damage.GetValue();
-        float bonusDamage = major.Strength.GetValue();
-        float totalBaseDamage = baseDamge + bonusDamage;
-
-        float baseCrtitChance = offense.critChance.GetValue();
-        float bonnusCritChance = major.agility.GetValue() * .3f;//Bonus crit chance from Agility: +0.3% AGI
-        float critChance = baseCrtitChance + bonnusCritChance;
-
-        float baseCritPower = offense.critPower.GetValue();
-        float bonusCritPower = major.Strength.GetValue() * .5f;
-        float critPower = (baseCritPower + bonusCritPower) / 100;//Total crit power multiplier(e.g 150 / 100 =1.5f - multiplier)
+        float baseDamge = GetBaseDamage();
+        float critChance = GetCritChance();
+        float critPower = GetCritPower() / 100;//Total crit power multiplier(e.g 150 / 100 =1.5f - multiplier)
 
         isCrit = Random.Range(0, 100) < critChance;
-        float finalDamage = isCrit ? totalBaseDamage * critPower : totalBaseDamage;
+        float finalDamage = isCrit ? baseDamge * critPower : baseDamge;
 
         return finalDamage * scaleFactor;
     }
 
+    public float GetBaseDamage() => offense.damage.GetValue() * major.strength.GetValue();
+    public float GetCritChance() => offense.critChance.GetValue() + (major.agility.GetValue() * .3f);
+    public float GetCritPower() => offense.critPower.GetValue() + (major.strength.GetValue() * .5f);
 
     public float GetArmorMitigation(float armorReduction)
     {
-        float baseArmor = defense.armor.GetValue();
-        float bonusArmor = major.Vitality.GetValue();
-        float totalArmor = baseArmor + bonusArmor;
+        float totalArmor = GetBaseArmor();
 
         float reductionMutiplier = Mathf.Clamp(1 - armorReduction, 0, 1);
         float effectiveArmor = totalArmor * reductionMutiplier;
@@ -118,6 +111,8 @@ public class Entity_Stats : MonoBehaviour
 
         return finalMitigation;
     }
+
+    public float GetBaseArmor() => defense.armor.GetValue() + major.vitality.GetValue();
 
     public float GetArmorReduction()
     {
@@ -141,7 +136,7 @@ public class Entity_Stats : MonoBehaviour
     public float GetMaxHealth()
     {
         float baseMaxHealth = resources.maxHealth.GetValue();
-        float bonusMaxHealth = major.Vitality.GetValue() * 5;
+        float bonusMaxHealth = major.vitality.GetValue() * 5;
         float finalMaxHealth = baseMaxHealth + bonusMaxHealth;
 
         return finalMaxHealth;
@@ -157,13 +152,13 @@ public class Entity_Stats : MonoBehaviour
                 return resources.healthRegen;
 
             case StatType.Strength:
-                return major.Strength;
+                return major.strength;
             case StatType.Agility:
                 return major.agility;
             case StatType.Intelligence:
                 return major.intelligence;
             case StatType.Vitality:
-                return major.Vitality;
+                return major.vitality;
 
             case StatType.AttackSpeed:
                 return offense.attackSpeed;
@@ -213,10 +208,10 @@ public class Entity_Stats : MonoBehaviour
         resources.maxHealth.SetBaseValue(defaultStatsetup.maxHealth);
         resources.healthRegen.SetBaseValue(defaultStatsetup.healthRegen);
 
-        major.Strength.SetBaseValue(defaultStatsetup.strength);
+        major.strength.SetBaseValue(defaultStatsetup.strength);
         major.agility.SetBaseValue(defaultStatsetup.agility);
         major.intelligence.SetBaseValue(defaultStatsetup.intelligence);
-        major.Vitality.SetBaseValue(defaultStatsetup.vitality);
+        major.vitality.SetBaseValue(defaultStatsetup.vitality);
 
         offense.attackSpeed.SetBaseValue(defaultStatsetup.attackSpeed);
         offense.damage.SetBaseValue(defaultStatsetup.damage);

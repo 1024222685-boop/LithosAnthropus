@@ -22,5 +22,6 @@ public enum StatType
     Evasion,
     MercyResistance,
     BrutalityResistance,
-    CowardiceResistance
+    CowardiceResistance,
+    ElementalDamage
 }
