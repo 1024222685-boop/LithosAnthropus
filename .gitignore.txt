@@ -3,3 +3,13 @@
 /Obj/
 /Logs/
 /Build/
+
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+/[Pp]ackages/
+
