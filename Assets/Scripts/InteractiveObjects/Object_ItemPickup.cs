@@ -28,7 +28,12 @@ public class Object_ItemPickup : MonoBehaviour
     {
         inventory = collision.GetComponent<Inventory_Base>();
 
-        if (inventory != null && inventory.CanAddItem())
+        if (inventory == null)
+            return;
+
+        bool canAddItem = inventory.CanAddItem() || inventory.CanAddToStack(itemToAdd);
+
+        if (canAddItem)
         {
             inventory.AddItem(itemToAdd);
             Destroy(gameObject);

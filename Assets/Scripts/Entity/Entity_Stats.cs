@@ -169,7 +169,7 @@ public class Entity_Stats : MonoBehaviour
                 return offense.attackSpeed;
             case StatType.Damage:
                 return offense.damage;
-            case StatType.Critchance:
+            case StatType.CritChance:
                 return offense.critChance;
             case StatType.CritPower:
                 return offense.critPower;
@@ -180,7 +180,7 @@ public class Entity_Stats : MonoBehaviour
                 return offense.brutalityDamage;
             case StatType.MercyDamage:
                 return offense.mercyDamage;
-            case StatType.CowardicceDamage:
+            case StatType.CowardiceDamage:
                 return offense.cowardiceDamage;
 
             case StatType.Armor:

@@ -116,9 +116,11 @@
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DomainExpansionState.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Combat.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_StunnedState.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_StatSlot.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_DeadState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_BasicAttackState.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_ItemToolTip.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Stats.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillTree.cs" />

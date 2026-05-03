@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: C3hMsHuuV3K+F32e7leExhcjIxOhyhLZqeQDc6MGsFDlYcivW8b5joA=
+guid: W3IbtH7/V3sDucfjyaXmFGEOTdmj0bmEfxe76GlDU9X9C8MNoJxBjCI=
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -144,7 +144,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 13 Border 01_0
+      name: purple Borders_0
       rect:
         serializedVersion: 2
         x: 0
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5090007bd66e66c44a131eb0eeffe1f8
-      internalID: -1949249066
+      spriteID: a2c2487f7a396cf4c94b252ca3602e6e
+      internalID: 907829379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_1
+      name: purple Borders_1
       rect:
         serializedVersion: 2
         x: 64
@@ -174,19 +174,19 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 8, y: 8, z: 8, w: 8}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b53f8035bfc51c40b62b3db259629c6
-      internalID: -562855962
+      spriteID: ec17f5a17b91f0a429ef40494b7fc999
+      internalID: -461695897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_2
+      name: purple Borders_2
       rect:
         serializedVersion: 2
         x: 128
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c744d626f0641948afaa2ac881be616
-      internalID: -668733147
+      spriteID: e38854804e63372439cff805d6a6ab32
+      internalID: 413232472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_3
+      name: purple Borders_3
       rect:
         serializedVersion: 2
         x: 192
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 280092231e46df149b5d9b52652df9c7
-      internalID: -1361157864
+      spriteID: 52d7cdf8bfd044146be6c6ee4b725543
+      internalID: -1769301600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_4
+      name: purple Borders_4
       rect:
         serializedVersion: 2
         x: 256
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e39956cfd16ccf47bd2ac20d4998972
-      internalID: -321287724
+      spriteID: 18a69eac6f38dba41b840b6794a16ba5
+      internalID: 1594268799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_5
+      name: purple Borders_5
       rect:
         serializedVersion: 2
         x: 0
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fe912ef1187e714fa49633a58bbefd0
-      internalID: 1553163971
+      spriteID: 079b016e9c3b3224c80ee9fbe41ccfbc
+      internalID: 1066755803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_6
+      name: purple Borders_6
       rect:
         serializedVersion: 2
         x: 64
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 363eb25ed8aa4624f8efe5188f257e32
-      internalID: -2043976239
+      spriteID: 74e7a3b9739ef3c4ba5b311e56c82f5b
+      internalID: 353091150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_7
+      name: purple Borders_7
       rect:
         serializedVersion: 2
         x: 128
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b9f56c5aeb8dbc4785aa8df3975d4d0
-      internalID: -824158617
+      spriteID: f1cb2f007750b3f43a098b935da89871
+      internalID: -300719842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_8
+      name: purple Borders_8
       rect:
         serializedVersion: 2
         x: 192
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2d005eec6dc55645b44b96a8abf5b39
-      internalID: -1102216106
+      spriteID: e166c8dde62a63b4e8d8f9ba5afbb3f7
+      internalID: -1019636949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_9
+      name: purple Borders_9
       rect:
         serializedVersion: 2
         x: 256
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abe61e6600300db45828d25d3db03490
-      internalID: -1725986224
+      spriteID: 1961530c26fd93a40bd043d0cf05ea5f
+      internalID: -1385360421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_10
+      name: purple Borders_10
       rect:
         serializedVersion: 2
         x: 0
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b919e0882c9534a8a29d4780487325
-      internalID: -1901006439
+      spriteID: 6a001e499dd25ee4bbdb8b1986ba7333
+      internalID: 1582310616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_11
+      name: purple Borders_11
       rect:
         serializedVersion: 2
         x: 64
@@ -389,35 +389,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9a57a989b5fbbc47b466bcd65489883
-      internalID: 1263913287
+      spriteID: 7ae824ab1551fbc4db96b74807d29bab
+      internalID: -565626781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_12
+      name: purple Borders_12
       rect:
         serializedVersion: 2
-        x: 128
+        x: 129
         y: 64
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 5, z: 5, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daccc6d67a5ec41448b9ea85bd3ab789
-      internalID: 1714703537
+      spriteID: 178d35bf40304134095719bdc6ef83f4
+      internalID: -1966080355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_13
+      name: purple Borders_13
       rect:
         serializedVersion: 2
         x: 192
@@ -431,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6272fae467dc3b419768da99b7e3437
-      internalID: -1425987222
+      spriteID: fc04f15be6300f0428e33544a5751695
+      internalID: 1872881621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_14
+      name: purple Borders_14
       rect:
         serializedVersion: 2
         x: 256
@@ -447,19 +447,19 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 5, z: 5, w: 5}
+      border: {x: 4, y: 4, z: 4, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33d39194e4e68054487293c955b5e862
-      internalID: -673324968
+      spriteID: 54b3705f4f1ee464d99fbc3fc2bccf1b
+      internalID: -2124204720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_15
+      name: purple Borders_15
       rect:
         serializedVersion: 2
         x: 0
@@ -473,14 +473,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e600472e127b97a4aba3746dfde45453
-      internalID: 1189956578
+      spriteID: 1d046889bbfd17e478dc13293106b1d4
+      internalID: -1275096506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_16
+      name: purple Borders_16
       rect:
         serializedVersion: 2
         x: 64
@@ -494,14 +494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98ba67e1dde49e1478181957df79bc26
-      internalID: -1105623874
+      spriteID: b17ea04bba2cd494cbfbed918a9f3c2d
+      internalID: -850561072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_17
+      name: purple Borders_17
       rect:
         serializedVersion: 2
         x: 128
@@ -515,14 +515,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f71d202b01466b46bbd9a6dbc797d8d
-      internalID: -377177740
+      spriteID: 4e9bf299fa6236c4bae5e0d16d63f6df
+      internalID: 1362353938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_18
+      name: purple Borders_18
       rect:
         serializedVersion: 2
         x: 192
@@ -536,14 +536,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ff5aa178f407c24bbe090fe014dc666
-      internalID: 1471451622
+      spriteID: de3139e478c0b62428d51c0790ca86a6
+      internalID: -586391891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13 Border 01_19
+      name: purple Borders_19
       rect:
         serializedVersion: 2
         x: 256
@@ -557,8 +557,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02f0719fbf141de4597669c0209bed2d
-      internalID: -1652891136
+      spriteID: c741e76176c3ea24f96a42c842c2e96f
+      internalID: -1705919916
       vertices: []
       indices: 
       edges: []
@@ -574,26 +574,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      13 Border 01_0: -1949249066
-      13 Border 01_1: -562855962
-      13 Border 01_10: -1901006439
-      13 Border 01_11: 1263913287
-      13 Border 01_12: 1714703537
-      13 Border 01_13: -1425987222
-      13 Border 01_14: -673324968
-      13 Border 01_15: 1189956578
-      13 Border 01_16: -1105623874
-      13 Border 01_17: -377177740
-      13 Border 01_18: 1471451622
-      13 Border 01_19: -1652891136
-      13 Border 01_2: -668733147
-      13 Border 01_3: -1361157864
-      13 Border 01_4: -321287724
-      13 Border 01_5: 1553163971
-      13 Border 01_6: -2043976239
-      13 Border 01_7: -824158617
-      13 Border 01_8: -1102216106
-      13 Border 01_9: -1725986224
+      purple Borders_0: 907829379
+      purple Borders_1: -461695897
+      purple Borders_10: 1582310616
+      purple Borders_11: -565626781
+      purple Borders_12: -1966080355
+      purple Borders_13: 1872881621
+      purple Borders_14: -2124204720
+      purple Borders_15: -1275096506
+      purple Borders_16: -850561072
+      purple Borders_17: 1362353938
+      purple Borders_18: -586391891
+      purple Borders_19: -1705919916
+      purple Borders_2: 413232472
+      purple Borders_3: -1769301600
+      purple Borders_4: 1594268799
+      purple Borders_5: 1066755803
+      purple Borders_6: 353091150
+      purple Borders_7: -300719842
+      purple Borders_8: -1019636949
+      purple Borders_9: -1385360421
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   doOverrideTextureManagerOperations: 0
