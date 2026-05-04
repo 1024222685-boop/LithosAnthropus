@@ -67,4 +67,6 @@ public class Inventory_Base : MonoBehaviour
     {
         return itemList.Find(item => item.itemData == itemData);
     }
+
+    public void TriggerUpdateUI() => OnInventoryChange?.Invoke();
 }

@@ -4,14 +4,15 @@ public class Entity_Stats : MonoBehaviour
 {
     public Stat_SetupSO defaultStatsetup;
 
-    public enum EquipmentType { Sword, Hlemet, Chest }
-    public EquipmentType equipmentType;
-    public ElementType elementType;
     public Stat_ResourceGroup resources;
     public Stat_OffenseGroup offense;
     public Stat_DefenceGroup defense;
     public Stat_MajorGroup major;
-    //public Stat vitality;//每点可增加5点HP
+
+    protected virtual void Awake()
+    {
+      
+    }
 
     public AttackData GetAttackData(DamageScaleData scaleData)
     {
@@ -93,7 +94,7 @@ public class Entity_Stats : MonoBehaviour
         return finalDamage * scaleFactor;
     }
 
-    public float GetBaseDamage() => offense.damage.GetValue() * major.strength.GetValue();
+    public float GetBaseDamage() => offense.damage.GetValue() + major.strength.GetValue();
     public float GetCritChance() => offense.critChance.GetValue() + (major.agility.GetValue() * .3f);
     public float GetCritPower() => offense.critPower.GetValue() + (major.strength.GetValue() * .5f);
 

@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\UI\UI_ItemSlot.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Inventory.cs" />
     <Compile Include="Assets\Scripts\UI\UI_TreeConnection.cs" />
+    <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_GrantSkillPoint.cs" />
     <Compile Include="Assets\Scripts\Player\Player_AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Base.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_MoveState.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Scripts\UI\UI_TreeNode.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_SickleThrow.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_GroundState.cs" />
+    <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_Buff.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_VFX.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_MajorGroup.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_DomainExpansion.cs" />
@@ -103,6 +105,7 @@
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_HurtState.cs" />
     <Compile Include="Assets\Scripts\Enum\ItemType.cs" />
+    <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_MercyBlastOnTakingDamage.cs" />
     <Compile Include="Assets\Scripts\Data\DamageScaleData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_AirState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_SickleBounce.cs" />
@@ -175,6 +178,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DeadState.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Stats.cs" />
     <Compile Include="Assets\Scripts\Player\Player_SkillManager.cs" />
+    <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_HealOnDoingDamage.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DashState.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Base.cs" />
     <Compile Include="Assets\Scripts\UI\UI_TreeConnectHandler.cs" />

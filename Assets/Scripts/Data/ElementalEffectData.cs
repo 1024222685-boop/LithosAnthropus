@@ -1,6 +1,9 @@
+using System;
 using UnityEngine;
 
-public class ElementalEffectData : MonoBehaviour
+[Serializable]
+
+public class ElementalEffectData
 {
     public float mercyDuration;
     public float mercySlowMultiplier;
@@ -24,9 +27,4 @@ public class ElementalEffectData : MonoBehaviour
         cowardDamage = entity_Stats.offense.cowardiceDamage.GetValue() * damageScale.cowardDamageScale;
         cowardCharge = damageScale.cowardCharge;
     }
-}
-
-public class ScaleFactor
-{
-    public float brutalDamageScale = .5f;
 }
