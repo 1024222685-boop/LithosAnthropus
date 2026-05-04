@@ -15,7 +15,7 @@ MonoBehaviour:
   displayName: A Few Good Men
   description: Emu can get the skill of dashing
   icon: {fileID: 21300000, guid: 085f78d87950ca14780f57aa92a770eb, type: 3}
-  cost: 2
+  cost: 0
   unlockedByDefault: 1
   skillType: 0
   upgradeData:

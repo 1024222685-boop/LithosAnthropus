@@ -129,7 +129,7 @@ public class Entity_Health : MonoBehaviour, IDamagable
 
     public float GetHealthPercent() => currentHealth / entityStats.GetMaxHealth();
 
-    public void SetHealthPercent(float percent)
+    public void SetHealthToPercent(float percent)
     {
         currentHealth = entityStats.GetMaxHealth() * Mathf.Clamp01(percent);
         UpdateHealthBar();

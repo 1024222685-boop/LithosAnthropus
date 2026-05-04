@@ -87,7 +87,7 @@ public class Skill_Shadow : Skill_Base
         else
         {
             ChangePlayerShadow();
-            playerHealth.SetHealthPercent(saveHealthPercent);
+            playerHealth.SetHealthToPercent(saveHealthPercent);
             SetSkillOnCooldown();
         }
     }
