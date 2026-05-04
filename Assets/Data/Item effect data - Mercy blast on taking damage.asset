@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec4a82b0fe1f2e438ac0c94e921249c, type: 3}
+  m_Name: Item effect data - Mercy blast on taking damage
+  m_EditorClassIdentifier: 
+  effectDescription: When you take damage and your health falss below 25%, unleash
+    a lord explosion 150 Mercy damage to nearby enemies. Cooldown 40s.
+  effectData:
+    mercyDuration: 3
+    mercySlowMultiplier: 0.6
+    brutalDuration: 0
+    totalbrutalDamage: 0
+    cowardDuration: 0
+    cowardDamage: 0
+    cowardCharge: 0
+  mercyDamage: 150
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 256
+  healthPercnetTrigger: 0.25
+  cooldown: 40
+  mercyBlastVfx: {fileID: 160900, guid: 1b1f4eecb848b384f93fd0216a95f56e, type: 3}
+  onHitVfx: {fileID: 178598, guid: 351dec89524a0c64b97fd0eeb9fbbba1, type: 3}

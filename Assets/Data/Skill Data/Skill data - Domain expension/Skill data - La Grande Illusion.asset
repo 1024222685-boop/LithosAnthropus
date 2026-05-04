@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff7b4ac865ab044e9fc9aa9a317d659, type: 3}
+  m_Name: Skill data - La Grande Illusion
+  m_EditorClassIdentifier: 
+  displayName: La Grande Illusion
+  description: 'When E mu relaese the filed reach to the enem,the stuntman will attack
+    them.
+
+'
+  icon: {fileID: 21300000, guid: 7f15d5b511fc3a4408ac8fe322b1d3b4, type: 3}
+  cost: 30
+  unlockedByDefault: 0
+  skillType: 4
+  upgradeData:
+    upgradeType: 23
+    cooldown: 50
+    damageScaleData:
+      physical: 1
+      elemental: 1
+      mercyDuration: 3
+      mercySlowMultiplier: 0.2
+      brutalDuration: 3
+      brutalDamageScale: 1
+      cowardDuration: 3
+      cowardDamageScale: 1
+      cowardCharge: 0.4

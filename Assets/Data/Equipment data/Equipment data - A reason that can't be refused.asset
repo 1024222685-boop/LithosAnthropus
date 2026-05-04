@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4a573af39f6324cb8494da50439db8, type: 3}
+  m_Name: Equipment data - A reason that can't be refused
+  m_EditorClassIdentifier: 
+  itemName: A reason that can't be refused
+  itemIcon: {fileID: 21300000, guid: 56cb2f0b571ca61478f0d7bf0a2bfd9f, type: 3}
+  itemType: 1
+  maxStackSize: 1
+  itemEffect: {fileID: 11400000, guid: a0b96954dd4968743a995a0a8d0df4c4, type: 2}
+  modifiers:
+  - statType: 7
+    value: 50
+  - statType: 6
+    value: 0.15
+  - statType: 8
+    value: 0.5
+  - statType: 3
+    value: 6

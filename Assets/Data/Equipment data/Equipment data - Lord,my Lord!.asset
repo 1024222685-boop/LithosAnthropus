@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4a573af39f6324cb8494da50439db8, type: 3}
+  m_Name: Equipment data - Lord,my Lord!
+  m_EditorClassIdentifier: 
+  itemName: Lord,my Lord!
+  itemIcon: {fileID: 2090970038, guid: 63ad31d4add42ef418107187b95109e2, type: 3}
+  itemType: 2
+  maxStackSize: 1
+  itemEffect: {fileID: 11400000, guid: 7fee9d3cca88ce742aac855252ee980b, type: 2}
+  modifiers:
+  - statType: 0
+    value: 500
+  - statType: 14
+    value: 20
+  - statType: 2
+    value: 14
+  - statType: 12
+    value: 50
