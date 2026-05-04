@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a82504739d16743b8a4fe0f2437e74, type: 3}
+  m_Name: Cosumable data - Small Potion
+  m_EditorClassIdentifier: 
+  itemName: Small Potion
+  itemIcon: {fileID: -864993472, guid: 64d7b02ef7067f1438cbc48b13809fdc, type: 3}
+  itemType: 4
+  maxStackSize: 5
+  itemEffect: {fileID: 11400000, guid: e05ec6c57bff49b409ff22990e475b01, type: 2}
