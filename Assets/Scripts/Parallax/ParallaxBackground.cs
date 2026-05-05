@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ParallaxBackground : MonoBehaviour
@@ -14,7 +12,7 @@ public class ParallaxBackground : MonoBehaviour
     {
         mainCamera = Camera.main;
         cameraHalfWidth = mainCamera.orthographicSize * mainCamera.aspect;
-        CalculateImageLength();
+        InitializeLayers();
     }
 
     private void FixedUpdate()
@@ -23,19 +21,19 @@ public class ParallaxBackground : MonoBehaviour
         float distanceToMove = currentCameraPositionX - lastCameraPositionX;
         lastCameraPositionX = currentCameraPositionX;
 
-        float camraleftEdge = currentCameraPositionX - cameraHalfWidth;
+        float cameraLeftEdge = currentCameraPositionX - cameraHalfWidth;
         float cameraRightEdge = currentCameraPositionX + cameraHalfWidth;
 
         foreach (ParallaxLayer layer in backgroundLayers)
         {
             layer.Move(distanceToMove);
-            layer.LoopBackground(camraleftEdge, cameraRightEdge);
+            layer.LoopBackground(cameraLeftEdge, cameraRightEdge);
         }
     }
 
-    private void CalculateImageLength()
+    private void InitializeLayers()
     {
-        foreach(ParallaxLayer layer in backgroundLayers)
+        foreach (ParallaxLayer layer in backgroundLayers)
             layer.CalculateImageWidth();
     }
 }

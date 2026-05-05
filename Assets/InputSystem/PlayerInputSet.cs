@@ -199,6 +199,15 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interac"",
+                    ""type"": ""Button"",
+                    ""id"": ""c81753f5-72e7-428d-ba28-c4c80a1541d3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -436,7 +445,7 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""87b00ac5-8b04-482a-a6f0-5d77413f1b33"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard & Mouse"",
@@ -513,7 +522,7 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4341b579-7ac9-4846-92c1-a08c356d797c"",
-                    ""path"": ""<Keyboard>/b"",
+                    ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard & Mouse"",
@@ -529,6 +538,17 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ToggleInventoryUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""121a0d23-c48c-4c71-a349-e06eb8ec3be2"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard & Mouse"",
+                    ""action"": ""Interac"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1040,6 +1060,7 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
         m_Player_UltimateSpell = m_Player.FindAction("UltimateSpell", throwIfNotFound: true);
         m_Player_AimDirection = m_Player.FindAction("AimDirection", throwIfNotFound: true);
         m_Player_ToggleInventoryUI = m_Player.FindAction("ToggleInventoryUI", throwIfNotFound: true);
+        m_Player_Interac = m_Player.FindAction("Interac", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1145,6 +1166,7 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_UltimateSpell;
     private readonly InputAction m_Player_AimDirection;
     private readonly InputAction m_Player_ToggleInventoryUI;
+    private readonly InputAction m_Player_Interac;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1204,6 +1226,10 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/ToggleInventoryUI".
         /// </summary>
         public InputAction @ToggleInventoryUI => m_Wrapper.m_Player_ToggleInventoryUI;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Interac".
+        /// </summary>
+        public InputAction Interact => m_Wrapper.m_Player_Interac;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1266,6 +1292,9 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
             @ToggleInventoryUI.started += instance.OnToggleInventoryUI;
             @ToggleInventoryUI.performed += instance.OnToggleInventoryUI;
             @ToggleInventoryUI.canceled += instance.OnToggleInventoryUI;
+            Interact.started += instance.OnInterac;
+            Interact.performed += instance.OnInterac;
+            Interact.canceled += instance.OnInterac;
         }
 
         /// <summary>
@@ -1313,6 +1342,9 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
             @ToggleInventoryUI.started -= instance.OnToggleInventoryUI;
             @ToggleInventoryUI.performed -= instance.OnToggleInventoryUI;
             @ToggleInventoryUI.canceled -= instance.OnToggleInventoryUI;
+            Interact.started -= instance.OnInterac;
+            Interact.performed -= instance.OnInterac;
+            Interact.canceled -= instance.OnInterac;
         }
 
         /// <summary>
@@ -1645,6 +1677,13 @@ public partial class @PlayerInputSet: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnToggleInventoryUI(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Interac" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInterac(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

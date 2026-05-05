@@ -113,6 +113,7 @@
     <Compile Include="Assets\Scripts\Enum\SkillUpgradeType.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_DefenceGroup.cs" />
+    <Compile Include="Assets\Scripts\interface\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_MoveState.cs" />
     <Compile Include="Assets\Scripts\interface\ICounterable.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_RefundAllSkills.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy_Health.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Item.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Health.cs" />
+    <Compile Include="Assets\Scripts\InteractiveObjects\Object_BlackSmith.cs" />
     <Compile Include="Assets\Scripts\VFX\VFX_AutoController.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Shadow.cs" />
     <Compile Include="Assets\Scripts\StateMachine\EntityState.cs" />
@@ -150,8 +152,9 @@
     <Compile Include="Assets\Scripts\StatSystem\Stat.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_VFX.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_SicklePeirce.cs" />
-    <Compile Include="Assets\Scripts\Entity\Entity_StatusHandler.cs" />
+    <Compile Include="Assets\Scripts\InteractiveObjects\Object_NPC.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_EquipmentSlot.cs" />
+    <Compile Include="Assets\Scripts\Entity\Entity_StatusHandler.cs" />
     <Compile Include="Assets\Scripts\UI\UI_PlayerStats.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_SetupSo.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
@@ -161,6 +164,7 @@
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_BattleState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_FallState.cs" />
+    <Compile Include="Assets\Scripts\InteractiveObjects\Object_Merchant.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_IdleState.cs" />
     <Compile Include="Assets\Scripts\Data\AttackData.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillToolTip.cs" />
@@ -201,6 +205,7 @@
     <None Include="Assets\Sprites\SnoopethDuckDuck Swords and Staffs\Pack 3\License - CC0.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Sprites\Evil Wizard 3\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Sprites\SnoopethDuckDuck Swords and Staffs\Pack 5\License - CC0.txt" />
     <None Include="Assets\Game_playGround\48 Free Minerals Pixel Art Icons Pack\readme.txt" />
@@ -215,6 +220,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Skill System Sprites\Free - Raven Fantasy Icons\Special Note to the Dev.txt" />
+    <None Include="Assets\Sprites\FREE - Blacksmith 2D Pixel Art\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Sprites\SnoopethDuckDuck Swords and Staffs\Pack 6\License - CC0.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />

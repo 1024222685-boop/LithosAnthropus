@@ -19554,7 +19554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoDestroy: 0
   destroyDelay: 1
-  randomOffset: 1
+  randomOffset: 0
   randomRotation: 1
   canFade: 0
   fadeSpeed: 1

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -20,17 +18,17 @@ public class ParallaxLayer
 
     public void Move(float distanceToMove)
     {
-        background.position += Vector3.right * (distanceToMove * parallaxMultiplier); 
+        background.position += Vector3.right * (distanceToMove * parallaxMultiplier);
     }
 
-    public void LoopBackground(float cameraLeftEdge,float cameraRight)
+    public void LoopBackground(float cameraLefteEdge, float cameraRightEdge)
     {
         float imageRightEdge = (background.position.x + imageHalfWidth) - imageWidthOffset;
         float imageLeftEdge = (background.position.x - imageHalfWidth) + imageWidthOffset;
 
-        if (imageRightEdge < cameraLeftEdge)
+        if (imageRightEdge < cameraLefteEdge)
             background.position += Vector3.right * imageFullWidth;
-        else if (imageLeftEdge > cameraRight)
-            background.position += Vector3.left * -imageFullWidth;
+        else if (imageLeftEdge > cameraRightEdge)
+            background.position += Vector3.right * -imageFullWidth;
     }
 }

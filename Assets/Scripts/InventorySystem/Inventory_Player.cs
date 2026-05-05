@@ -29,8 +29,8 @@ public class Inventory_Player : Inventory_Base
         var slotToReplace = matchchingSlots[0];
         var itemToUnequip = slotToReplace.equipedItem;
 
+        UnequipItem(itemToUnequip,slotToReplace != null);
         EquipItem(inventoryItem, slotToReplace);
-        UnequipItem(itemToUnequip);
     }
 
     private void EquipItem(Inventory_Item itemToEquip, Inventory_EquipmentSlot slot)
@@ -41,13 +41,13 @@ public class Inventory_Player : Inventory_Base
         slot.equipedItem.AddModifiers(player.stats);
         slot.equipedItem.AddItemEffect(player);
         
-        player.health.SetHealthToPercent(saveHealthPercent);
         RemoveItem(itemToEquip);
+        player.health.SetHealthToPercent(saveHealthPercent);
     }
 
-    public void UnequipItem(Inventory_Item itemToUnequip)
+    public void UnequipItem(Inventory_Item itemToUnequip,bool replacingItem = false)
     {
-        if (CanAddItem() == false)
+        if (CanAddItem() == false && replacingItem == false)
         {
             Debug.Log("No sapce!");
             return;

@@ -27,6 +27,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   healthPercnetTrigger: 0.25
-  cooldown: 40
-  mercyBlastVfx: {fileID: 160900, guid: 1b1f4eecb848b384f93fd0216a95f56e, type: 3}
-  onHitVfx: {fileID: 178598, guid: 351dec89524a0c64b97fd0eeb9fbbba1, type: 3}
+  cooldown: 5
+  mercyBlastVfx: {fileID: 195900, guid: ec61825cb06be72419bb09eee03af08c, type: 3}
+  onHitVfx: {fileID: 151244, guid: 8368975de5593844bbfaf74e342fb326, type: 3}
