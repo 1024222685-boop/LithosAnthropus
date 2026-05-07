@@ -16,11 +16,13 @@ public class UI_StorageSlot : UI_ItemSlot
         if(itemInslot == null)
             return;
 
+        bool transferFullStack = Input.GetKey(KeyCode.LeftControl);
+
         if (slotType == StorageSlotType.StorageSlot)
-            storage.FromStorageToPlayer(itemInslot);
+            storage.FromStorageToPlayer(itemInslot,transferFullStack);
 
         if (slotType == StorageSlotType.PlayerInventorySlot)
-            storage.FromPlayerToStorage(itemInslot);
+            storage.FromPlayerToStorage(itemInslot, transferFullStack);
 
         ui.itemToolTip.ShowToolTip(false, null);
     }
