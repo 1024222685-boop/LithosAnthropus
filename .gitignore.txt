@@ -1,15 +1,11 @@
-/Library/
-/Temp/
-/Obj/
-/Logs/
-/Build/
+# VS本地缓存
+.vs/
+*.suo
+*.user
 
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]serSettings/
-/[Pp]ackages/
-
+# Unity临时/编译文件（这些全不该上传仓库）
+Library/
+Temp/
+Logs/
+obj/
+UserSettings/
