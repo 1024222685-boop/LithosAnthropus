@@ -112,7 +112,6 @@
     <Compile Include="Assets\Scripts\interface\IDamagable.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillUpgradeType.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
-    <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftPreviewMaterialSlot.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_DefenceGroup.cs" />
     <Compile Include="Assets\Scripts\interface\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_MoveState.cs" />
@@ -130,10 +129,11 @@
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_BasicAttackState.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Storage.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Stats.cs" />
+    <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftPreviewSlot.cs" />
     <Compile Include="Assets\Scripts\Data\BuffEffectData.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_SkillTree.cs" />
     <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftSlot.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_SkillTree.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Greed.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_SickleThrowState.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
@@ -179,8 +179,8 @@
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
     <Compile Include="Assets\Scripts\Enum\ElementType.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_StorageSlot.cs" />
     <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftListButton.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_StorageSlot.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_AttackState.cs" />
     <Compile Include="Assets\Scripts\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_IdleState.cs" />
@@ -188,6 +188,7 @@
     <Compile Include="Assets\Scripts\StateMachine\EnemyState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_ItemPickup.cs" />
+    <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftPreview.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DeadState.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Stats.cs" />
     <Compile Include="Assets\Scripts\Player\Player_SkillManager.cs" />

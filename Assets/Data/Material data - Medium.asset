@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Material data - Medium
   m_EditorClassIdentifier: 
   itemName: TheWorldMedium
-  itemIcon: {fileID: 21300000, guid: 75b451fa4e70d2a44912fe8311022673, type: 3}
+  itemIcon: {fileID: 21300000, guid: f4b19d92041b289498328d46599bdd8b, type: 3}
   itemType: 0
   maxStackSize: 2
+  itemEffect: {fileID: 0}
+  craftRecipe: []

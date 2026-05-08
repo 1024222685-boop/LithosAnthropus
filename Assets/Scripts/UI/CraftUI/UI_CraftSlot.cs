@@ -5,6 +5,7 @@ using UnityEngine;
 public class UI_CraftSlot : MonoBehaviour
 {
     private ItemDataSO itemToCraft;
+    [SerializeField] private UI_CraftPreview craftPreview;
 
     [SerializeField] private Image craftItemIcon;
     [SerializeField] private TextMeshProUGUI craftItemName;
@@ -15,4 +16,6 @@ public class UI_CraftSlot : MonoBehaviour
         craftItemIcon.sprite = craftData.itemIcon;
         craftItemName.text = craftData.itemName;
     }
+
+    public void UpdateCraftPreview() => craftPreview.UpdateCraftPreview(itemToCraft);
 }
