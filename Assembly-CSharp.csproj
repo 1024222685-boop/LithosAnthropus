@@ -165,6 +165,7 @@
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Storage.cs" />
+    <Compile Include="Assets\Scripts\InventorySystem\Inventory_Merchant.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Combat.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\ItemListDataSO.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_BattleState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_FallState.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_Merchant.cs" />
+    <Compile Include="Assets\Scripts\UI\MerchantUI\UI_MerchantSlot.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_IdleState.cs" />
     <Compile Include="Assets\Scripts\Data\AttackData.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillToolTip.cs" />
@@ -187,6 +189,7 @@
     <Compile Include="Assets\Scripts\Data\ConsumableItemDataSO.cs" />
     <Compile Include="Assets\Scripts\StateMachine\EnemyState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_AnimationTriggers.cs" />
+    <Compile Include="Assets\Scripts\UI\MerchantUI\UI_Merchant.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_ItemPickup.cs" />
     <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftPreview.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DeadState.cs" />

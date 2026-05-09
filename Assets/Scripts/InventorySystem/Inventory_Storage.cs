@@ -1,9 +1,62 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class Inventory_Storage : Inventory_Base
 {
-    public Inventory_Player playerInventory;
+    public Inventory_Player playerInventory { get; private set; }
     public List<Inventory_Item> materialStash;
+
+    public void ConsumMaterials(Inventory_Item itemToCraft)
+    {
+        foreach (var requiredItem in itemToCraft.itemData.craftRecipe)
+        {
+            int amountToConsume = requiredItem.stackSize;
+
+            amountToConsume = amountToConsume - ConsumedMaterialAmount(playerInventory.itemList, requiredItem);
+
+            if(amountToConsume > 0)
+                amountToConsume = amountToConsume - ConsumedMaterialAmount(itemList, requiredItem);
+
+            if(amountToConsume > 0)
+                amountToConsume = amountToConsume - ConsumedMaterialAmount(materialStash, requiredItem);
+        }
+    }
+
+    private int ConsumedMaterialAmount(List<Inventory_Item> itemList, Inventory_Item neededItem)
+    {
+        ItemDataSO needitemData = neededItem.itemData;
+        int amountNeeded = neededItem.stackSize;
+        int consumeAmount = 0;
+
+        foreach (var item in itemList)
+        {
+            if (item.itemData != neededItem.itemData)
+                continue;
+
+            int removeAmount = Mathf.Min(item.stackSize, amountNeeded - consumeAmount);
+            item.stackSize = item.stackSize - removeAmount;
+            consumeAmount = consumeAmount + removeAmount;
+
+            if(item.stackSize <= 0)
+                itemList.Remove(item);
+
+            if (consumeAmount >= amountNeeded)
+                break;
+        }
+
+        return consumeAmount;
+    }
+
+    public bool HasEnoughMaterial(Inventory_Item itemToCraft)
+    {
+        foreach (var requiredMaterial in itemToCraft.itemData.craftRecipe)
+        {
+            if(GetAvailableAmountOf(requiredMaterial.itemData) < requiredMaterial.stackSize)
+                return false;
+        }
+
+        return true;
+    }
 
     public int GetAvailableAmountOf(ItemDataSO requiredItem)
     {
@@ -66,7 +119,7 @@ public class Inventory_Storage : Inventory_Base
             if (CanAddItem(item))
             {
                 var itemToAdd = new Inventory_Item(item.itemData);
-                playerInventory.RemoveItem(item);
+                playerInventory.RemoveOneItem(item);
                 AddItem(itemToAdd);
             }
 
@@ -85,7 +138,7 @@ public class Inventory_Storage : Inventory_Base
             {
                 var itemToAdd = new Inventory_Item(item.itemData);
 
-                RemoveItem(item);
+                RemoveOneItem(item);
                 playerInventory.AddItem(itemToAdd);
             }
 

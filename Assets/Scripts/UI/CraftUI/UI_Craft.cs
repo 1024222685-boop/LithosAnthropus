@@ -15,6 +15,7 @@ public class UI_Craft : MonoBehaviour
     {
         inventory = storage.playerInventory;
         inventory.OnInventoryChange += UpdateUI;
+        UpdateUI();
 
         craftPreviewUI = GetComponentInChildren<UI_CraftPreview>();
         craftPreviewUI.SetupCraftPreview(storage);

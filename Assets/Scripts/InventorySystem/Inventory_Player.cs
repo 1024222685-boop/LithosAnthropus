@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Inventory_Player : Inventory_Base
 {
+    public int gold = 100000;
+
     private Player player;
     public List<Inventory_EquipmentSlot> equipList;
     public Inventory_Storage storage { get; private set; }
@@ -43,7 +45,7 @@ public class Inventory_Player : Inventory_Base
         slot.equipedItem.AddModifiers(player.stats);
         slot.equipedItem.AddItemEffect(player);
         
-        RemoveItem(itemToEquip);
+        RemoveOneItem(itemToEquip);
         player.health.SetHealthToPercent(saveHealthPercent);
     }
 

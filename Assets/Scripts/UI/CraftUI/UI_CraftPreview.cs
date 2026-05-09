@@ -12,6 +12,7 @@ public class UI_CraftPreview : MonoBehaviour
     [SerializeField] private Image itemIcon;
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI itemInfo;
+    [SerializeField] private TextMeshProUGUI buttonText;
 
     public void SetupCraftPreview(Inventory_Storage storage)
     {
@@ -22,6 +23,23 @@ public class UI_CraftPreview : MonoBehaviour
             slot.gameObject.SetActive(false);
     }
 
+    public void ConfirmCraft()
+    {
+        if (itemToCraft == null)
+        {
+            buttonText.text = "Pick an item"!;
+            return;
+        }
+
+        if (storage.HasEnoughMaterial(itemToCraft) && storage.playerInventory.CanAddItem(itemToCraft))
+        {
+            storage.ConsumMaterials(itemToCraft);
+            storage.playerInventory.AddItem(itemToCraft);
+        }
+
+        UpdateCraftPreviewSlots();
+    }
+
     public void UpdateCraftPreview(ItemDataSO itemData)
     {
         itemToCraft = new Inventory_Item(itemData);
@@ -29,15 +47,19 @@ public class UI_CraftPreview : MonoBehaviour
         itemIcon.sprite = itemData.itemIcon;
         itemName.text = itemData.itemName;
         itemInfo.text = itemToCraft.GetItemInfo();
+        UpdateCraftPreviewSlots();
+    }
 
-        foreach(var slot in craftPreviewSlots)
+    private void UpdateCraftPreviewSlots()
+    {
+        foreach (var slot in craftPreviewSlots)
             slot.gameObject.SetActive(false);
 
         for (int i = 0; i < itemToCraft.itemData.craftRecipe.Length; i++)
         {
-           Inventory_Item requiredItem = itemToCraft.itemData.craftRecipe[i];
-           int avaliableAmount = storage.GetAvailableAmountOf(requiredItem.itemData);
-           int requiredAmount = requiredItem.stackSize;
+            Inventory_Item requiredItem = itemToCraft.itemData.craftRecipe[i];
+            int avaliableAmount = storage.GetAvailableAmountOf(requiredItem.itemData);
+            int requiredAmount = requiredItem.stackSize;
 
             craftPreviewSlots[i].gameObject.SetActive(true);
             craftPreviewSlots[i].SetupPreviewSlot(requiredItem.itemData, avaliableAmount, requiredAmount);

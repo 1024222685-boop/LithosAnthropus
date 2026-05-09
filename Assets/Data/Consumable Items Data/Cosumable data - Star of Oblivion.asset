@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a82504739d16743b8a4fe0f2437e74, type: 3}
   m_Name: Cosumable data - Star of Oblivion
   m_EditorClassIdentifier: 
+  itemPrice: 100
+  minStackSizeAtShop: 1
+  maxStackSizeAtShop: 1
+  craftRecipe: []
   itemName: Star of Oblivion
   itemIcon: {fileID: -528211411, guid: 61b4646270b6c6645807ef4faaa27b28, type: 3}
   itemType: 4

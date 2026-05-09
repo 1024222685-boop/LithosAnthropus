@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a82504739d16743b8a4fe0f2437e74, type: 3}
   m_Name: Cosumable data - Bust the rule,face the wheel
   m_EditorClassIdentifier: 
+  itemPrice: 100
+  minStackSizeAtShop: 1
+  maxStackSizeAtShop: 2
+  craftRecipe: []
   itemName: Bust the rule,face the wheel
   itemIcon: {fileID: 21300000, guid: 80df13908644a9f4fb1720238cb8e817, type: 3}
   itemType: 4

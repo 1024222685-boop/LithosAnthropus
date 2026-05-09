@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229789fc099bbf448b0cb81c6e93d696, type: 3}
   m_Name: Material data - Empty power Kuchi
   m_EditorClassIdentifier: 
+  itemPrice: 100
+  minStackSizeAtShop: 1
+  maxStackSizeAtShop: 5
+  craftRecipe: []
   itemName: Empty Kuchi
   itemIcon: {fileID: 21300000, guid: 903db970c2431bc40966f59450ff4d0f, type: 3}
   itemType: 0
   maxStackSize: 3
   itemEffect: {fileID: 0}
-  craftRecipe: []
