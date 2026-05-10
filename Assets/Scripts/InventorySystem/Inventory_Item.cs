@@ -35,7 +35,7 @@ public class Inventory_Item
         }
     }
 
-    public void RemoveModifiers(Entity_Stats playerStats) 
+    public void RemoveModifiers(Entity_Stats playerStats)
     {
         foreach (var mod in modifiers)
         {
@@ -61,13 +61,26 @@ public class Inventory_Item
 
     public string GetItemInfo()
     {
+        StringBuilder sb = new StringBuilder();
+
         if (itemData.itemType == ItemType.Material)
-            return "Used for crafting.";
+        {
+            sb.AppendLine("");
+            sb.AppendLine("Used for crafting");
+            sb.AppendLine("");
+            sb.AppendLine("");
+            return sb.ToString();
+        }
 
         if (itemData.itemType == ItemType.Consumable)
-            return itemData.itemEffect.effectDescription;
+        {
+            sb.AppendLine("");
+            sb.AppendLine(itemEffect.effectDescription);
+            sb.AppendLine("");
+            sb.AppendLine("");
+            return sb.ToString();
+        }
 
-        StringBuilder sb = new StringBuilder();
 
         sb.AppendLine("");
 
@@ -84,6 +97,9 @@ public class Inventory_Item
             sb.AppendLine("Unique effect");
             sb.AppendLine(itemEffect.effectDescription);
         }
+
+        sb.AppendLine("");
+        sb.AppendLine("");
 
         return sb.ToString();
     }

@@ -40,5 +40,15 @@ public class UI_MerchantSlot : UI_ItemSlot
         ui.itemToolTip.ShowToolTip(false, null);
     }
 
+    public override void OnPointerEnter(PointerEventData eventData)
+    {
+        if(itemInslot == null) return;
+
+        if (slotType == MerchanSlotType.MerchantSlot)
+            ui.itemToolTip.ShowToolTip(true, rect, itemInslot, false, true);
+        else
+            ui.itemToolTip.ShowToolTip(true, rect, itemInslot, false, true);
+    }
+
     public void SetuoMerchantUI(Inventory_Merchant merchant) => this.merchant = merchant;
 }

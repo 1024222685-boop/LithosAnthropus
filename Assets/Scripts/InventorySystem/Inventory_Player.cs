@@ -13,12 +13,12 @@ public class Inventory_Player : Inventory_Base
     {
         base.Awake();
         player = GetComponent<Player>();
-        storage= FindFirstObjectByType<Inventory_Storage>();
+        storage = FindFirstObjectByType<Inventory_Storage>();
     }
 
     public void TryEquipItem(Inventory_Item item)
     {
-        var inventoryItem = FindItem(item.itemData);
+        var inventoryItem = FindItem(item);
         var matchchingSlots = equipList.FindAll(slot => slot.slotType == item.itemData.itemType);
 
         foreach (var slot in matchchingSlots)
@@ -33,7 +33,7 @@ public class Inventory_Player : Inventory_Base
         var slotToReplace = matchchingSlots[0];
         var itemToUnequip = slotToReplace.equipedItem;
 
-        UnequipItem(itemToUnequip,slotToReplace != null);
+        UnequipItem(itemToUnequip, slotToReplace != null);
         EquipItem(inventoryItem, slotToReplace);
     }
 
@@ -44,12 +44,12 @@ public class Inventory_Player : Inventory_Base
         slot.equipedItem = itemToEquip;
         slot.equipedItem.AddModifiers(player.stats);
         slot.equipedItem.AddItemEffect(player);
-        
-        RemoveOneItem(itemToEquip);
+
         player.health.SetHealthToPercent(saveHealthPercent);
+        RemoveOneItem(itemToEquip);
     }
 
-    public void UnequipItem(Inventory_Item itemToUnequip,bool replacingItem = false)
+    public void UnequipItem(Inventory_Item itemToUnequip, bool replacingItem = false)
     {
         if (CanAddItem(itemToUnequip) == false && replacingItem == false)
         {
@@ -60,7 +60,7 @@ public class Inventory_Player : Inventory_Base
         float savedHealthPercent = player.health.GetHealthPercent();
         var slotToUnequip = equipList.Find(slot => slot.equipedItem == itemToUnequip);
 
-        if(slotToUnequip != null)
+        if (slotToUnequip != null)
             slotToUnequip.equipedItem = null;
 
         itemToUnequip.RemoveModifiers(player.stats);

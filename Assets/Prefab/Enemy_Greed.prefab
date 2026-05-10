@@ -657,6 +657,7 @@ GameObject:
   - component: {fileID: 5333823769789507401}
   - component: {fileID: 5154415456463102715}
   - component: {fileID: 415576647260536796}
+  - component: {fileID: -639095330542739638}
   m_Layer: 8
   m_HasEditorInfo: 1
   m_Name: Enemy_Greed
@@ -846,7 +847,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  isDead: 0
   regenInterval: 1
   canRegenerateHealth: 1
   knockbackPower: {x: 1.5, y: 2.5}
@@ -882,8 +882,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultStatsetup: {fileID: 11400000, guid: bd732ca6549a10c4a82e29dd35975546, type: 2}
-  equipmentType: 0
-  elementType: 0
   resources:
     maxHealth:
       baseValue: 1000
@@ -933,7 +931,7 @@ MonoBehaviour:
       baseValue: 0
       modifiers: []
   major:
-    Strength:
+    strength:
       baseValue: 0
       modifiers: []
     agility:
@@ -942,9 +940,25 @@ MonoBehaviour:
     intelligence:
       baseValue: 0
       modifiers: []
-    Vitality:
+    vitality:
       baseValue: 0
       modifiers: []
+--- !u!114 &-639095330542739638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7966972448907909156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d056c5710067f488049af520cfdf8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDropPrefab: {fileID: 2150550373287504434, guid: 24e10ae89124bd54e8489823263f5401, type: 3}
+  dropData: {fileID: 11400000, guid: 793a5854b94f9c14486019cb1e91e0b9, type: 2}
+  maxRarityAmount: 1200
+  maxItemsToDrop: 2
 --- !u!1 &8537415524321430734
 GameObject:
   m_ObjectHideFlags: 0

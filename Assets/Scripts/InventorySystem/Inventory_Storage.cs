@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Inventory_Storage : Inventory_Base
@@ -6,7 +7,18 @@ public class Inventory_Storage : Inventory_Base
     public Inventory_Player playerInventory { get; private set; }
     public List<Inventory_Item> materialStash;
 
-    public void ConsumMaterials(Inventory_Item itemToCraft)
+    public void CraftItem(Inventory_Item itemToCraft)
+    {
+        ConsumMaterials(itemToCraft);
+        playerInventory.AddItem(itemToCraft);
+    }
+
+    public bool CanCraftItem(Inventory_Item itemToCraft)
+    {
+        return HasEnoughMaterial(itemToCraft) && playerInventory.CanAddItem(itemToCraft);
+    }
+
+    private void ConsumMaterials(Inventory_Item itemToCraft)
     {
         foreach (var requiredItem in itemToCraft.itemData.craftRecipe)
         {
@@ -14,10 +26,10 @@ public class Inventory_Storage : Inventory_Base
 
             amountToConsume = amountToConsume - ConsumedMaterialAmount(playerInventory.itemList, requiredItem);
 
-            if(amountToConsume > 0)
+            if (amountToConsume > 0)
                 amountToConsume = amountToConsume - ConsumedMaterialAmount(itemList, requiredItem);
 
-            if(amountToConsume > 0)
+            if (amountToConsume > 0)
                 amountToConsume = amountToConsume - ConsumedMaterialAmount(materialStash, requiredItem);
         }
     }
@@ -37,7 +49,7 @@ public class Inventory_Storage : Inventory_Base
             item.stackSize = item.stackSize - removeAmount;
             consumeAmount = consumeAmount + removeAmount;
 
-            if(item.stackSize <= 0)
+            if (item.stackSize <= 0)
                 itemList.Remove(item);
 
             if (consumeAmount >= amountNeeded)
@@ -47,11 +59,11 @@ public class Inventory_Storage : Inventory_Base
         return consumeAmount;
     }
 
-    public bool HasEnoughMaterial(Inventory_Item itemToCraft)
+    private bool HasEnoughMaterial(Inventory_Item itemToCraft)
     {
         foreach (var requiredMaterial in itemToCraft.itemData.craftRecipe)
         {
-            if(GetAvailableAmountOf(requiredMaterial.itemData) < requiredMaterial.stackSize)
+            if (GetAvailableAmountOf(requiredMaterial.itemData) < requiredMaterial.stackSize)
                 return false;
         }
 
@@ -73,7 +85,7 @@ public class Inventory_Storage : Inventory_Base
             if (item.itemData == requiredItem)
                 amount = amount + item.stackSize;
         }
-        
+
         foreach (var item in materialStash)
         {
             if (item.itemData == requiredItem)
@@ -90,9 +102,13 @@ public class Inventory_Storage : Inventory_Base
         if (stackableItem != null)
             stackableItem.AddStack();
         else
-            materialStash.Add(itemToAdd);
+        {
+            var newItemToAdd = new Inventory_Item(itemToAdd.itemData);
+            materialStash.Add(newItemToAdd);
+        }
 
         TriggerUpdateUI();
+        materialStash = materialStash.OrderBy(item => item.itemData.name).ToList();
     }
 
     public Inventory_Item StackableInStash(Inventory_Item itemToAdd)

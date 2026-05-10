@@ -6,7 +6,7 @@ public class Inventory_Base : MonoBehaviour
 {
     public event Action OnInventoryChange;
 
-    public int maxInventorySize = 10;
+    public int maxInventorySize = 12;
     public List<Inventory_Item> itemList = new List<Inventory_Item>();
 
     protected virtual void Awake()
@@ -33,10 +33,10 @@ public class Inventory_Base : MonoBehaviour
 
     public bool CanAddItem(Inventory_Item itemToAdd)
     {
-        bool hasStackable = FindStatckable(itemToAdd) != null;
+        bool hasStackable = FindStackable(itemToAdd) != null;
         return hasStackable || itemList.Count < maxInventorySize;
     }
-    public Inventory_Item FindStatckable(Inventory_Item itemToAdd)
+    public Inventory_Item FindStackable(Inventory_Item itemToAdd)
     {
         List<Inventory_Item> stackableItems = itemList.FindAll(item => item.itemData == itemToAdd.itemData);
 
@@ -51,7 +51,7 @@ public class Inventory_Base : MonoBehaviour
 
     public void AddItem(Inventory_Item itemToAdd)
     {
-        Inventory_Item itemInInventory = FindStatckable(itemToAdd);
+        Inventory_Item itemInInventory = FindStackable(itemToAdd);
 
         if (itemInInventory != null)
             itemInInventory.AddStack();
@@ -63,19 +63,31 @@ public class Inventory_Base : MonoBehaviour
 
     public void RemoveOneItem(Inventory_Item itemToRemove)
     {
+        if (itemToRemove == null) return;
+
         Inventory_Item itemInventory = itemList.Find(item => item == itemToRemove);
 
-        if(itemInventory.stackSize > 1)
+        if (itemInventory == null) return;
+
+        if (itemInventory.stackSize > 1)
             itemInventory.RemoveStack();
         else
-            itemList.Remove(itemToRemove);
+            itemList.Remove(itemInventory);
 
         OnInventoryChange?.Invoke();
     }
 
-    public Inventory_Item FindItem(ItemDataSO itemData)
+    public void RemoveFullStack(Inventory_Item itemToRemove)
     {
-        return itemList.Find(item => item.itemData == itemData);
+        for (int i = 0; i < itemToRemove.stackSize; i++)
+        {
+            RemoveOneItem(itemToRemove);
+        }
+    }
+
+    public Inventory_Item FindItem(Inventory_Item itemToFind)
+    {
+        return itemList.Find(item => item == itemToFind);
     }
 
     public void TriggerUpdateUI() => OnInventoryChange?.Invoke();
