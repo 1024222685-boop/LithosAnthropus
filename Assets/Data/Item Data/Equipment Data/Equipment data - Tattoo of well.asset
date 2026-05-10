@@ -25,7 +25,7 @@ MonoBehaviour:
   maxStackSize: 1
   itemEffect: {fileID: 0}
   modifiers:
-  - statType: 1
+  - statType: 0
     value: 50
   - statType: 9
     value: 2
