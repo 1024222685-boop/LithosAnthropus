@@ -11,10 +11,10 @@ public class UI_ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     protected RectTransform rect;
 
     [Header("UI Slot Setup")]
-    [SerializeField] private Image itemIcon;
-    [SerializeField] private TextMeshProUGUI itemStacksSize;
+    [SerializeField] protected Image itemIcon;
+    [SerializeField] protected TextMeshProUGUI itemStacksSize;
 
-    protected void Awake()
+    protected virtual void Awake()
     {
         ui = GetComponentInParent<UI>();
         rect = GetComponent<RectTransform>();

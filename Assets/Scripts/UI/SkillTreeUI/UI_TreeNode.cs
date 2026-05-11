@@ -1,11 +1,9 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using System.Collections;
 
-public class UI_TreeNode : MonoBehaviour,
-    IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler,
-    ISelectHandler, IDeselectHandler, ISubmitHandler
+public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, ISelectHandler, IDeselectHandler, ISubmitHandler
 {
     private UI ui;
     private RectTransform rect;
@@ -36,14 +34,8 @@ public class UI_TreeNode : MonoBehaviour,
     private Color baseNormalColor;
     private readonly Color hoverHighlightColor = new Color(0.9f, 0.9f, 0.9f, 1f);
 
-
     private void Awake()
     {
-        ui = GetComponentInParent<UI>();
-        rect = GetComponent<RectTransform>();
-        skillTree = GetComponentInParent<UI_SkillTree>();
-        connectHandler = GetComponent<UI_TreeConnectHandler>();
-
         button = GetComponent<Button>();
         if (button == null)
         {
@@ -62,7 +54,7 @@ public class UI_TreeNode : MonoBehaviour,
             fadeDuration = 0f
         };
 
-        // 修复：统一初始化外框Image，仅从子物体获取，不重复覆盖
+        // 统一初始化外框Image，仅从子物体获取，不重复覆盖
         if (SelectionFrame != null)
         {
             frameImage = SelectionFrame.GetComponentInChildren<Image>();
@@ -74,15 +66,29 @@ public class UI_TreeNode : MonoBehaviour,
         }
 
         baseNormalColor = GetColorByHex(lockedColorHex);
-        UpdateIconBaseColor(baseNormalColor);
     }
 
     private void Start()
     {
-        if (skillData.unlockedByDefault)
-            Unlock();
+        UpdateIconBaseColor(baseNormalColor);
+        UnlockDefaultSkill();
 
         UpdateButtonInteractable();
+    }
+
+    public void UnlockDefaultSkill()
+    {
+        GetNeededComponent();
+        if (skillData.unlockedByDefault)
+            Unlock();
+    }
+
+    private void GetNeededComponent()
+    {
+        ui = GetComponentInParent<UI>();
+        rect = GetComponent<RectTransform>();
+        skillTree = GetComponentInParent<UI_SkillTree>(true);
+        connectHandler = GetComponent<UI_TreeConnectHandler>();
     }
 
     private void UpdateButtonInteractable()
@@ -118,15 +124,20 @@ public class UI_TreeNode : MonoBehaviour,
 
     private void Unlock()
     {
-        isUnlocked = true;
+        if (isUnlocked)
+        {
+            Debug.Log("Skill is already unlocked!");
+            return;
+        }
 
+        isUnlocked = true;
         UpdateIconBaseColor(Color.white);
         LockConflictNodes();
 
         skillTree.RemoveSkillPoints(skillData.cost);
         connectHandler.UnlockedConnectionImage(true);
 
-        skillTree.skillManager.GetSkillByType(skillData.skillType).SetSkillUpgrade(skillData.upgradeData);
+        skillTree.skillManager.GetSkillByType(skillData.skillType).SetSkillUpgrade(skillData);
 
         UpdateButtonInteractable();
     }
@@ -211,7 +222,7 @@ public class UI_TreeNode : MonoBehaviour,
     private void ShowTooltipAndHighlight()
     {
         if (ui == null || ui.skillToolTip == null) return;
-        ui.skillToolTip.ShowToolTip(true, rect, this);
+        ui.skillToolTip.ShowToolTip(true, rect, skillData, this);
 
         if (isUnlocked || isLocked)
             return;
@@ -220,7 +231,7 @@ public class UI_TreeNode : MonoBehaviour,
             skillIcon.color = hoverHighlightColor;
     }
 
-    // 修复：移除拦截判断，确保协程正常启动
+    //移除拦截判断，确保协程正常启动
     private void ShowSelectionFrame()
     {
         if (SelectionFrame == null || frameImage == null) return;
@@ -233,7 +244,7 @@ public class UI_TreeNode : MonoBehaviour,
         flashCoroutine = StartCoroutine(FlashFrame());
     }
 
-    // 修复：优化协程稳定性，增加退出条件与空值保护
+    //优化协程稳定性，增加退出条件与空值保护
     private IEnumerator FlashFrame()
     {
         if (frameImage == null) yield break;

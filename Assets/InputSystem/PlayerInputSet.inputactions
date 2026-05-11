@@ -115,9 +115,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Interac",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "c81753f5-72e7-428d-ba28-c4c80a1541d3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "QuickItemSlot_1",
+                    "type": "Button",
+                    "id": "514b3204-aecb-4c32-9666-76dc80298489",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "QuickItemSlot_2",
+                    "type": "Button",
+                    "id": "f852bfe1-64c0-4ae0-b520-6b7993102e98",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -462,7 +480,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard & Mouse",
-                    "action": "Interac",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "82d7cfae-0061-4969-83eb-8d946f694491",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard & Mouse",
+                    "action": "QuickItemSlot_1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "941dcb45-6bc6-4c6c-abec-b0dbf2f15143",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard & Mouse",
+                    "action": "QuickItemSlot_2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
