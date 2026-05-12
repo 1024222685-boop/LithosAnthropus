@@ -73,6 +73,7 @@
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
     <Compile Include="Assets\InputSystem\PlayerInputSet.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_CounterAttackState.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Options.cs" />
     <Compile Include="Assets\Scripts\UI\StorageUI\UI_Storage.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_OffenseGroup.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterUI\UI_StatSlot.cs" />

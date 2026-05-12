@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Object_BlackSmith : Object_NPC,IInteractable
+public class Object_BlackSmith : Object_NPC, IInteractable
 {
     private Animator anim;
     private Inventory_Player inventory;
@@ -21,8 +19,7 @@ public class Object_BlackSmith : Object_NPC,IInteractable
         ui.storageUI.SetupStorage(storage);
         ui.craftUI.SetCraftUI(storage);
 
-        ui.storageUI.gameObject.SetActive(true);
-        //sui.craftUI.gameObject.SetActive(true);
+        ui.OpenStorageUI(true);
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision)
@@ -34,9 +31,8 @@ public class Object_BlackSmith : Object_NPC,IInteractable
 
     protected override void OnTriggerExit2D(Collider2D collision)
     {
-        base.OnTriggerExit2D(collision); 
-        ui.SwitchOffAllTooltips();
-        ui.storageUI.gameObject.SetActive(false);
-        ui.craftUI.gameObject.SetActive(false);
+        base.OnTriggerExit2D(collision);
+        ui.HideAllTooltips();
+        ui.OpenStorageUI(false);
     }
 }
