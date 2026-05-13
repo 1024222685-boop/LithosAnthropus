@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e896f661db737d43bec3125e114a866, type: 3}
+  m_Name: List of items - Small Potion to craft
+  m_EditorClassIdentifier: 
+  itemList:
+  - {fileID: 11400000, guid: 7e4655c0a9e939a4d841e6a84c40f72a, type: 2}
+  - {fileID: 11400000, guid: e0773292a167d1b4ba7b9694d8d4c8e8, type: 2}

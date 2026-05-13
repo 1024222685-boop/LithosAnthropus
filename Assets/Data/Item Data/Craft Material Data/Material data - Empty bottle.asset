@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229789fc099bbf448b0cb81c6e93d696, type: 3}
+  m_Name: Material data - Empty bottle
+  m_EditorClassIdentifier: 
+  itemPrice: 100
+  minStackSizeAtShop: 1
+  maxStackSizeAtShop: 1
+  itemRarity: 144
+  dropChance: 85.7
+  maxDropChance: 210
+  craftRecipe: []
+  itemName: Empty bottle
+  itemIcon: {fileID: -1433563064, guid: 5b8b698499ad09b45bd0d088aa1e164a, type: 3}
+  itemType: 0
+  maxStackSize: 1
+  itemEffect: {fileID: 0}
