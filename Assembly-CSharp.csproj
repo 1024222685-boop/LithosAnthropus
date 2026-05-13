@@ -63,11 +63,13 @@
     <Compile Include="Assets\Scripts\StateMachine\PlayerState.cs" />
     <Compile Include="Assets\Scripts\UI\Tooltips\UI_ToolTip.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_Dash.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameUI\UI_InGame.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_GrantSkillPoint.cs" />
     <Compile Include="Assets\Scripts\Player\Player_AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Base.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_MoveState.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_DataSO.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameUI\UI_QuickItemSlot.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillType.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
@@ -79,10 +81,9 @@
     <Compile Include="Assets\Scripts\UI\CharacterUI\UI_StatSlot.cs" />
     <Compile Include="Assets\Scripts\UI\CraftUI\UI_Craft.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_GroundState.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_QuickItemSlot.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_SickleThrow.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_GroundState.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_SkillSlot.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameUI\UI_MiniHealthBar.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_Buff.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_VFX.cs" />
     <Compile Include="Assets\Scripts\UI\Tooltips\UI_SkillToolTip.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_JumpAttackState.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_JumpState.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameUI\UI_SkillSlot.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Health.cs" />
     <Compile Include="Assets\Scripts\Player\Player_DropManager.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
@@ -118,7 +120,6 @@
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_DefenceGroup.cs" />
     <Compile Include="Assets\Scripts\interface\IInteractable.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_QuickItemSlotOption.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_MoveState.cs" />
     <Compile Include="Assets\Scripts\interface\ICounterable.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_RefundAllSkills.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Assets\Scripts\Data\ItemData\ItemDataSO.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_DropManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Health.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameUI\UI_QuickItemSlotOption.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Item.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Health.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_BlackSmith.cs" />
@@ -159,8 +161,8 @@
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_WallJumpState.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_VFX.cs" />
-    <Compile Include="Assets\Scripts\SkillSystem\SkillObject_SicklePeirce.cs" />
     <Compile Include="Assets\Scripts\UI\Tooltips\UI_StatToolTip.cs" />
+    <Compile Include="Assets\Scripts\SkillSystem\SkillObject_SicklePeirce.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_NPC.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_EquipmentSlot.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_StatusHandler.cs" />
@@ -187,18 +189,17 @@
     <Compile Include="Assets\Scripts\Enum\ElementType.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftListButton.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_InGame.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_AttackState.cs" />
     <Compile Include="Assets\Scripts\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_IdleState.cs" />
     <Compile Include="Assets\Scripts\Data\ConsumableItemDataSO.cs" />
-    <Compile Include="Assets\Scripts\StateMachine\EnemyState.cs" />
     <Compile Include="Assets\Scripts\UI\SkillTreeUI\UI_TreeConnectHandler.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\EnemyState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\UI\MerchantUI\UI_Merchant.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_ItemPickup.cs" />
-    <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftPreview.cs" />
     <Compile Include="Assets\Scripts\UI\SkillTreeUI\UI_TreeConnection.cs" />
+    <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftPreview.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DeadState.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Stats.cs" />
     <Compile Include="Assets\Scripts\Player\Player_SkillManager.cs" />
@@ -210,7 +211,6 @@
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_DomainExpansion.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_Stuntman.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_MiniHealthBar.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterUI\UI_EquipSlotParent.cs" />
   </ItemGroup>
   <ItemGroup>

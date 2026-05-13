@@ -11,6 +11,7 @@ public class UI_ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     protected RectTransform rect;
 
     [Header("UI Slot Setup")]
+    [SerializeField] protected GameObject defaultIcon;
     [SerializeField] protected Image itemIcon;
     [SerializeField] protected TextMeshProUGUI itemStacksSize;
 
@@ -36,7 +37,7 @@ public class UI_ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
         {
             if (itemInslot.itemData.itemType == ItemType.Consumable)
             {
-           
+
 
                 inventory.TryUseItem(itemInslot);
             }
@@ -52,10 +53,12 @@ public class UI_ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     {
         itemInslot = item;
 
+        if (defaultIcon != null)
+            defaultIcon.gameObject.SetActive(itemInslot == null);
+
         if (itemInslot == null)
         {
             itemStacksSize.text = "";
-            itemIcon.sprite = null;
             itemIcon.color = Color.clear;
             return;
         }

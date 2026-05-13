@@ -12,6 +12,8 @@ public class UI_Options : MonoBehaviour
     {
         player = FindFirstObjectByType<Player>();
         healthBarToggle.onValueChanged.AddListener(OnHealthToggleChanged);
+
+        OnHealthToggleChanged(healthBarToggle.isOn);
     }
 
     private void OnHealthToggleChanged(bool isOn)

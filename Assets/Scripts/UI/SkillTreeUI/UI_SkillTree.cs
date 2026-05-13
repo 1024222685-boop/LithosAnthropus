@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -5,14 +6,21 @@ using UnityEngine.UI;
 public class UI_SkillTree : MonoBehaviour
 {
     [SerializeField] public int skillPoints;
+    [SerializeField] private TextMeshProUGUI skillPointsText;
     [SerializeField] private UI_TreeConnectHandler[] parentNodes;
     [SerializeField] private UI_TreeNode defaultSelectedNode;
     private UI_TreeNode[] allTreeNodes;
-    public Player_SkillManager skillManager { get; private set; }   
+    public Player_SkillManager skillManager { get; private set; }
 
     private void Start()
     {
         UpdateAllConnections();
+        UpdateSkillPointsUI();
+    }
+
+    private void UpdateSkillPointsUI()
+    {
+        skillPointsText.text = skillPoints.ToString();
     }
 
     public void UnlockDefaultSkills()
@@ -20,7 +28,7 @@ public class UI_SkillTree : MonoBehaviour
         allTreeNodes = GetComponentsInChildren<UI_TreeNode>(true);
         skillManager = FindAnyObjectByType<Player_SkillManager>();
 
-        foreach(var node in allTreeNodes)
+        foreach (var node in allTreeNodes)
             node.UnlockDefaultSkill();
     }
 
@@ -65,8 +73,16 @@ public class UI_SkillTree : MonoBehaviour
     }
 
     public bool EnoughSkillPoints(int cost) => skillPoints >= cost;
-    public void RemoveSkillPoints(int cost) => skillPoints = skillPoints - cost;
-    public void AddSkillPoints(int points) => skillPoints = skillPoints + points;
+    public void RemoveSkillPoints(int cost)
+    {
+        skillPoints = skillPoints - cost;
+        UpdateSkillPointsUI();
+    }
+    public void AddSkillPoints(int points)
+    {
+        skillPoints = skillPoints + points;
+        UpdateSkillPointsUI();
+    }
 
     [ContextMenu("Update All Connecitons")]
     public void UpdateAllConnections()

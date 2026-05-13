@@ -70,7 +70,9 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void Start()
     {
-        UpdateIconBaseColor(baseNormalColor);
+        if (isUnlocked == false)
+            UpdateIconColor(GetColorByHex(lockedColorHex));
+
         UnlockDefaultSkill();
 
         UpdateButtonInteractable();
@@ -99,7 +101,7 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
     }
 
-    private void UpdateIconBaseColor(Color newBaseColor)
+    private void UpdateIconColor(Color newBaseColor)
     {
         baseNormalColor = newBaseColor;
         if (skillIcon != null)
@@ -114,7 +116,7 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         isUnlocked = false;
         isLocked = false;
 
-        UpdateIconBaseColor(GetColorByHex(lockedColorHex));
+        UpdateIconColor(GetColorByHex(lockedColorHex));
 
         skillTree.AddSkillPoints(skillData.cost);
         connectHandler.UnlockedConnectionImage(false);
@@ -131,7 +133,7 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
 
         isUnlocked = true;
-        UpdateIconBaseColor(Color.white);
+        UpdateIconColor(Color.white);
         LockConflictNodes();
 
         skillTree.RemoveSkillPoints(skillData.cost);
@@ -223,6 +225,7 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (ui == null || ui.skillToolTip == null) return;
         ui.skillToolTip.ShowToolTip(true, rect, skillData, this);
+        ui.skillToolTip.StopLockedSkillEffecr();
 
         if (isUnlocked || isLocked)
             return;
@@ -304,9 +307,9 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         HideSelectionFrame();
 
         if (isLocked || !isUnlocked)
-            UpdateIconBaseColor(GetColorByHex(lockedColorHex));
+            UpdateIconColor(GetColorByHex(lockedColorHex));
         if (isUnlocked)
-            UpdateIconBaseColor(Color.white);
+            UpdateIconColor(Color.white);
     }
 
     private void OnValidate()
