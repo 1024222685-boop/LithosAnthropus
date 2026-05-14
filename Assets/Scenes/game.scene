@@ -79297,7 +79297,7 @@ Transform:
   m_GameObject: {fileID: 665566461}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.00000008742278, z: 0, w: -1}
-  m_LocalPosition: {x: 47.3, y: -5.55, z: -0}
+  m_LocalPosition: {x: 47.3, y: -5.57, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -79519,7 +79519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxInventorySize: 10
   itemList: []
-  gold: 100000
+  itemDataBase: {fileID: 11400000, guid: a7577dccbc00900468c3f9d5ee89dd5f, type: 2}
   equipList:
   - slotType: 1
     equipedItem:
@@ -79548,6 +79548,7 @@ MonoBehaviour:
   - itemData: {fileID: 0}
     stackSize: 0
     itemEffect: {fileID: 0}
+  gold: 500
 --- !u!114 &665566479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81165,6 +81166,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693783134}
   m_CullTransparentMesh: 1
+--- !u!1 &706750150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 7
+  m_Component:
+  - component: {fileID: 706750152}
+  - component: {fileID: 706750151}
+  m_Layer: 0
+  m_HasEditorInfo: 1
+  m_Name: '***SAVE MANAGER***'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &706750151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706750150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739c51b815daa0546ae5f146527ac2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: LithosAnthropus.json
+  encryptData: 0
+--- !u!4 &706750152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706750150}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 329.35785, y: 857.75525, z: -0.5244087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708603347
 GameObject:
   m_ObjectHideFlags: 0
@@ -113051,6 +113099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxInventorySize: 10
   itemList: []
+  itemDataBase: {fileID: 11400000, guid: a7577dccbc00900468c3f9d5ee89dd5f, type: 2}
   materialStash: []
 --- !u!1 &1050651863
 GameObject:
@@ -121772,7 +121821,7 @@ Transform:
   m_GameObject: {fileID: 1235682035}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.432854, y: -5.059083, z: 15.598946}
+  m_LocalPosition: {x: 45.432854, y: -5.079083, z: 15.598946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -139093,6 +139142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxInventorySize: 30
   itemList: []
+  itemDataBase: {fileID: 11400000, guid: a7577dccbc00900468c3f9d5ee89dd5f, type: 2}
   shopData: {fileID: 11400000, guid: 536952c690f325b40b268710a231dc5a, type: 2}
   minItemAmount: 4
 --- !u!1 &1622918907
@@ -153500,7 +153550,7 @@ Transform:
   m_GameObject: {fileID: 1949691992}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.432854, y: -5.059083, z: 15.598946}
+  m_LocalPosition: {x: 45.432854, y: -5.079083, z: 15.598946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -161354,7 +161404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2144819839
 Transform:
   m_ObjectHideFlags: 0
@@ -161612,3 +161662,4 @@ SceneRoots:
   - {fileID: 1622182537}
   - {fileID: 1050007982}
   - {fileID: 1902353596}
+  - {fileID: 706750152}

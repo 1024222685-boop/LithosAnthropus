@@ -8,7 +8,7 @@ public class Player_SkillManager : MonoBehaviour
     public Skill_Stuntman stuntman { get; private set; }
     public Skill_DomainExpansion domainExpansion { get; private set; }
 
-    private Skill_Base[] allskills;
+    public Skill_Base[] allskills { get; private set; }
 
     private void Awake()
     {

@@ -144,6 +144,15 @@ public class UI_TreeNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         UpdateButtonInteractable();
     }
 
+    public void UnlockWithSaveData()
+    {
+        connectHandler.UnlockedConnectionImage(true);
+
+        isUnlocked = true;
+        UpdateIconColor(Color.white);
+        LockConflictNodes();
+    }
+
     private bool CanBeUnlocked()
     {
         if (isLocked || isUnlocked)

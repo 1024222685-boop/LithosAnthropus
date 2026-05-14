@@ -75,6 +75,7 @@
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
     <Compile Include="Assets\InputSystem\PlayerInputSet.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_CounterAttackState.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\GameData.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Options.cs" />
     <Compile Include="Assets\Scripts\UI\StorageUI\UI_Storage.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_OffenseGroup.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\StatSystem\Stat_MajorGroup.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterUI\UI_ItemSlot.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_DomainExpansion.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\FileDataHandler.cs" />
     <Compile Include="Assets\Scripts\UI\SkillTreeUI\UI_TreeNode.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_Buff.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxLayer.cs" />
@@ -108,6 +110,7 @@
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Stuntman.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_ResourceGroup.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
+    <Compile Include="Assets\Scripts\interface\ISaveable.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_HurtState.cs" />
     <Compile Include="Assets\Scripts\Enum\ItemType.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_MercyBlastOnTakingDamage.cs" />
@@ -125,6 +128,7 @@
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_RefundAllSkills.cs" />
     <Compile Include="Assets\Scripts\Player\Player_VFX.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DomainExpansionState.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveManager.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Combat.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_StunnedState.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxBackground.cs" />
@@ -152,12 +156,14 @@
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Health.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_BlackSmith.cs" />
     <Compile Include="Assets\Scripts\VFX\VFX_AutoController.cs" />
+    <Compile Include="Assets\Scripts\InteractiveObjects\Object_Checkpoint.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Shadow.cs" />
     <Compile Include="Assets\Scripts\StateMachine\EntityState.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Player.cs" />
     <Compile Include="Assets\Scripts\Data\ElementalEffectData.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\EquipmentDataSO.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_WallJumpState.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_VFX.cs" />
