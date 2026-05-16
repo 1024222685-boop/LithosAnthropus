@@ -1,0 +1,1351 @@
+fileFormatVersion: 2
+guid: B3tKtiurUShekiPaRIxBd3cZ98oqm78BGFucMOhcSx2x73bdrSK/aBE=
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 14
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  webStreaming: 0
+  priorityLevel: 0
+  uploadedMode: 2
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    maxPlaceholderSize: 32
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    maxPlaceholderSize: 32
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    maxPlaceholderSize: 32
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    maxPlaceholderSize: 32
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WeixinMiniGame
+    maxTextureSize: 2048
+    maxPlaceholderSize: 32
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pixeldoors1_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79bf4d08306f6c4cb9aa016a5f15fe0
+      internalID: 1546451911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305c065c8bb7c334484493ba0ad7a638
+      internalID: -947361397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d81d6b86216434a9ddf53a12a8349c
+      internalID: -1884294513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3aa61de6f1297545b15b071d3516ac9
+      internalID: -757414493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_4
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1119adc4357b3648844f43408626927
+      internalID: 649340398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e75c8b4f75ebd44aec79734ad6a4c2
+      internalID: -1578617951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_6
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56acf8db4520834fb6250bd37742604
+      internalID: 815385858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_7
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4702cf4bb3fd64746a1e6e7213eb4e4a
+      internalID: 1833862976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_8
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a911ed12c8eda746b3cd1161a184f21
+      internalID: -1609647619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_9
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d07ba0271689df42bcdfb8a3e685acd
+      internalID: 1011873775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_10
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280d7476d37170a4d9d229b36d3663f6
+      internalID: 1668320504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6efe1de6f32bdf489a328af2b64005c
+      internalID: -1103312288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_12
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ac92e9f62d1ed43b1fd24ad5ca7e7c
+      internalID: 53941112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_13
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2be622b750f3204dbcaa45492470246
+      internalID: -1787991293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_14
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00dcda25963546408383f38bc2ee6ba
+      internalID: 716799418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_15
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91cc131ee8605d48acbf9963cc01b0c
+      internalID: 1970440855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_16
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc48072304cf2b146a33010c6ed35e36
+      internalID: -1720599439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_17
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 220
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a66856edec5e44d912c8bbe781fe46
+      internalID: 2107897713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_18
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40c94a8265439b44b6fdc985de7dcc1
+      internalID: -989739713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_19
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2baae267dd647449a600fbf2523183
+      internalID: 1216134285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_20
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa04dd3ffbc18444a3799fd75df12de
+      internalID: -982925634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_21
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd33f1e90c50eb46ba31ad4de420f3e
+      internalID: 497013583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_22
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d1131a4e014c848a51eaae41bd5416
+      internalID: -207609042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_23
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc12fba863a017f49b5d160e3d883f7a
+      internalID: 1055109452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_24
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdf36f6cdb9e54419c9a3716e82d526
+      internalID: 243318989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_25
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faded26ac3461e642b7b39f5ee99d6e0
+      internalID: -1995916029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_26
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a77d6096551668468a757c78a185a6a
+      internalID: -302152892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_27
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26aec0a5c2dd197408639fc871c94fac
+      internalID: -454149423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_28
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c585e03ef24854e847cbcdbe5c0773
+      internalID: 1690196053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_29
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d11a3c972fdda48bb4c597efcefe1b
+      internalID: 1060749817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_30
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fcc0282530c88f47b2aff753afdcef5
+      internalID: -1237780387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_31
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e12f8f5d9a28bd40866fbeb6c9b6b37
+      internalID: 2088126672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_32
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a37c2b5ee993c04a8b67c4a3b6f95d6
+      internalID: 1967444273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_33
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51adb434a50c124fb39ab0b1e96be2c
+      internalID: 2143602144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_34
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e067bf3c34e4b2442b5b1426c22efce6
+      internalID: 1155471051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_35
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 132
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e717018f2df3e4c96f0330313be68d
+      internalID: 171347679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_36
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ab2ead33b22e241b43449ce051aa56
+      internalID: 1059642948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_37
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3316279fd2bd136438b9fd8b5b53f538
+      internalID: -569948280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_38
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 068133dafb2868542953b21b62173b47
+      internalID: 106415723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_39
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8026eb7df10eff14e8b56aca735822e5
+      internalID: 2084578806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_40
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac2c7c99d49e6c4cbc2cdb92ce679cf
+      internalID: 1368275377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_41
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19bf404951b3f2d47952b6e487bdab95
+      internalID: 1808650315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_42
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905a0fa7348b9ba48aa7ef1e6f412904
+      internalID: 159651432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_43
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da50d9ab42c091499be5b6e1a7e4515
+      internalID: -859442942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_44
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4620fb6796028bd4fa677ca20b646c18
+      internalID: -2133373874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_45
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8bf92f4c1269394492de5e3287564d2
+      internalID: -1089527655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_46
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a603b98b98d284992c378be46db4e7
+      internalID: -213827476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_47
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885f7ba9e008f4e449e10a99560662e4
+      internalID: 31935127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_48
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6891efb2fdfd2f74a9ca284b66650c34
+      internalID: -585899011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_49
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8f3cc03a4fb6b409a8e3915ca34626
+      internalID: 1654937098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_50
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a24f72d8c5e21144a79177616ba3d01
+      internalID: -957004855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_51
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe825e3335b3cb46aa92f253be7ee99
+      internalID: 1478279425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_52
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61aa8958e8da32b4fa3209388fcf0a50
+      internalID: -228701557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixeldoors1_53
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 44
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418ee2ca2f5def148940cce1555334bb
+      internalID: -1241825541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pixeldoors1_0: 1546451911
+      Pixeldoors1_1: -947361397
+      Pixeldoors1_10: 1668320504
+      Pixeldoors1_11: -1103312288
+      Pixeldoors1_12: 53941112
+      Pixeldoors1_13: -1787991293
+      Pixeldoors1_14: 716799418
+      Pixeldoors1_15: 1970440855
+      Pixeldoors1_16: -1720599439
+      Pixeldoors1_17: 2107897713
+      Pixeldoors1_18: -989739713
+      Pixeldoors1_19: 1216134285
+      Pixeldoors1_2: -1884294513
+      Pixeldoors1_20: -982925634
+      Pixeldoors1_21: 497013583
+      Pixeldoors1_22: -207609042
+      Pixeldoors1_23: 1055109452
+      Pixeldoors1_24: 243318989
+      Pixeldoors1_25: -1995916029
+      Pixeldoors1_26: -302152892
+      Pixeldoors1_27: -454149423
+      Pixeldoors1_28: 1690196053
+      Pixeldoors1_29: 1060749817
+      Pixeldoors1_3: -757414493
+      Pixeldoors1_30: -1237780387
+      Pixeldoors1_31: 2088126672
+      Pixeldoors1_32: 1967444273
+      Pixeldoors1_33: 2143602144
+      Pixeldoors1_34: 1155471051
+      Pixeldoors1_35: 171347679
+      Pixeldoors1_36: 1059642948
+      Pixeldoors1_37: -569948280
+      Pixeldoors1_38: 106415723
+      Pixeldoors1_39: 2084578806
+      Pixeldoors1_4: 649340398
+      Pixeldoors1_40: 1368275377
+      Pixeldoors1_41: 1808650315
+      Pixeldoors1_42: 159651432
+      Pixeldoors1_43: -859442942
+      Pixeldoors1_44: -2133373874
+      Pixeldoors1_45: -1089527655
+      Pixeldoors1_46: -213827476
+      Pixeldoors1_47: 31935127
+      Pixeldoors1_48: -585899011
+      Pixeldoors1_49: 1654937098
+      Pixeldoors1_5: -1578617951
+      Pixeldoors1_50: -957004855
+      Pixeldoors1_51: 1478279425
+      Pixeldoors1_52: -228701557
+      Pixeldoors1_53: -1241825541
+      Pixeldoors1_6: 815385858
+      Pixeldoors1_7: 1833862976
+      Pixeldoors1_8: -1609647619
+      Pixeldoors1_9: 1011873775
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  doOverrideTextureManagerOperations: 0
+  platformOperationGroupSettings: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
