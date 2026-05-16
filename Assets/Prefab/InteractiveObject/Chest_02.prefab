@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5631514359260895580}
   - component: {fileID: 4122196934794887479}
   - component: {fileID: 8049294532165138729}
+  - component: {fileID: -836883443944654469}
   m_Layer: 8
   m_HasEditorInfo: 1
   m_Name: Chest_02
@@ -50,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockback: {x: 0, y: 0}
+  canDropItems: 1
 --- !u!61 &5631514359260895580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,6 +145,22 @@ MonoBehaviour:
   mercyvfx: {r: 0, g: 1, b: 1, a: 1}
   brutalvfx: {r: 1, g: 0, b: 0, a: 1}
   cowardvfx: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+--- !u!114 &-836883443944654469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903188337508625552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d056c5710067f488049af520cfdf8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDropPrefab: {fileID: 2150550373287504434, guid: 24e10ae89124bd54e8489823263f5401, type: 3}
+  dropData: {fileID: 11400000, guid: a7577dccbc00900468c3f9d5ee89dd5f, type: 2}
+  maxRarityAmount: 1200
+  maxItemsToDrop: 3
 --- !u!1 &8969595952213409727
 GameObject:
   m_ObjectHideFlags: 0

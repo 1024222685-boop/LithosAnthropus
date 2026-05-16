@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.scene
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/game.scene
+    guid: 7bb9b87781d1f1549b7b84f1d73d8195
+  - enabled: 1
+    path: Assets/Scenes/Level_Rainbow 's place.scene
+    guid: a59df5a42df4bbf4e8e396a9e625d3be
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.scene
+    guid: 44fb3190c439e1e41b844c9b67d65649
   m_BuildProfiles: []
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 71e85fb883a498144a843915b9792421, type: 2}

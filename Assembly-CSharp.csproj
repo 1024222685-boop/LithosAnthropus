@@ -111,6 +111,9 @@
     <Compile Include="Assets\Scripts\StatSystem\Stat_ResourceGroup.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
     <Compile Include="Assets\Scripts\interface\ISaveable.cs" />
+    <Compile Include="Assets\Scripts\InteractiveObjects\Object_Transferpoint.cs" />
+    <Compile Include="Assets\Scripts\Enum\RespawnType.cs" />
+    <Compile Include="Assets\Scripts\Player\Player_Health.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_HurtState.cs" />
     <Compile Include="Assets\Scripts\Enum\ItemType.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_MercyBlastOnTakingDamage.cs" />
@@ -147,6 +150,8 @@
     <Compile Include="Assets\Scripts\InteractiveObjects\ObjectChest.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
     <Compile Include="Assets\Scripts\UI\UI.cs" />
+    <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_PortalKey.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Enum\StatType.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\ItemDataSO.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_DropManager.cs" />
@@ -162,6 +167,7 @@
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Player.cs" />
     <Compile Include="Assets\Scripts\Data\ElementalEffectData.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
+    <Compile Include="Assets\Scripts\InteractiveObjects\Object_Portal.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\EquipmentDataSO.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_WallJumpState.cs" />
@@ -172,6 +178,7 @@
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_NPC.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_EquipmentSlot.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_StatusHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_MainMenu.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_SetupSo.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
