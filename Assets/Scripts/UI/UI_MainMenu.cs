@@ -6,7 +6,16 @@ public class UI_MainMenu : MonoBehaviour
 {
     public void PlayBTN()
     {
-        GameManager.instance.ContinuePlay();
+        GameData data = SaveManager.instance.GetGameData();
+
+        if (!string.IsNullOrEmpty(data.lastScenePlayed))
+        {
+            GameManager.instance.ContinuePlay();
+        }
+        else
+        {
+            GameManager.instance.ChangeScene("game", RespawnType.Enter);
+        }
     }
 
     public void QuitGameBTN()

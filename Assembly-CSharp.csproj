@@ -163,6 +163,7 @@
     <Compile Include="Assets\Scripts\VFX\VFX_AutoController.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_Checkpoint.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Shadow.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_DeathScreen.cs" />
     <Compile Include="Assets\Scripts\StateMachine\EntityState.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Player.cs" />
     <Compile Include="Assets\Scripts\Data\ElementalEffectData.cs" />

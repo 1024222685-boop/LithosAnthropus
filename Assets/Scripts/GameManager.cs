@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour,ISaveable
+public class GameManager : MonoBehaviour, ISaveable
 {
     public static GameManager instance;
     private Vector3 lastPlayerPostion;
@@ -41,16 +41,24 @@ public class GameManager : MonoBehaviour,ISaveable
 
         SceneManager.LoadScene(sceneName);
 
+        yield return null;
+
+        Player player = Player.instance;
+
+        if (player == null)
+            yield break;
+
         yield return new WaitForSeconds(.2f);
 
         Vector3 position = GetNewPlayerPosition(respawnType);
 
         if (position != Vector3.zero)
-            Player.instance.SwapPlayer(position);
+            player.SwapPlayer(position);
     }
 
     public void ChangeScene(string sceneName, RespawnType respawnType)
     {
+        Time.timeScale = 1;
         SaveManager.instance.SaveGame();
         StartCoroutine(ChangeSceneCo(sceneName, respawnType));
     }
@@ -84,6 +92,7 @@ public class GameManager : MonoBehaviour,ISaveable
                 return position;
             }
         }
+
 
         if (type == RespawnType.NoneSpecific)
         {
@@ -141,7 +150,11 @@ public class GameManager : MonoBehaviour,ISaveable
         if (currentScene == "MainMenu")
             return;
 
-        data.lastPlayerPosition = Player.instance.transform.position;
+        if (Player.instance != null && !Player.instance.health.isDead)
+        {
+            data.lastPlayerPosition = Player.instance.transform.position;
+        }
+
         data.lastScenePlayed = currentScene;
     }
 }

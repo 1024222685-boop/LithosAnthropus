@@ -25,6 +25,9 @@ public class Object_Checkpoint : MonoBehaviour, ISaveable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        foreach (var cp in FindObjectsByType<Object_Checkpoint>(FindObjectsSortMode.None))
+            cp.ActivateCheckpoint(false);
+
         ActivateCheckpoint(true);
     }
 
