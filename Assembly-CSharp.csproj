@@ -131,6 +131,7 @@
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_RefundAllSkills.cs" />
     <Compile Include="Assets\Scripts\Player\Player_VFX.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DomainExpansionState.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_FadeScreen.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\SaveManager.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Combat.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_StunnedState.cs" />

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour, ISaveable
     private Vector3 lastPlayerPostion;
 
     private string lastScenePlayed;
+    private bool dataLoaded;
 
     private void Awake()
     {
@@ -37,9 +38,23 @@ public class GameManager : MonoBehaviour, ISaveable
 
     private IEnumerator ChangeSceneCo(string sceneName, RespawnType respawnType)
     {
-        yield return new WaitForSeconds(1);
+        UI_FadeScreen fadeScreen = FindFadeScreenUI();
+
+        fadeScreen.DoFadeOut();
+        yield return fadeScreen.fadeEffectCo;
 
         SceneManager.LoadScene(sceneName);
+
+        dataLoaded = false;
+        yield return null;
+
+        while (dataLoaded == false)
+        {
+            yield return null;
+        }
+
+        fadeScreen = FindFadeScreenUI();
+        fadeScreen.DoFadeIn();
 
         yield return null;
 
@@ -48,12 +63,18 @@ public class GameManager : MonoBehaviour, ISaveable
         if (player == null)
             yield break;
 
-        yield return new WaitForSeconds(.2f);
-
         Vector3 position = GetNewPlayerPosition(respawnType);
 
         if (position != Vector3.zero)
             player.SwapPlayer(position);
+    }
+
+    private UI_FadeScreen FindFadeScreenUI()
+    {
+        if (UI.instance != null)
+            return UI.instance.fadeScreenUI;
+        else
+            return FindFirstObjectByType<UI_FadeScreen>();
     }
 
     public void ChangeScene(string sceneName, RespawnType respawnType)
@@ -141,6 +162,8 @@ public class GameManager : MonoBehaviour, ISaveable
 
         if (string.IsNullOrEmpty(lastScenePlayed))
             lastScenePlayed = "game";
+
+        dataLoaded = true;
     }
 
     public void SaveData(ref GameData data)
@@ -156,5 +179,6 @@ public class GameManager : MonoBehaviour, ISaveable
         }
 
         data.lastScenePlayed = currentScene;
+        dataLoaded = false;
     }
 }
