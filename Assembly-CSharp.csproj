@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_MoveState.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_DataSO.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\UI_QuickItemSlot.cs" />
+    <Compile Include="Assets\Scripts\Entity\Entity_SFX.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillType.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Storage.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Merchant.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Combat.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\ItemListDataSO.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_AnimationTriggers.cs" />
@@ -205,6 +207,7 @@
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\Scripts\UI\CraftUI\UI_CraftListButton.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_AttackState.cs" />
+    <Compile Include="Assets\Scripts\Data\AudioDatabaseSO.cs" />
     <Compile Include="Assets\Scripts\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_IdleState.cs" />
     <Compile Include="Assets\Scripts\Data\ConsumableItemDataSO.cs" />
