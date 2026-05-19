@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c83d6b6f5ac8d94a8a754f4cb135f11, type: 3}
+  m_Name: AUDIO DATABASE
+  m_EditorClassIdentifier: 
+  player:
+  - audioName: player_attackHit
+    clips:
+    - {fileID: 8300000, guid: cde2e13b5c19a32439df8402966c5900, type: 3}
+    volume: 0.6
+  - audioName: player_AttackMiss
+    clips:
+    - {fileID: 8300000, guid: 294b32952e75c0b47b18b96b77785bde, type: 3}
+    - {fileID: 8300000, guid: 093a3023fceb05b48bfc9385cf835201, type: 3}
+    - {fileID: 8300000, guid: 6a00b6354ba3ec9439b0a83b5e1dd2da, type: 3}
+    volume: 0.6
+  uiAudio:
+  - audioName: button_click
+    clips:
+    - {fileID: 8300000, guid: 0cffc7cdb8bc3294e81ddcc8f998129c, type: 3}
+    volume: 0.6
