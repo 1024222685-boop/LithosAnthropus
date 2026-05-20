@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_MoveState.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_DataSO.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\UI_QuickItemSlot.cs" />
+    <Compile Include="Assets\Scripts\AudioRangeController.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_SFX.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillType.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_DomainExpansionState.cs" />
     <Compile Include="Assets\Scripts\UI\UI_FadeScreen.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Combat.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_StunnedState.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxBackground.cs" />

@@ -55,6 +55,8 @@ public class Player : Entity
     [Space]
     public float dashDuration = .25f;
     public float dashSpeed = 20;
+    internal Transform trea;
+
     public Vector2 moveInput { get; private set; }
     public Vector2 mousePosition { get; private set; }
 
