@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ItemDataSO : ScriptableObject
 {
-    public string saveId { get; private set; }
+    public string saveId;
 
     [Header("Merchant details")]
     [Range(0,10000)]

@@ -43,10 +43,16 @@ public class UI_Options : MonoBehaviour
 
     private void OnHealthToggleChanged(bool isOn)
     {
+        AudioManager.instance.PlayGlobalSFX("button_click");
+
         player.health.EnableHealthBar(isOn);
     }
 
-    public void GoMainMenuBTN() => GameManager.instance.ChangeScene("MainMenu", RespawnType.NoneSpecific);
+    public void GoMainMenuBTN()
+    {
+        AudioManager.instance.PlayGlobalSFX("button_click");
+        GameManager.instance.ChangeScene("MainMenu", RespawnType.NoneSpecific);
+    }
 
     private void OnEnable()
     {

@@ -473,6 +473,7 @@ MonoBehaviour:
   groundCheck: {fileID: 5494394747905367361}
   primaryWallCheck: {fileID: 1632331757297221966}
   secondaryWallCheck: {fileID: 1632331757297221966}
+  questTargetId: Enemy_Greed
   battleMoveSpeed: 3
   attackDistance: 2
   battleTimeDuration: 5

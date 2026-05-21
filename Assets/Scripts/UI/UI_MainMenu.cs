@@ -30,6 +30,8 @@ public class UI_MainMenu : MonoBehaviour
 
     public void QuitGameBTN()
     {
+        AudioManager.instance.PlayGlobalSFX("button_click");
+
         Application.Quit(0);
     }
 }

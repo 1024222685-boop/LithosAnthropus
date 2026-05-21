@@ -36,5 +36,13 @@ MonoBehaviour:
   levelMusic:
   - audioName: playlist_levels
     clips:
-    - {fileID: 8300000, guid: e49372c364ef4ff45be3dbd6e3ebbfda, type: 3}
+    - {fileID: 8300000, guid: 1908662d2bb0efb44b11eb7741de44d3, type: 3}
+    maxVolume: 0.6
+  - audioName: playlist_levels2
+    clips:
+    - {fileID: 8300000, guid: 21024c6bdd049a5418104d4e1556e16d, type: 3}
+    maxVolume: 0.6
+  - audioName: playlist_levels3
+    clips:
+    - {fileID: 8300000, guid: 3c8233078bd75974a949f19c42be13d8, type: 3}
     maxVolume: 0.6
