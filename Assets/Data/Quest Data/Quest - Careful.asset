@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564785cee1c270448a0e0b5c5bc0781f, type: 3}
+  m_Name: Quest - Careful
+  m_EditorClassIdentifier: 
+  questSaveId: 312b210633c069746b1e1d808f157ec8
+  questName: Careful
+  description: Give blacksmith one Te-ras medium
+  questGoal: '- Talk to BlackSmith Jove'
+  questTargetId: 
+  requiredAmount: 1
+  rewardType: 2
+  rewardItems:
+  - itemData: {fileID: 11400000, guid: 54f07ba977a583a46a9c1f7c2e918135, type: 2}
+    stackSize: 1
+    itemEffect: {fileID: 0}
