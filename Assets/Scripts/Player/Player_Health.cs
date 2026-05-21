@@ -12,6 +12,12 @@ public class Player_Health : Entity_Health
         player = GetComponent<Player>();
     }
 
+    private void Start()
+    {
+        bool showHealthBar = PlayerPrefs.GetInt("HealthBar", 1) == 1;
+        EnableHealthBar(showHealthBar);
+    }
+
     protected override void Die()
     {
         base.Die();
