@@ -16,7 +16,7 @@ MonoBehaviour:
   questName: Careful
   description: Give blacksmith one Te-ras medium
   questGoal: '- Talk to BlackSmith Jove'
-  questTargetId: 
+  questTargetId: blacksmith_jove
   requiredAmount: 1
   rewardType: 2
   rewardItems:

@@ -1,4 +1,3 @@
-using System.Text;
 using TMPro;
 using UnityEngine;
 
@@ -12,12 +11,20 @@ public class UI_ItemToolTip : UI_ToolTip
     [SerializeField] private Transform merchantInfo;
     [SerializeField] private Transform inventoryInfo;
 
-    public void ShowToolTip(bool show, RectTransform targetRect, Inventory_Item itemToShow,bool buyPrice = false,bool showMerchantInfo = false)
+    public void ShowToolTip(bool show, RectTransform targetRect, Inventory_Item itemToShow, bool buyPrice = false, bool showMerchantInfo = false, bool showControls = true)
     {
         base.ShowToolTip(show, targetRect);
 
-        merchantInfo.gameObject.SetActive(showMerchantInfo);
-        inventoryInfo.gameObject.SetActive(!showMerchantInfo);
+        if (showControls)
+        {
+            merchantInfo.gameObject.SetActive(showMerchantInfo);
+            inventoryInfo.gameObject.SetActive(!showMerchantInfo);
+        }
+        else
+        {
+            merchantInfo.gameObject.SetActive(false);
+            inventoryInfo.gameObject.SetActive(false);
+        }
 
         int price = buyPrice ? itemToShow.buyPrice : Mathf.FloorToInt(itemToShow.sellPrice);
         int totalPrice = price * itemToShow.stackSize;
@@ -30,7 +37,7 @@ public class UI_ItemToolTip : UI_ToolTip
         itemInfo.text = itemToShow.GetItemInfo();
 
         string color = GetColorByRarity(itemToShow.itemData.itemRarity);
-        itemName.text = GetColoredText(color,itemToShow.itemData.itemName);
+        itemName.text = GetColoredText(color, itemToShow.itemData.itemName);
     }
 
     private string GetColorByRarity(int rarity)

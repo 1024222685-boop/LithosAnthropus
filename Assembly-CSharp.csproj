@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Enum\SkillType.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
+    <Compile Include="Assets\Scripts\UI\QuestUI\UI_QuestPreviw.cs" />
     <Compile Include="Assets\InputSystem\PlayerInputSet.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_CounterAttackState.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\GameData.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Assets\Scripts\Enum\RespawnType.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Health.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_HurtState.cs" />
+    <Compile Include="Assets\Scripts\UI\QuestUI\UI_QuestSlot.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\ConsumableItemDataSO.cs" />
     <Compile Include="Assets\Scripts\Enum\ItemType.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_MercyBlastOnTakingDamage.cs" />
@@ -141,6 +143,7 @@
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Combat.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_StunnedState.cs" />
+    <Compile Include="Assets\Scripts\UI\QuestUI\UI_QuestRewardSlot.cs" />
     <Compile Include="Assets\Scripts\Parallax\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_DeadState.cs" />
     <Compile Include="Assets\Scripts\Data\ItemEffects\ItemEffect_Heal.cs" />
