@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564785cee1c270448a0e0b5c5bc0781f, type: 3}
+  m_Name: Quest - M
+  m_EditorClassIdentifier: 
+  questSaveId: b4c32b5df681b89498bf4da3cbdefbd5
+  questType: 2
+  questName: M
+  description: If you can pass me Kp better, honestly Te-ras Medium woul be nice
+    too(.....Actually Kp better,give me the Kp)
+  questGoal: "- Deliver Te-ras to the travis \n- And Kp(or not)"
+  questTargetId: 
+  requiredAmount: 2
+  itemToDeliver: {fileID: 11400000, guid: 414f0763ec8a43145af24f6c29613174, type: 2}
+  rewardType: 0
+  rewardItems:
+  - itemData: {fileID: 11400000, guid: 94edffa7a28ad8d4fb9fadb7eea2281d, type: 2}
+    stackSize: 1
+    itemEffect: {fileID: 0}
