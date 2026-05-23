@@ -15,11 +15,11 @@ MonoBehaviour:
   questSaveId: 312b210633c069746b1e1d808f157ec8
   questName: Careful
   description: Give blacksmith one Te-ras medium
-  questGoal: '- Talk to BlackSmith Jove'
-  questTargetId: blacksmith_jove
-  requiredAmount: 1
-  rewardType: 2
+  questGoal: '- Talk to Merchant phi'
+  questTargetId: Enemy_Greed
+  requiredAmount: 2
+  rewardType: 0
   rewardItems:
-  - itemData: {fileID: 11400000, guid: 54f07ba977a583a46a9c1f7c2e918135, type: 2}
-    stackSize: 1
+  - itemData: {fileID: 11400000, guid: 94edffa7a28ad8d4fb9fadb7eea2281d, type: 2}
+    stackSize: 3
     itemEffect: {fileID: 0}

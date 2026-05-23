@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Object_Merchant : Object_NPC,IInteractable
 {
+    [Header("Quest & Dialogue")]
+    [SerializeField] private QuestDataSO[] quests;
+
     private Inventory_Player inventory;
     private Inventory_Merchant merchant;
 
@@ -12,13 +15,6 @@ public class Object_Merchant : Object_NPC,IInteractable
         base.Awake();
         merchant = GetComponent<Inventory_Merchant>();
     }
-
-    public void Interact()
-    {
-        ui.merchantUI.SetupMerchantUI(merchant, inventory);
-        ui.OpenMerchantUI(true);
-    }
-
     protected override void Update()
     {
         base.Update();
@@ -26,6 +22,18 @@ public class Object_Merchant : Object_NPC,IInteractable
         if(Input.GetKeyDown(KeyCode.Z))
             merchant.FillShopList();
     }
+
+
+
+    public override void Interact()
+    {
+        base.Interact();
+        ui.OpenQuestUI(quests);
+
+        //ui.merchantUI.SetupMerchantUI(merchant, inventory);
+        //ui.OpenMerchantUI(true);
+    }
+
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {

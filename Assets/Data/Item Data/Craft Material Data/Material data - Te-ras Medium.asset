@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229789fc099bbf448b0cb81c6e93d696, type: 3}
   m_Name: Material data - Te-ras Medium
   m_EditorClassIdentifier: 
+  saveId: 414f0763ec8a43145af24f6c29613174
   itemPrice: 100
   minStackSizeAtShop: 1
   maxStackSizeAtShop: 5
-  itemRarity: 785
-  dropChance: 21.6
+  itemRarity: 118
+  dropChance: 65
   maxDropChance: 65
   craftRecipe: []
   itemName: Te-ras Medium

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12865fd28a9a95c4f9907bfffc340fb5, type: 3}
   m_Name: QUEST DATABASE
   m_EditorClassIdentifier: 
-  allQuests: []
+  allQuests:
+  - {fileID: 11400000, guid: 89a1b4e9675a9f04e8bffcbbf61c5ed3, type: 2}
+  - {fileID: 11400000, guid: 312b210633c069746b1e1d808f157ec8, type: 2}
+  - {fileID: 11400000, guid: b4c32b5df681b89498bf4da3cbdefbd5, type: 2}

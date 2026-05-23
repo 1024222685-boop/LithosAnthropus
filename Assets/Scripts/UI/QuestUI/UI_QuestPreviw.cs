@@ -9,24 +9,40 @@ public class UI_QuestPreviw : MonoBehaviour
     [SerializeField] private UI_QuestRewardSlot[] questReward;
 
     [SerializeField] private GameObject[] additionalObjects;
+    private UI_Quest questUI;
+    private QuestDataSO previwQuest;
 
     public void SetupQuestPreviw(QuestDataSO questDataSO)
     {
+        questUI = transform.root.GetComponentInChildren<UI_Quest>();
+        previwQuest = questDataSO;
+
         EnableAdditionalObjects(true);
         EnableQuestRewardObjects(false);
 
         questName.text = questDataSO.questName;
         questDescription.text = questDataSO.description;
-        questGoal.text = questDataSO.questGoal;
+        questGoal.text = questDataSO.questGoal + " " + questDataSO.requiredAmount;
 
         for (int i = 0; i < questDataSO.rewardItems.Length; i++)
         {
+            Inventory_Item rewardItem = new Inventory_Item(questDataSO.rewardItems[i].itemData);
+            rewardItem.stackSize = questDataSO.rewardItems[i].stackSize;
+
             questReward[i].gameObject.SetActive(true);
-            questReward[i].UpdateSlot(questDataSO.rewardItems[i]);
+            questReward[i].UpdateSlot(rewardItem);
         }
     }
 
-    private void MakeQuestPreviwEmpty()
+    public void AcceptQuestBTN()
+    {
+        MakeQuestPreviwEmpty();
+
+        questUI.questManager.AcceptQuest(previwQuest);
+        questUI.UpdateQuestList();
+    }
+
+    public void MakeQuestPreviwEmpty()
     {
         questName.text = "";
         questDescription.text = "";

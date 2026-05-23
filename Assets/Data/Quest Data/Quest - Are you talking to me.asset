@@ -18,9 +18,9 @@ MonoBehaviour:
   questGoal: '- Eliminate the greed Te-ras
 
     - Get the Medium from the Te-ras'
-  questTargetId: Enemy_Greed
+  questTargetId: blacksmith_jove
   requiredAmount: 2
-  rewardType: 0
+  rewardType: 1
   rewardItems:
   - itemData: {fileID: 11400000, guid: 94edffa7a28ad8d4fb9fadb7eea2281d, type: 2}
     stackSize: 2

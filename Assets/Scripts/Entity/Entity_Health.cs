@@ -41,6 +41,11 @@ public class Entity_Health : MonoBehaviour, IDamagable
         SetUpHealth();
     }
 
+    protected virtual void Start()
+    {
+
+    }
+
     private void SetUpHealth()
     {
         if (entityStats == null)
@@ -135,8 +140,8 @@ public class Entity_Health : MonoBehaviour, IDamagable
     protected virtual void Die()
     {
         isDead = true;
-        entity.EntityDeath();
-        dropManager.DropItems();
+        entity?.EntityDeath();
+        dropManager?.DropItems();
     }
 
     public float GetHealthPercent() => currentHealth / entityStats.GetMaxHealth();

@@ -14,8 +14,9 @@ public class Object_BlackSmith : Object_NPC, IInteractable
         anim.SetBool("isBlacksmith", true);
     }
 
-    public void Interact()
+    public override void Interact()
     {
+        base.Interact();
         ui.storageUI.SetupStorage(storage);
         ui.craftUI.SetCraftUI(storage);
 
