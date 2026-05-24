@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae08cc633c2dd84ba76703d3bec5f02, type: 3}
+  m_Name: Line - MerchantPhi_1
+  m_EditorClassIdentifier: 
+  dialogueGroupName: Merchant_Phi
+  speaker: {fileID: 11400000, guid: 3eaca1f8717750a42a1bc8e2ee5e7c9c, type: 2}
+  textLine:
+  - Hello,there.This is Lumio Grocery / Blacksmith Shop.You are....,I feel like I've
+    seen you somewhere before?....Never mind,Let me introduce.People call us the
+    Lumio siblings. Due to my appearance, my brother often travels around doing business
+    with me.
+  - You must have talked to my brother over there. If not, it's fine. There's not
+    much to chat with that old man.
+  - There's a guy named Travis along the way. He seems odd, you'd better watch out
+    for him. You may or may not have spoken to him. Either way, stay cautious in
+    this world.
+  - If you want to reach to the next area, you can go forwad to the Gate of Pacha,
+    and use the corresponding key to open it, ......You should have the key, right?
+  playCanAnswer: 1
+  answerLine:
+  - {fileID: 0}
