@@ -116,7 +116,7 @@ public class Inventory_Base : MonoBehaviour, ISaveable
                 RemoveOneItem(item);
                 amount--;
 
-                if(amount <= 0)
+                if (amount <= 0)
                     break;
             }
         }

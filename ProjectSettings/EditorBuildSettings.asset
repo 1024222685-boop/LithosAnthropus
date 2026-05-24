@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dark forest.scene
     guid: 369d63f12085bb944962885278ba306c
+  - enabled: 1
+    path: Assets/Scenes/Across the Time slit.scene
+    guid: 118160b3ca371f54784c35b6d7bf5f06
   m_BuildProfiles: []
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 71e85fb883a498144a843915b9792421, type: 2}

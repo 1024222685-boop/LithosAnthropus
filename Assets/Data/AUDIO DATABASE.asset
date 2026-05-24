@@ -46,3 +46,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: 3c8233078bd75974a949f19c42be13d8, type: 3}
     maxVolume: 0.6
+  - audioName: Time Slit
+    clips:
+    - {fileID: 8300000, guid: a73a848f9266a404792e9b3f87ae0726, type: 3}
+    maxVolume: 0.6

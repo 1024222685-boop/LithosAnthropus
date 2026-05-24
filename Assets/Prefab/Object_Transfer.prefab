@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 7
   m_Component:
   - component: {fileID: 6440426956736963852}
+  - component: {fileID: 6426580066541044723}
   - component: {fileID: 2935305999125662269}
   - component: {fileID: 5060548878940890090}
   m_Layer: 9
@@ -35,6 +36,26 @@ Transform:
   - {fileID: 5950856964209230826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6426580066541044723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640933089212492672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d94dc897bfffc41ab4664080760050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starfieldScene: Across the Time slit
+  destinationScene: Level_Rainbow 's place
+  timeInStarfield: 3
+  fadeDuration: 0.3
+  flashCount: 5
+  flashSpeed: 0.83
+  playerHurtPrefab: {fileID: 4944416191156287033, guid: 16d7a50630055044a86f062cd501273e, type: 3}
+  whiteFlashPanel: {fileID: 4460279491476988999, guid: 38c19f6db07bcaf4eb47f088a4655814, type: 3}
 --- !u!114 &2935305999125662269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,10 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8319e29adba1744bbecdcd9d2ec943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixedGlobalPortalPosition: {x: 138, y: 7.09, z: 0}
+  fixedGlobalPortalPosition: {x: 138.02, y: 7.03, z: 0}
   fixedGlobalFacingDir: 1
   doorAnimator: {fileID: 4136291506076736864}
-  defaultPosition: {x: 138, y: 7.09}
+  defaultPosition: {x: 138.02, y: 7.03}
   placeSceneName: Level_Rainbow 's place
   respawnPoint: {fileID: 6440426956736963852}
   canBeTriggered: 1
@@ -88,7 +109,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeLayer: 0
-  m_Offset: {x: 0.012969971, y: 0.024324417}
+  m_Offset: {x: -0.0061187744, y: 0.03494644}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -98,7 +119,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.4519958, y: 4.3261023}
+  m_Size: {x: 2.1591797, y: 4.304858}
   m_EdgeRadius: 0
 --- !u!1 &8311788757205352226
 GameObject:

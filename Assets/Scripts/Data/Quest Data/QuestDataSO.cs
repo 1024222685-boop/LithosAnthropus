@@ -4,7 +4,7 @@ using UnityEngine;
 public enum RewardType { Merchant, blackSmith, None };
 public enum QuestType { Kill,Talk,Delivery}
 
-[CreateAssetMenu(menuName = "RPG Setup/ Quest Data/ New Quest", fileName = "Quest - ")]
+[CreateAssetMenu(menuName = "RPG Setup/Quest Data/New Quest", fileName = "Quest - ")]
 public class QuestDataSO : ScriptableObject
 {
     public string questSaveId;
