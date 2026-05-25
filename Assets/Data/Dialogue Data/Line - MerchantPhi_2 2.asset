@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae08cc633c2dd84ba76703d3bec5f02, type: 3}
+  m_Name: Line - MerchantPhi_2 2
+  m_EditorClassIdentifier: 
+  dialogueGroupName: Merchant_Phi
+  speaker: {fileID: 11400000, guid: 3eaca1f8717750a42a1bc8e2ee5e7c9c, type: 2}
+  textLine:
+  - It's a little bit awkward to say, but could you do me some favors
+  playerChoiceAnswer: You look something's on your mind
+  choiceLines:
+  - {fileID: 11400000, guid: 047fe9a967a2104439409caf442fe77b, type: 2}
+  - {fileID: 11400000, guid: fc2d05ccd25e35b44a5b74d7db11eba1, type: 2}
+  actionLine: 
+  actionType: 5
