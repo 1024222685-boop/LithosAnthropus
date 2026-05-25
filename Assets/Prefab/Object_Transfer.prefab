@@ -50,10 +50,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starfieldScene: Across the Time slit
   destinationScene: Level_Rainbow 's place
-  timeInStarfield: 3
+  timeInStarfield: 8.68
   fadeDuration: 0.3
-  flashCount: 5
-  flashSpeed: 0.83
+  flashCount: 100
+  flashSpeed: 0.08
+  shakeIntensity: 0.4
+  shakeDuration: 0.5
   playerHurtPrefab: {fileID: 4944416191156287033, guid: 16d7a50630055044a86f062cd501273e, type: 3}
   whiteFlashPanel: {fileID: 4460279491476988999, guid: 38c19f6db07bcaf4eb47f088a4655814, type: 3}
 --- !u!114 &2935305999125662269

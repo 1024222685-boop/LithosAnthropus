@@ -13,9 +13,15 @@ public class DialogueLineSO : ScriptableObject
     [Header("Text options")]
     [TextArea] public string[] textLine;
 
-    [Header("Answer setup")]
-    public bool playCanAnswer;
-    public DialogueLineSO[] answerLine;
+    [Header("Choices info")]
+    [TextArea] public string playerChoiceAnswer;
+    public DialogueLineSO[] choiceLines;
+
+    [Header("Dialogue Action")]
+    [TextArea] public string actionLine;
+    public DialogueActionType actionType;
+
+    public string GetFirstLine() => textLine[0];
 
     public string GetRandomLine()
     {

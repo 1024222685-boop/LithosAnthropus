@@ -111,9 +111,9 @@ public class PortalTimeSlit : MonoBehaviour
 
                 for (int i = 0; i < flashCount; i++)
                 {
-                    flashImage.color = new Color(1, 1, 1, 1);
+                    flashImage.color = new Color(0.3f, 0.3f, 0.3f, 0.8f);
                     yield return new WaitForSeconds(flashSpeed);
-                    flashImage.color = new Color(1, 1, 1, 0);
+                    flashImage.color = new Color(0.5f, 0.5f, 0.5f, 0f);
                     yield return new WaitForSeconds(flashSpeed);
                 }
             }

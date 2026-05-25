@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class UI : MonoBehaviour
 {
@@ -83,6 +84,20 @@ public class UI : MonoBehaviour
             Time.timeScale = 0;
             OpenOptionsUI();
         };
+
+        input.UI.DialogueInteraction.performed += ctx =>
+        {
+            if (dialogueUI.gameObject.activeInHierarchy)
+                dialogueUI.DialogueInteraction();
+        };
+
+        input.UI.DialogueNavigation.performed += ctx =>
+        {
+            int direction = Mathf.RoundToInt(ctx.ReadValue<float>());
+
+            if(dialogueUI.gameObject.activeInHierarchy)
+                dialogueUI.NavigateChoice(direction);
+        };
     }
 
     public void OpenDeathScreenUI()
@@ -163,12 +178,13 @@ public class UI : MonoBehaviour
         StopPlayerControlsIfNeeded();
     }
 
-    public void OpenDialogueUI(DialogueLineSO firstLine)
+    public void OpenDialogueUI(DialogueLineSO firstLine,DialogueNpcData npcData)
     {
         StopPlayerControls(true);
         HideAllTooltips();
 
         dialogueUI.gameObject.SetActive(true);
+        dialogueUI.SetupNpcData(npcData);
         dialogueUI.PlayDialogueLine(firstLine);
     }
 
@@ -189,6 +205,18 @@ public class UI : MonoBehaviour
         if (openStorageUI == false)
         {
             craftUI.gameObject.SetActive(false);
+            HideAllTooltips();
+        }
+    }
+
+    public void OpenCraftUI(bool openStorageUI)
+    {
+        craftUI.gameObject.SetActive(openStorageUI);
+        StopPlayerControls(openStorageUI);
+
+        if (openStorageUI == false)
+        {
+            storageUI.gameObject.SetActive(false);
             HideAllTooltips();
         }
     }

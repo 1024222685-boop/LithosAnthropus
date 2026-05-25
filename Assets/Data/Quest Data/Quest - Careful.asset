@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Quest - Careful
   m_EditorClassIdentifier: 
   questSaveId: 312b210633c069746b1e1d808f157ec8
+  questType: 1
   questName: Careful
   description: Give blacksmith one Te-ras medium
   questGoal: '- Talk to Merchant phi'
   questTargetId: Enemy_Greed
   requiredAmount: 2
+  itemToDeliver: {fileID: 0}
   rewardType: 0
   rewardItems:
   - itemData: {fileID: 11400000, guid: 94edffa7a28ad8d4fb9fadb7eea2281d, type: 2}

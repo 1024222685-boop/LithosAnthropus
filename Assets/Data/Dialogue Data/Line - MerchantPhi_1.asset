@@ -18,7 +18,7 @@ MonoBehaviour:
   - Hello,there.This is Lumio Grocery / Blacksmith Shop.You are....,I feel like I've
     seen you somewhere before?....Never mind,Let me introduce.People call us the
     Lumio siblings. Due to my appearance, my brother often travels around doing business
-    with me.
+    with me.Want something?
   - You must have talked to my brother over there. If not, it's fine. There's not
     much to chat with that old man.
   - There's a guy named Travis along the way. He seems odd, you'd better watch out
@@ -26,6 +26,9 @@ MonoBehaviour:
     this world.
   - If you want to reach to the next area, you can go forwad to the Gate of Pacha,
     and use the corresponding key to open it, ......You should have the key, right?
-  playCanAnswer: 1
-  answerLine:
-  - {fileID: 0}
+  actionLine: 
+  actionType: 5
+  choiceLines:
+  - {fileID: 11400000, guid: 0fab4612d5ab8e343ae5f72d76e13e11, type: 2}
+  - {fileID: 11400000, guid: 7ef77b7de8d67d246800057852bd2237, type: 2}
+  - {fileID: 11400000, guid: 3b548f7cea4976c43ad4bf5ec5e9b504, type: 2}

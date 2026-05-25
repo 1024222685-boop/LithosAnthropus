@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e53041a9917b7340b1a83e79a5182d2, type: 3}
-  m_Name: Speaker - blacksmith Jove
+  m_Name: Speaker - Blacksmith Jove
   m_EditorClassIdentifier: 
   speakerName: Jove
   speakerPortrait: {fileID: -925038689, guid: d16a8c7831aa4824db7abdc302f6acb2, type: 3}
