@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\SkillSystem\Skill_SickleThrow.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_GroundState.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\UI_MiniHealthBar.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_TreeSprite.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_VFX.cs" />
     <Compile Include="Assets\Scripts\UI\Tooltips\UI_SkillToolTip.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_MajorGroup.cs" />
@@ -214,6 +215,7 @@
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_AnimationTriggers.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_BattleState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_FallState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyTreeSpriteState\Enemy_TsDeadState.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_Merchant.cs" />
     <Compile Include="Assets\Scripts\UI\MerchantUI\UI_MerchantSlot.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_IdleState.cs" />

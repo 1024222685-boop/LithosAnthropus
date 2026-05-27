@@ -15,7 +15,7 @@ MonoBehaviour:
   displayName: 49th Parallel
   description: E mu will relese a field that can make the enemy slow down
   icon: {fileID: 21300000, guid: 670b5495b2f99184c9b5d3415e0ec788, type: 3}
-  cost: 5
+  cost: 10
   unlockedByDefault: 0
   skillType: 4
   upgradeData:

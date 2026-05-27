@@ -14,6 +14,27 @@ public class Entity_Stats : MonoBehaviour
       
     }
 
+    public void AdjustStatSetpup(Stat_ResourceGroup resourceGroup, Stat_OffenseGroup offenseGroup, Stat_DefenceGroup defenceGroup, float penalty,float increase)
+    {
+        offense.damage.SetBaseValue(offenseGroup.damage.GetValue() * increase);
+        offense.attackSpeed.SetBaseValue(offenseGroup.attackSpeed.GetValue() * increase);
+        offense.critChance.SetBaseValue(offenseGroup.critChance.GetValue() * increase);
+        offense.critPower.SetBaseValue(offenseGroup.critPower.GetValue() * increase);
+        offense.brutalityDamage.SetBaseValue(offenseGroup.brutalityDamage.GetValue() * increase);
+        offense.mercyDamage.SetBaseValue(offenseGroup.mercyDamage.GetValue() * increase);
+        offense.cowardiceDamage.SetBaseValue(offenseGroup.cowardiceDamage.GetValue() * increase);
+
+        defense.evasion.SetBaseValue(defenceGroup.evasion.GetValue() * increase);
+
+        resources.maxHealth.SetBaseValue(resourceGroup.maxHealth.GetValue() * penalty);
+        resources.healthRegen.SetBaseValue(resourceGroup.healthRegen.GetValue() * penalty);
+
+        defense.armor.SetBaseValue(defenceGroup.armor.GetValue() * penalty);
+        defense.cowardiceRes.SetBaseValue(defenceGroup.cowardiceRes.GetValue() * penalty);
+        defense.brutalityRes.SetBaseValue(defenceGroup.brutalityRes.GetValue() * penalty);
+        defense.mercyRes.SetBaseValue(defenceGroup.mercyRes.GetValue() * penalty);
+    }
+
     public AttackData GetAttackData(DamageScaleData scaleData)
     {
         return new AttackData(this, scaleData);

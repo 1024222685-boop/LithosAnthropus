@@ -72,6 +72,7 @@ public class Enemy : Entity
     }
 
     public void EnableCounterWindow(bool enable) => canBeStunned = enable;
+
     public override void EntityDeath()
     {
         base.EntityDeath();
@@ -99,6 +100,11 @@ public class Enemy : Entity
 
         this.player = player;
         stateMachine.ChangeState(battleState);
+    }
+
+    public void DestroyGameObjectWithDelay(float delay = 10)
+    {
+        Destroy(gameObject,delay);
     }
 
     public Transform GetPlayerReference()

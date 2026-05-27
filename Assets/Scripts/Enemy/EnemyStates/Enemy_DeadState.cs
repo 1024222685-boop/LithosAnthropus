@@ -25,6 +25,7 @@ public class Enemy_DeadState : EnemyState
 
         // ¹Ø±Õ×´Ì¬»ú£¬·ÀÖ¹ÇÐ»»×´Ì¬
         stateMachine.SwitchoffStateMachine();
+        enemy.DestroyGameObjectWithDelay();
     }
 
     public override void Update()

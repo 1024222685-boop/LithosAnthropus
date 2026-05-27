@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UI_FadeScreen : MonoBehaviour
 {
-    public Coroutine fadeEffectCo {get; private set;}
+    public Coroutine fadeEffectCo { get; private set; }
     private Image fadeImage;
 
     private void Awake()
@@ -17,29 +17,29 @@ public class UI_FadeScreen : MonoBehaviour
     public void DoFadeIn(float duration = 1)
     {
         fadeImage.color = new Color(0, 0, 0, 1);
-        FadeEffect(0f,duration);
+        FadeEffect(0f, duration);
     }
 
     public void DoFadeOut(float duration = 1)
     {
         fadeImage.color = new Color(0, 0, 0, 0);
-        FadeEffect(1f,duration);
+        FadeEffect(1f, duration);
     }
 
     private void FadeEffect(float targetAlpha, float duration)
     {
-        if(fadeEffectCo != null)
+        if (fadeEffectCo != null)
             StopCoroutine(fadeEffectCo);
 
-        fadeEffectCo = StartCoroutine(FadeEffectCo(targetAlpha,duration));
+        fadeEffectCo = StartCoroutine(FadeEffectCo(targetAlpha, duration));
     }
 
-    private IEnumerator FadeEffectCo(float targetAlpha,float duration)
+    private IEnumerator FadeEffectCo(float targetAlpha, float duration)
     {
         float startAlpha = fadeImage.color.a;
         float time = 0;
 
-        while(time < duration) 
+        while (time < duration)
         {
             time = time + Time.deltaTime;
 

@@ -24,7 +24,7 @@ MonoBehaviour:
   rewardType: 1
   rewardItems:
   - itemData: {fileID: 11400000, guid: 94edffa7a28ad8d4fb9fadb7eea2281d, type: 2}
-    stackSize: 2
+    stackSize: 1
     itemEffect: {fileID: 0}
   - itemData: {fileID: 11400000, guid: abb6eaab2652c114c85e03c9d6384c7b, type: 2}
     stackSize: 1
