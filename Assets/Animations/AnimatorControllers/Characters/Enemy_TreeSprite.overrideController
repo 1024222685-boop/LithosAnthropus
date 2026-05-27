@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enemy_TreeSprite
+  m_Controller: {fileID: 9100000, guid: 421bf923e022de843b3fcf17feedf5b0, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: fc8492fe5d3b9f94ea0e54041892bbcc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f447659445848884aa448d220429202e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6a00b55b9c03e504398a335192cf9885, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d96f0997b0d62a44aa5e84c4cfc1b726, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9fc9db8e8990a8b4d9e76a084084c00a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d4770ff9e9e560f40b1d750ee90778e5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: db9bdcf81ba30714b82c054f39a529c5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f9d27ab94c18d5c4c90926183489972f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1639ca227aa689049b01045ed529bc60, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 83232fe0bf0838b4eaed339b6d7e0fe8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 592073e77debd884c99191c4ceb781bf, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3155d996cdc40fc458107ac56574e8af, type: 2}
