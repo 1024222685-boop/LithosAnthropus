@@ -190,6 +190,7 @@
     <Compile Include="Assets\Scripts\Data\DialogueData\DialogueNpcData.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\EquipmentDataSO.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\SerializableDictionary.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_ArcherElf.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\ItemEffects\ItemEffect_DataSO.cs" />
     <Compile Include="Assets\Scripts\Player\Player_QuestManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_WallJumpState.cs" />
@@ -207,6 +208,7 @@
     <Compile Include="Assets\Scripts\UI\SkillTreeUI\UI_SkillTree.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterUI\UI_PlayerStats.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Storage.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyArcherElfState\Enemy_ArcherElfBattleState.cs" />
     <Compile Include="Assets\Scripts\InventorySystem\Inventory_Merchant.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Combat.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />

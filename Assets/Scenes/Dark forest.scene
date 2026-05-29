@@ -124,6 +124,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &1907139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1014948224876033659, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_Name
+      value: Enemy_WiredTreeSprite_Large
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.9760826
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
 --- !u!1 &17445642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1377,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 17445644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &263539453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1014948224876033659, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_Name
+      value: Enemy_WiredTreeSprite_Large (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.9760826
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
 --- !u!1 &348816896
 GameObject:
   m_ObjectHideFlags: 0
@@ -37684,6 +37798,63 @@ MonoBehaviour:
   sr: {fileID: 1071974755}
   rb: {fileID: 0}
   col: {fileID: 0}
+--- !u!1001 &1072235278
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1014948224876033659, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_Name
+      value: Enemy_WiredTreeSprite_Large (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.9760826
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908960520525998192, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba5b8717dc72943409fad090e39aeeeb, type: 3}
 --- !u!1 &1116404591
 GameObject:
   m_ObjectHideFlags: 3
@@ -40626,3 +40797,6 @@ SceneRoots:
   - {fileID: 156783767}
   - {fileID: 1914783226}
   - {fileID: 410481711}
+  - {fileID: 1907139}
+  - {fileID: 263539453}
+  - {fileID: 1072235278}
