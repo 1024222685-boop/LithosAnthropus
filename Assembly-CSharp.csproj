@@ -232,6 +232,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_AttackState.cs" />
     <Compile Include="Assets\Scripts\Data\AudioDatabaseSO.cs" />
     <Compile Include="Assets\Scripts\StateMachine\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_ArcherElfArrow.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_IdleState.cs" />
     <Compile Include="Assets\Scripts\UI\SkillTreeUI\UI_TreeConnectHandler.cs" />
     <Compile Include="Assets\Scripts\StateMachine\EnemyState.cs" />

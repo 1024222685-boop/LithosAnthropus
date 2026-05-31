@@ -21,9 +21,8 @@ public class Enemy_TreeSprite : Enemy, ICounterable
         moveState = new Enemy_MoveState(this, stateMachine, "move");
         attackState = new Enemy_AttackState(this, stateMachine, "attack");
         battleState = new Enemy_BattleState(this, stateMachine, "battle");
-        deadState = new Enemy_DeadState(this, stateMachine, "idle");
-        stunnedState = new Enemy_StunnedState(this, stateMachine, "stunned");
         deadState = new Enemy_DeadState(this, stateMachine, "dead");
+        stunnedState = new Enemy_StunnedState(this, stateMachine, "stunned");
         tsDeadState = new Enemy_TsDeadState(this, stateMachine, "dead");
 
         anim.SetBool("hasStunRecovery", hasRecoveryAnimation);

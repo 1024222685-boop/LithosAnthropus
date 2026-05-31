@@ -230,6 +230,8 @@ MonoBehaviour:
   questTargetId: 
   battleMoveSpeed: 3
   attackDistance: 2
+  attackCooldown: 0.5
+  canChasePlayer: 1
   battleTimeDuration: 5
   minRetreatDistance: 1
   retreatVelocity: {x: 0, y: 0}
@@ -34893,6 +34895,63 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &654155704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1911097607151551198, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_Name
+      value: Enemy_ArcherElf
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.9760826
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340676957157703896, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8acc5de92d9fe8544bf9e136d21325d7, type: 3}
 --- !u!1 &661601583
 GameObject:
   m_ObjectHideFlags: 0
@@ -35544,6 +35603,8 @@ MonoBehaviour:
   questTargetId: 
   battleMoveSpeed: 3
   attackDistance: 2
+  attackCooldown: 0.5
+  canChasePlayer: 1
   battleTimeDuration: 5
   minRetreatDistance: 1
   retreatVelocity: {x: 0, y: 0}
@@ -40800,3 +40861,4 @@ SceneRoots:
   - {fileID: 1907139}
   - {fileID: 263539453}
   - {fileID: 1072235278}
+  - {fileID: 654155704}

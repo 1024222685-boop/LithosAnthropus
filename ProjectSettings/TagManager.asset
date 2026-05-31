@@ -16,8 +16,8 @@ TagManager:
   - Enemy
   - PlayerInteractable
   - SkillObjectSickle
-  - 
-  - 
+  - EnemyProjecttile
+  - Untargetable
   - 
   - 
   - 

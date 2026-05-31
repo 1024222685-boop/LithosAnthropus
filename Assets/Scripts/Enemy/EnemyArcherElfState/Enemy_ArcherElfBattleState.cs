@@ -7,6 +7,7 @@ public class Enemy_ArcherElfBattleState : Enemy_BattleState
 
     public Enemy_ArcherElfBattleState(Enemy enemy, StateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
+
     }
 
 
@@ -47,7 +48,7 @@ public class Enemy_ArcherElfBattleState : Enemy_BattleState
             if (WithinAttackRange() && enemy.PlayerDetected())
             {
                 canFlip = true;
-                lasTimeAttacked = Time.time;
+                lastTimeAttacked = Time.time;
                 stateMachine.ChangeState(enemy.attackState);
             }
         }
@@ -57,6 +58,7 @@ public class Enemy_ArcherElfBattleState : Enemy_BattleState
 
             if (shouldWalkAway)
             {
+                enemy.HandleFlip(DirectionToPlayer());
                 enemy.SetVelocity((enemy.GetBattleMoveSpeed() * -1) * DirectionToPlayer(), rb.velocity.y);
             }
             else

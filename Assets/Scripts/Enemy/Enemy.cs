@@ -9,6 +9,7 @@ public class Enemy : Entity
     public Entity_Stats stats { get; private set; }
 
     public Enemy_Health health { get; private set; }
+    public Entity_Combat combat { get; private set; }
     public Enemy_IdleState idleState;
     public Enemy_MoveState moveState;
     public Enemy_AttackState attackState;
@@ -53,12 +54,16 @@ public class Enemy : Entity
         base.Awake();
         health = GetComponent<Enemy_Health>();
         stats = GetComponent<Entity_Stats>();
+        combat = GetComponent<Entity_Combat>();
+    }
+
+    public virtual void SpecialAttack()
+    {
+
     }
 
     protected override IEnumerator SlowDownEntityCo(float duration, float slowMultiplier)
     {
-
-
         activeSlowMutiplier = 1 - slowMultiplier;
 
         anim.speed = anim.speed * activeSlowMutiplier;

@@ -61,7 +61,7 @@ public class Skill_Base : MonoBehaviour
         player.ui.inGameUI.GetSkillSlot(skillType).StartCooldown(cooldown);
         lastTimeUsed = Time.time;
     }
-    public void ReduceCooldownBy(float cooldownReduction) => lastTimeUsed = lastTimeUsed + cooldownReduction;
+    public void ReduceCooldownBy(float cooldownReduction) => lastTimeUsed = lastTimeUsed - cooldownReduction;
     public void ResetCooldown()
     {
         player.ui.inGameUI.GetSkillSlot(skillType).ResetCooldown();
