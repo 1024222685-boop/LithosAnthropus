@@ -15,6 +15,11 @@ public class EnemyState : EntityState
         stats = enemy.stats;
     }
 
+    public virtual void AnimationTrigger()
+    {
+       
+    }
+
     public override void UpdateAnimationParameters()
     {
         base.UpdateAnimationParameters();

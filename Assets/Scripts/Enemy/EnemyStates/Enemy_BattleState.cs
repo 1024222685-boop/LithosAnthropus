@@ -19,8 +19,22 @@ public class Enemy_BattleState : EnemyState
 
         if (player == null)
             player = enemy.GetPlayerReference();
+
+        if (ShouldRetreat())
+        {
+            ShortRetreat();
+        }
     }
-    
+
+    protected void ShortRetreat()
+    {
+        float x = (enemy.retreatVelocity.x * enemy.activeSlowMutiplier) * -DirectionToPlayer();
+        float y = enemy.retreatVelocity.y;
+
+        rb.velocity = new Vector2(x, y);
+        enemy.HandleFlip(DirectionToPlayer());
+    }
+
     public override void Update()
     {
         base.Update();
@@ -85,5 +99,4 @@ public class Enemy_BattleState : EnemyState
 
         return player.position.x > enemy.transform.position.x ? 1 : -1;
     }
-
 }

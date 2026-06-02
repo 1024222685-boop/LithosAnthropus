@@ -6,6 +6,8 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
 {
     public event Action OnFlipped;//翻转时触发的事件（所有UI会监听该事件）
 
+    public event Action OnDeath;
+  
     public Animator anim { get; private set; }//动画组件（设为private的目的是防止修改，保证调用时出错可首先排除这个问题）
 
     public Rigidbody2D rb { get; private set; }
@@ -34,7 +36,7 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
         anim = GetComponentInChildren<Animator>();//获取子物体里的动画组件
         rb = GetComponent<Rigidbody2D>();
         sfx = GetComponent<Entity_SFX>();
-     
+
         stateMachine = new StateMachine();//新建状态机，不会让事件重复利用导致角色动作挤在一帧上使用
     }
 
@@ -56,7 +58,7 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
 
     public virtual void EntityDeath()
     {
-
+        OnDeath?.Invoke();
     }
 
     public virtual void SlowDownEntity(float duration, float slowMultiplier, bool canOverrideSlowEffect = false)
