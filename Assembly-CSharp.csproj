@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\UI\QuestUI\UI_ActiveQuestPreviw.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_MoveState.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\UI_QuickItemSlot.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyGiantState\Enemy_GiantBattleState.cs" />
     <Compile Include="Assets\Scripts\AudioRangeController.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_SFX.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillType.cs" />
@@ -79,9 +80,11 @@
     <Compile Include="Assets\Scripts\Data\ItemData\ItemEffects\ItemEffect_Heal.cs" />
     <Compile Include="Assets\Scripts\UI\QuestUI\UI_QuestPreviw.cs" />
     <Compile Include="Assets\InputSystem\PlayerInputSet.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyGiantState\Enemy_GiantTeleportState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_CounterAttackState.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\GameData.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Options.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_Giant.cs" />
     <Compile Include="Assets\Scripts\UI\StorageUI\UI_Storage.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_OffenseGroup.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterUI\UI_StatSlot.cs" />
@@ -115,6 +118,8 @@
     <Compile Include="Assets\Scripts\UI\InGameUI\UI_SkillSlot.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Health.cs" />
     <Compile Include="Assets\Scripts\Player\Player_DropManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_GiantAnimationTriggers.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_GiantSpell.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\UI\Tooltips\UI_ItemToolTip.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Stuntman.cs" />
@@ -188,14 +193,14 @@
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Shadow.cs" />
     <Compile Include="Assets\Scripts\UI\UI_DeathScreen.cs" />
     <Compile Include="Assets\Scripts\StateMachine\EntityState.cs" />
-    <Compile Include="Assets\Scripts\InventorySystem\Inventory_Player.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMageState\Enemy_MageBattleState.cs" />
+    <Compile Include="Assets\Scripts\InventorySystem\Inventory_Player.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_Portal.cs" />
     <Compile Include="Assets\Scripts\Data\DialogueData\DialogueNpcData.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\EquipmentDataSO.cs" />
-    <Compile Include="Assets\Scripts\SaveSystem\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_ArcherElf.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\ItemEffects\ItemEffect_DataSO.cs" />
     <Compile Include="Assets\Scripts\Player\Player_QuestManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_WallJumpState.cs" />
@@ -226,6 +231,7 @@
     <Compile Include="Assets\Scripts\InteractiveObjects\Object_Merchant.cs" />
     <Compile Include="Assets\Scripts\UI\MerchantUI\UI_MerchantSlot.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStates\Enemy_IdleState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyGiantState\Enemy_GiantAttackState.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData\ItemEffects\ItemEffect_PortalKey.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterUI\UI_ItemSlotParent.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Sickle.cs" />
@@ -258,6 +264,7 @@
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_DomainExpansion.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_Stuntman.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyGiantState\Enemy_GiantSpellCastState.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterUI\UI_EquipSlotParent.cs" />
   </ItemGroup>
   <ItemGroup>

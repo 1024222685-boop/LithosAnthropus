@@ -477,6 +477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e977f1a2bd38ff74b96c30b1b95f2c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageEchoInterval: 0.05
+  imageEchoPrefab: {fileID: 0}
   onDamageMaterial: {fileID: 2100000, guid: cd4d1c11c0e29344a8287d30ab705d14, type: 2}
   onDamageVfxDuration: 0.2
   hitvfxColor: {r: 1, g: 1, b: 1, a: 1}
@@ -35141,6 +35143,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8880421881242755212, guid: b4f8daf2f3fcb084c9c3159e7d9524bc, type: 3}
   m_PrefabInstance: {fileID: 3275472061476407871}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &694190075
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7044877484463372515, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_Name
+      value: Enemy_Mage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.9760826
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221529830518480179, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e0f3ed2afe283548b4c9c5bee2f40bc, type: 3}
 --- !u!1 &706750150
 GameObject:
   m_ObjectHideFlags: 0
@@ -35488,6 +35547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e977f1a2bd38ff74b96c30b1b95f2c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageEchoInterval: 0.05
+  imageEchoPrefab: {fileID: 0}
   onDamageMaterial: {fileID: 2100000, guid: cd4d1c11c0e29344a8287d30ab705d14, type: 2}
   onDamageVfxDuration: 0.2
   hitvfxColor: {r: 1, g: 1, b: 1, a: 1}
@@ -40874,3 +40935,4 @@ SceneRoots:
   - {fileID: 263539453}
   - {fileID: 1072235278}
   - {fileID: 654155704}
+  - {fileID: 694190075}

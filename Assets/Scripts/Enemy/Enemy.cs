@@ -59,6 +59,14 @@ public class Enemy : Entity
         vfx = GetComponent<Entity_VFX>();
     }
 
+    public void MakeUntargetable(bool canBeTargeted)
+    {
+        if(canBeTargeted == false)
+            gameObject.layer = LayerMask.NameToLayer("Untargetable");
+        else
+            gameObject.layer = LayerMask.NameToLayer("Enemy");
+    }
+
     public virtual void SpecialAttack()
     {
 
@@ -112,7 +120,7 @@ public class Enemy : Entity
         stateMachine.ChangeState(battleState);
     }
 
-    public void DestroyGameObjectWithDelay(float delay = .6f)
+    public void DestroyGameObjectWithDelay(float delay = 2)
     {
         Destroy(gameObject,delay);
     }

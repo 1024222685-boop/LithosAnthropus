@@ -59,7 +59,7 @@ public class Entity_Combat : MonoBehaviour
             sfx?.PlayAttackMiss();
     }
 
-    public void PerformAttackOnTarget(Transform target)
+    public void PerformAttackOnTarget(Transform target,DamageScaleData damageScaleData = null)
     {
         bool targetGotHit = false;
 
@@ -69,6 +69,7 @@ public class Entity_Combat : MonoBehaviour
         if (damagable == null)
             return;
 
+        DamageScaleData damageScale = damageScaleData == null ? basicAttackScale : damageScaleData;
         AttackData attackData = stats.GetAttackData(basicAttackScale);
         Entity_StatusHandler statusHandler = target.GetComponent<Entity_StatusHandler>();
 

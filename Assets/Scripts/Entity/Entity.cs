@@ -11,6 +11,7 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
     public Animator anim { get; private set; }//动画组件（设为private的目的是防止修改，保证调用时出错可首先排除这个问题）
 
     public Rigidbody2D rb { get; private set; }
+    public Collider2D col { get; private set; }
     public Entity_SFX sfx { get; private set; }
     protected StateMachine stateMachine;//让所有实体都拥有状态机
 
@@ -36,6 +37,7 @@ public class Entity : MonoBehaviour//所有实体基类（不用每个重复再写）
         anim = GetComponentInChildren<Animator>();//获取子物体里的动画组件
         rb = GetComponent<Rigidbody2D>();
         sfx = GetComponent<Entity_SFX>();
+        col = GetComponent<Collider2D>();
 
         stateMachine = new StateMachine();//新建状态机，不会让事件重复利用导致角色动作挤在一帧上使用
     }

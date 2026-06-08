@@ -58,7 +58,6 @@ public class Enemy_BattleState : EnemyState
             float xVeloicty = enemy.canChasePlayer ? enemy.GetBattleMoveSpeed() : 0.0001f;
             enemy.SetVelocity(xVeloicty * DirectionToPlayer(), rb.velocity.y);
         }
-
     }
 
     protected bool CanAttack() => Time.time > lastTimeAttacked + enemy.attackCooldown;
