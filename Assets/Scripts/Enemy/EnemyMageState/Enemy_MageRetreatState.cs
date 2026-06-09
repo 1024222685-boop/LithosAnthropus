@@ -22,7 +22,7 @@ public class Enemy_MageRetreatState : EnemyState
 
         rb.velocity = new Vector2(enemyMage.retreatSpeed * -DirectionToPlayer(), 0);
         enemy.HandleFlip(DirectionToPlayer());
-        enemy.MakeUntargetable(true);
+        enemy.MakeUntargetable(false);
         enemy.vfx.DoImageEchoEffect(1f);
     }
 
@@ -40,7 +40,7 @@ public class Enemy_MageRetreatState : EnemyState
     {
         base.Exit();
         enemy.vfx.StopImageEchoEffect();
-        enemy.MakeUntargetable(false);
+        enemy.MakeUntargetable(true);
     }
 
     protected int DirectionToPlayer()

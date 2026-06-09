@@ -14,6 +14,8 @@ public class Enemy_GiantSpellCastState : EnemyState
         enemyGiant.SetVelocity(0, 0);
         enemyGiant.SetSpellCastPerformed(false);
         enemyGiant.SetSpellCastOnCooldown();
+
+        enemyGiant.MakeUntargetable(false);
     }
 
     public override void Update()
@@ -36,5 +38,7 @@ public class Enemy_GiantSpellCastState : EnemyState
     {
         base.Exit();
         anim.SetBool("spellCast_performed", false);
+
+        enemyGiant.MakeUntargetable(true);
     }
 }

@@ -10,7 +10,7 @@ public class Enemy_GiantTeleportState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        enemyGiant.MakeUntargetable(true);
+        enemyGiant.MakeUntargetable(false);
     }
 
     public override void Update()
@@ -36,6 +36,6 @@ public class Enemy_GiantTeleportState : EnemyState
     public override void Exit()
     {
         base.Exit();
-        enemyGiant.MakeUntargetable(false);
+        enemyGiant.MakeUntargetable(true);
     }
 }

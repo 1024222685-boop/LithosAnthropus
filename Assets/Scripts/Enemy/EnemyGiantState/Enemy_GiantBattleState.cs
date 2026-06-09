@@ -14,6 +14,10 @@ public class Enemy_GiantBattleState : Enemy_BattleState
         base.Enter();
 
         stateTimer = enemyGiant.maxBattleIdleTime;
+
+        // 进入战斗时显示并初始化BOSS血条
+        UI_InGame.Instance.ShowBossHealthBar();
+        UI_InGame.Instance.UpdateBossHealthBar(enemyGiant.health.GetCurrentHealth(), enemyGiant.stats.GetMaxHealth());
     }
 
     public override void Update()
@@ -36,10 +40,17 @@ public class Enemy_GiantBattleState : Enemy_BattleState
         {
             float xVeloicty = enemy.canChasePlayer ? enemy.GetBattleMoveSpeed() : 0.0001f;
 
-            if(enemy.groundDetected == false)
+            if (enemy.groundDetected == false)
                 xVeloicty = 0.00001f;
 
             enemy.SetVelocity(xVeloicty * DirectionToPlayer(), rb.velocity.y);
         }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        // UI_InGame.Instance.HideBossHealthBar();
     }
 }

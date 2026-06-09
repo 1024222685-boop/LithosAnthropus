@@ -7,7 +7,7 @@ public class Enemy_Giant : Enemy, ICounterable
     public Enemy_GiantAttackState giantAttackState { get; private set; }
     public Enemy_GiantBattleState giantBattleState { get; private set; }
     public Enemy_GiantTeleportState giantTeleportState { get; private set; }
-    public Enemy_GiantSpellCastState giantSpellCastState { get; private  set; }
+    public Enemy_GiantSpellCastState giantSpellCastState { get; private set; }
 
     [Header("Giant specifics")]
     public float maxBattleIdleTime = 5;
@@ -55,6 +55,29 @@ public class Enemy_Giant : Enemy, ICounterable
         defaultTeleportChance = chanceToTeleport;
 
         stateMachine.Initialize(idleState);
+
+        // 订阅血量更新事件（和玩家完全一致的机制）
+        health.OnHealthUpdate += UpdateBossHealthBar;
+    }
+
+    // 血量变化时自动更新血条
+    private void UpdateBossHealthBar()
+    {
+        UI_InGame.Instance.UpdateBossHealthBar(health.GetCurrentHealth(), stats.GetMaxHealth());
+    }
+
+    // 死亡时隐藏血条并取消事件订阅
+    public override void EntityDeath()
+    {
+        base.EntityDeath();
+        health.OnHealthUpdate -= UpdateBossHealthBar;
+        UI_InGame.Instance.HideBossHealthBar();
+    }
+
+    // 物体销毁时强制取消订阅，防止内存泄漏
+    private void OnDestroy()
+    {
+        health.OnHealthUpdate -= UpdateBossHealthBar;
     }
 
     public void HandleCounter()
@@ -84,7 +107,7 @@ public class Enemy_Giant : Enemy, ICounterable
 
             Enemy_GiantSpell spell = Instantiate(spellCastPrefab, spellPosition, Quaternion.identity).GetComponent<Enemy_GiantSpell>();
 
-            spell.SetupSpell(combat,spellDamageScale);
+            spell.SetupSpell(combat, spellDamageScale);
 
             yield return new WaitForSeconds(spellCastRate);
         }
@@ -94,7 +117,7 @@ public class Enemy_Giant : Enemy, ICounterable
 
     public void SetSpellCastPerformed(bool spellCastStatus) => spellCastPerformed = spellCastStatus;
     public bool CanDoSpellCast() => Time.time > lastTimeCastedSpells + spellCastStateCooldown;
-    public void  SetSpellCastOnCooldown() => lastTimeCastedSpells = Time.time;
+    public void SetSpellCastOnCooldown() => lastTimeCastedSpells = Time.time;
 
     public bool ShouldTeleport()
     {

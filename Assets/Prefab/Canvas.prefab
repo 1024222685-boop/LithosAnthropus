@@ -68667,6 +68667,10 @@ MonoBehaviour:
   healthRect: {fileID: 9124928781600723477}
   healthSlider: {fileID: 3252679372992735945}
   healthText: {fileID: 7972772126610069873}
+  bossHealthRect: {fileID: 0}
+  bossHealthSlider: {fileID: 0}
+  bossHealthText: {fileID: 0}
+  bossHealthBarContainer: {fileID: 0}
   yOffsetQuickItemParent: 150
   quickItemOptionsParent: {fileID: 2007039754770847363}
 --- !u!1 &5425215662332947673

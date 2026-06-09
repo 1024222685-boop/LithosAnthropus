@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UI_InGame : MonoBehaviour
 {
+    public static UI_InGame Instance { get; private set; }
+
     private Player player;
     private Inventory_Player inventory;
     private UI_SkillSlot[] skillSlots;
@@ -13,11 +15,29 @@ public class UI_InGame : MonoBehaviour
     [SerializeField] private Slider healthSlider;
     [SerializeField] private TextMeshProUGUI healthText;
 
+    [Header("Boss Health Bar")]
+    [SerializeField] private RectTransform bossHealthRect;
+    [SerializeField] private Slider bossHealthSlider;
+    [SerializeField] private TextMeshProUGUI bossHealthText;
+    [SerializeField] private GameObject bossHealthBarContainer; 
+   
     [Header("Quick Item Slots")]
     [SerializeField] private float yOffsetQuickItemParent = 150;
     [SerializeField] private Transform quickItemOptionsParent;
     private UI_QuickItemSlotOption[] quickItemOptions;
     private UI_QuickItemSlot[] quickItemSlots;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -29,6 +49,46 @@ public class UI_InGame : MonoBehaviour
         inventory = player.inventory;
         inventory.OnInventoryChange += UpdateQuickSlotUI;
         inventory.OnQuickSlotUsed += PlayQuickSlotFeedback;
+
+        if (bossHealthBarContainer != null)
+        {
+            bossHealthBarContainer.SetActive(false);
+        }
+    }
+
+    public void UpdateBossHealthBar(float currentHealth, float maxHealth)
+    {
+        if (bossHealthSlider == null || bossHealthText == null || bossHealthRect == null)
+        {
+            Debug.LogWarning("BOSS Health bar wrong");
+            return;
+        }
+
+        float sizeDifference = Mathf.Abs(maxHealth - bossHealthRect.sizeDelta.x);
+        if (sizeDifference > 0.1f)
+        {
+            bossHealthRect.sizeDelta = new Vector2(maxHealth, bossHealthRect.sizeDelta.y);
+        }
+
+        bossHealthText.text = Mathf.RoundToInt(currentHealth) + "/" + maxHealth;
+        bossHealthSlider.value = currentHealth / maxHealth;
+    }
+
+
+    public void ShowBossHealthBar()
+    {
+        if (bossHealthBarContainer != null)
+        {
+            bossHealthBarContainer.SetActive(true);
+        }
+    }
+
+    public void HideBossHealthBar()
+    {
+        if (bossHealthBarContainer != null)
+        {
+            bossHealthBarContainer.SetActive(false);
+        }
     }
 
     public void PlayQuickSlotFeedback(int slotNumber) => quickItemSlots[slotNumber].SimulateButtonFeedback();
