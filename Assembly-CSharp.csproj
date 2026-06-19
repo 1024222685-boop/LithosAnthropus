@@ -123,6 +123,7 @@
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\UI\Tooltips\UI_ItemToolTip.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_Stuntman.cs" />
+    <Compile Include="Assets\Scripts\UI\CinematicBarsController.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_ResourceGroup.cs" />
     <Compile Include="Assets\Epic Toon FX\Scripts\ETFXRotation.cs" />
     <Compile Include="Assets\Scripts\interface\ISaveable.cs" />
@@ -205,6 +206,7 @@
     <Compile Include="Assets\Scripts\Player\Player_QuestManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Player_WallJumpState.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat.cs" />
+    <Compile Include="Assets\Scripts\StoryTrigger.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_VFX.cs" />
     <Compile Include="Assets\Scripts\UI\Tooltips\UI_StatToolTip.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_SicklePeirce.cs" />

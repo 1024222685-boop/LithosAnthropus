@@ -31,6 +31,7 @@ public class GameData
     public string lastScenePlayed;
     public Vector3 lastPlayerPosition;
 
+    public SerializableDictionary<string, bool> triggeredStories;
 
     public GameData()
     {
@@ -48,5 +49,7 @@ public class GameData
 
         completeQuests = new SerializableDictionary<string,bool>();
         activeQuests = new SerializableDictionary<string,int>();
+
+        triggeredStories = new SerializableDictionary<string, bool>();
     }
 }

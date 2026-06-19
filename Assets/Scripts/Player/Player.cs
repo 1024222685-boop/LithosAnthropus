@@ -58,6 +58,7 @@ public class Player : Entity
     public float dashSpeed = 20;
     internal Transform trea;
 
+    private bool isControlsLocked;
     public Vector2 moveInput { get; private set; }
     public Vector2 mousePosition { get; private set; }
 
@@ -182,5 +183,19 @@ public class Player : Entity
     private void OnDisable()
     {
         input.Disable();
+    }
+
+    public void LockControls()
+    {
+        isControlsLocked = true;
+        moveInput = Vector2.zero;
+        rb.velocity = new Vector2(0, rb.velocity.y);
+        input.Player.Disable();
+    }
+
+    public void UnlockControls()
+    {
+        isControlsLocked = false;
+        input.Player.Enable();
     }
 }

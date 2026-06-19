@@ -30,6 +30,9 @@ public class UI : MonoBehaviour
     private bool skillTreeEnabled;
     private bool inventoryEnabled;
 
+    private bool _wasInGameUIVisible;
+    private GameObject _lastActiveUIElement;
+
     private void Awake()
     {
         instance = this;
@@ -228,6 +231,44 @@ public class UI : MonoBehaviour
 
         if (openMerchantUI == false)
             HideAllTooltips();
+    }
+
+    public void EnterCinematicMode()
+    {
+        _wasInGameUIVisible = inGameUI.gameObject.activeSelf;
+        _lastActiveUIElement = null;
+
+        foreach (var element in uiElements)
+        {
+            if (element.activeSelf)
+            {
+                _lastActiveUIElement = element;
+                break;
+            }
+        }
+
+        foreach (var element in uiElements)
+        {
+            element.SetActive(false);
+        }
+
+        inGameUI.gameObject.SetActive(false);
+
+        HideAllTooltips();
+
+        input.UI.Disable();
+    }
+
+    public void ExitCinematicMode()
+    {
+        inGameUI.gameObject.SetActive(_wasInGameUIVisible);
+
+        if (_lastActiveUIElement != null)
+        {
+            _lastActiveUIElement.SetActive(true);
+        }
+
+        input.UI.Enable();
     }
 
     public void HideAllTooltips()
